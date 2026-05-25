@@ -1,0 +1,306 @@
+{
+  "adapter": "CaveNet",
+  "duration": 4.899782238890034,
+  "errors": [],
+  "extra": [
+    {
+      "aggregate": {
+        "event_count": 4,
+        "improved_sequence_count": 3,
+        "mean_actual_distance_improvement": 0.0009030242404552552,
+        "mean_adaptive_config_delta": 0.06398363442232027,
+        "mean_adaptive_distance": 0.04874702189151444,
+        "mean_adaptive_memory_mass": 0.3765969278276318,
+        "mean_adaptive_topology": 44.90307391342769,
+        "mean_distance_improvement": 0.0006162192484496423,
+        "mean_fixed_weak_distance": 0.049363241139964084,
+        "mean_fixed_weak_memory_mass": 0.3603668907072146,
+        "mean_fixed_weak_topology": 35.083619617773515,
+        "mean_memory_distance_improvement": 0.000739579456607348,
+        "memory_improved_sequence_count": 3,
+        "seed": 41,
+        "sequence_count": 4
+      },
+      "errors": [],
+      "id": "cavenet_pressure_population",
+      "ok": true,
+      "records": [
+        {
+          "actual_distance_improvement": 0.0016860117875196617,
+          "adaptive_distance": {
+            "actual_distance": 0.07519330553103311,
+            "combined_distance": 0.06169315945851317,
+            "expected_distance": 0.03144782768080784,
+            "memory_distance": 0.08605176261048553,
+            "surprise_distance": 0.0540797420117262
+          },
+          "adaptive_metrics": {
+            "actual_mass": 1.199915202790501,
+            "config_delta": 0.08872451474460778,
+            "final_attention_gain": 0.4765146411810519,
+            "final_learning_rate_gain": 0.24640062206684069,
+            "final_memory_mass": 0.023282782826160142,
+            "final_topology_deposit_gain": 0.4273296757398286,
+            "initial_attention_gain": 0.45,
+            "initial_learning_rate_gain": 0.2,
+            "initial_topology_deposit_gain": 0.2,
+            "memory_mass": 0.5714202527662657,
+            "surprise_total": 1.130369437093788,
+            "topology_mass": 56.375698208589746
+          },
+          "distance_improvement": 0.0011603556427872974,
+          "fixed_weak_distance": {
+            "actual_distance": 0.07687931731855277,
+            "combined_distance": 0.06285351510130047,
+            "expected_distance": 0.0317225883107417,
+            "memory_distance": 0.08747796680649997,
+            "surprise_distance": 0.05533418796940744
+          },
+          "fixed_weak_metrics": {
+            "actual_mass": 1.1640971860010456,
+            "config_delta": 0.0,
+            "final_attention_gain": 0.45,
+            "final_learning_rate_gain": 0.2,
+            "final_memory_mass": 0.022350761428986413,
+            "final_topology_deposit_gain": 0.2,
+            "initial_attention_gain": 0.45,
+            "initial_learning_rate_gain": 0.2,
+            "initial_topology_deposit_gain": 0.2,
+            "memory_mass": 0.5349182188070466,
+            "surprise_total": 1.0983407444984157,
+            "topology_mass": 40.59578598387084
+          },
+          "memory_distance_improvement": 0.0014262041960144412,
+          "reference_metrics": {
+            "actual_mass": 2.586882635557879,
+            "config_delta": 0.0,
+            "final_attention_gain": 1.0,
+            "final_learning_rate_gain": 1.0,
+            "final_memory_mass": 0.03846303117000795,
+            "final_topology_deposit_gain": 1.0,
+            "initial_attention_gain": 1.0,
+            "initial_learning_rate_gain": 1.0,
+            "initial_topology_deposit_gain": 1.0,
+            "memory_mass": 2.364638444401558,
+            "surprise_total": 2.17762332019784,
+            "topology_mass": 216.262906116983
+          },
+          "seed": 41,
+          "sequence_id": "Q0"
+        },
+        {
+          "actual_distance_improvement": 6.120404751101816e-05,
+          "adaptive_distance": {
+            "actual_distance": 0.05134040058645137,
+            "combined_distance": 0.0415146825139001,
+            "expected_distance": 0.020544955066986063,
+            "memory_distance": 0.0545615524923148,
+            "surprise_distance": 0.039611821909848195
+          },
+          "adaptive_metrics": {
+            "actual_mass": 0.7661629787408928,
+            "config_delta": 0.05018530665664574,
+            "final_attention_gain": 0.4519908392057356,
+            "final_learning_rate_gain": 0.20348396861003729,
+            "final_memory_mass": 0.015326234778936862,
+            "final_topology_deposit_gain": 0.33270509848732366,
+            "initial_attention_gain": 0.45,
+            "initial_learning_rate_gain": 0.2,
+            "initial_topology_deposit_gain": 0.2,
+            "memory_mass": 0.3167816458375353,
+            "surprise_total": 0.7272963511231196,
+            "topology_mass": 40.9027716468668
+          },
+          "distance_improvement": 3.8915464913955033e-05,
+          "fixed_weak_distance": {
+            "actual_distance": 0.051401604633962386,
+            "combined_distance": 0.041553597978814055,
+            "expected_distance": 0.020550827611825875,
+            "memory_distance": 0.054602875941466865,
+            "surprise_distance": 0.0396590837280011
+          },
+          "fixed_weak_metrics": {
+            "actual_mass": 0.7645319390715274,
+            "config_delta": 0.0,
+            "final_attention_gain": 0.45,
+            "final_learning_rate_gain": 0.2,
+            "final_memory_mass": 0.015256336116911724,
+            "final_topology_deposit_gain": 0.2,
+            "initial_attention_gain": 0.45,
+            "initial_learning_rate_gain": 0.2,
+            "initial_topology_deposit_gain": 0.2,
+            "memory_mass": 0.31577703313579153,
+            "surprise_total": 0.7258097391667326,
+            "topology_mass": 33.33135224725088
+          },
+          "memory_distance_improvement": 4.1323449152065594e-05,
+          "reference_metrics": {
+            "actual_mass": 1.698959864603394,
+            "config_delta": 0.0,
+            "final_attention_gain": 1.0,
+            "final_learning_rate_gain": 1.0,
+            "final_memory_mass": 0.04564044515479029,
+            "final_topology_deposit_gain": 1.0,
+            "initial_attention_gain": 1.0,
+            "initial_learning_rate_gain": 1.0,
+            "initial_topology_deposit_gain": 1.0,
+            "memory_mass": 1.4399890069485002,
+            "surprise_total": 1.470767693640526,
+            "topology_mass": 173.70353989446534
+          },
+          "seed": 42,
+          "sequence_id": "Q1"
+        },
+        {
+          "actual_distance_improvement": 0.0,
+          "adaptive_distance": {
+            "actual_distance": 0.03942225596113997,
+            "combined_distance": 0.03151534877717089,
+            "expected_distance": 0.014837352520358584,
+            "memory_distance": 0.03998263896186681,
+            "surprise_distance": 0.031819147665318195
+          },
+          "adaptive_metrics": {
+            "actual_mass": 0.6328732798214026,
+            "config_delta": 0.04130083401836291,
+            "final_attention_gain": 0.45,
+            "final_learning_rate_gain": 0.2,
+            "final_memory_mass": 0.012724160589757283,
+            "final_topology_deposit_gain": 0.3092717357521447,
+            "initial_attention_gain": 0.45,
+            "initial_learning_rate_gain": 0.2,
+            "initial_topology_deposit_gain": 0.2,
+            "memory_mass": 0.2645149301941357,
+            "surprise_total": 0.6070651986230265,
+            "topology_mass": 38.08940872454653
+          },
+          "distance_improvement": 0.0,
+          "fixed_weak_distance": {
+            "actual_distance": 0.03942225596113997,
+            "combined_distance": 0.03151534877717089,
+            "expected_distance": 0.014837352520358584,
+            "memory_distance": 0.03998263896186681,
+            "surprise_distance": 0.031819147665318195
+          },
+          "fixed_weak_metrics": {
+            "actual_mass": 0.6328732798214026,
+            "config_delta": 0.0,
+            "final_attention_gain": 0.45,
+            "final_learning_rate_gain": 0.2,
+            "final_memory_mass": 0.012724160589757283,
+            "final_topology_deposit_gain": 0.2,
+            "initial_attention_gain": 0.45,
+            "initial_learning_rate_gain": 0.2,
+            "initial_topology_deposit_gain": 0.2,
+            "memory_mass": 0.2645149301941357,
+            "surprise_total": 0.6070651986230265,
+            "topology_mass": 32.446134735103925
+          },
+          "memory_distance_improvement": 0.0,
+          "reference_metrics": {
+            "actual_mass": 1.4063850662697834,
+            "config_delta": 0.0,
+            "final_attention_gain": 1.0,
+            "final_learning_rate_gain": 1.0,
+            "final_memory_mass": 0.04788898317936166,
+            "final_topology_deposit_gain": 1.0,
+            "initial_attention_gain": 1.0,
+            "initial_learning_rate_gain": 1.0,
+            "initial_topology_deposit_gain": 1.0,
+            "memory_mass": 1.1681594262595518,
+            "surprise_total": 1.2656725194466596,
+            "topology_mass": 168.503228071193
+          },
+          "seed": 43,
+          "sequence_id": "Q2"
+        },
+        {
+          "actual_distance_improvement": 0.001864881126790341,
+          "adaptive_distance": {
+            "actual_distance": 0.07754924498832154,
+            "combined_distance": 0.0602648968164736,
+            "expected_distance": 0.022839244471290526,
+            "memory_distance": 0.07795901858042976,
+            "surprise_distance": 0.06271207922585256
+          },
+          "adaptive_metrics": {
+            "actual_mass": 0.8816222588153316,
+            "config_delta": 0.07572388226966467,
+            "final_attention_gain": 0.48427294442205976,
+            "final_learning_rate_gain": 0.2599776527386046,
+            "final_memory_mass": 0.019877793601367516,
+            "final_topology_deposit_gain": 0.38551371041478405,
+            "initial_attention_gain": 0.45,
+            "initial_learning_rate_gain": 0.2,
+            "initial_topology_deposit_gain": 0.2,
+            "memory_mass": 0.35367088251259055,
+            "surprise_total": 0.8592670024162801,
+            "topology_mass": 44.24441707370768
+          },
+          "distance_improvement": 0.0012656058860973166,
+          "fixed_weak_distance": {
+            "actual_distance": 0.07941412611511188,
+            "combined_distance": 0.06153050270257092,
+            "expected_distance": 0.023066215317529414,
+            "memory_distance": 0.07944980876169265,
+            "surprise_distance": 0.06419186061594971
+          },
+          "fixed_weak_metrics": {
+            "actual_mass": 0.8533387195209986,
+            "config_delta": 0.0,
+            "final_attention_gain": 0.45,
+            "final_learning_rate_gain": 0.2,
+            "final_memory_mass": 0.018786161247031512,
+            "final_topology_deposit_gain": 0.2,
+            "initial_attention_gain": 0.45,
+            "initial_learning_rate_gain": 0.2,
+            "initial_topology_deposit_gain": 0.2,
+            "memory_mass": 0.3262573806918846,
+            "surprise_total": 0.8319003154662539,
+            "topology_mass": 33.96120550486842
+          },
+          "memory_distance_improvement": 0.0014907901812628854,
+          "reference_metrics": {
+            "actual_mass": 1.896308265602219,
+            "config_delta": 0.0,
+            "final_attention_gain": 1.0,
+            "final_learning_rate_gain": 1.0,
+            "final_memory_mass": 0.03843688354169406,
+            "final_topology_deposit_gain": 1.0,
+            "initial_attention_gain": 1.0,
+            "initial_learning_rate_gain": 1.0,
+            "initial_topology_deposit_gain": 1.0,
+            "memory_mass": 1.686977191140003,
+            "surprise_total": 1.7560960420664693,
+            "topology_mass": 177.48254696078888
+          },
+          "seed": 44,
+          "sequence_id": "Q3"
+        }
+      ],
+      "roles": {
+        "functional_recovery": {
+          "mean_adaptive_memory_mass": 0.3765969278276318,
+          "mean_adaptive_topology": 44.90307391342769,
+          "mean_fixed_weak_memory_mass": 0.3603668907072146,
+          "mean_fixed_weak_topology": 35.083619617773515
+        },
+        "population_recovery": {
+          "improved_sequence_count": 3,
+          "mean_distance_improvement": 0.0006162192484496423,
+          "mean_memory_distance_improvement": 0.000739579456607348,
+          "memory_improved_sequence_count": 3,
+          "sequence_count": 4
+        },
+        "pressure_response": {
+          "mean_adaptive_config_delta": 0.06398363442232027
+        }
+      }
+    }
+  ],
+  "frame_count": 25,
+  "input_count": 4,
+  "observation_count": 25,
+  "ok": true,
+  "source_name": "cavenet:adaptive"
+}

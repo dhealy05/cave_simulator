@@ -1,0 +1,394 @@
+{
+  "adapter": "CaveProducer",
+  "duration": 2.0,
+  "errors": [],
+  "extra": [
+    {
+      "errors": [],
+      "id": "role_recovery_matrix",
+      "matrix": {
+        "expectation": {
+          "margins": {
+            "cavenet_surprise_drop_gain": 0.002665000173574919,
+            "minimal_value_surprise_drop": 0.27092354953470404
+          },
+          "status": "pass"
+        },
+        "regulation": {
+          "margins": {
+            "cave_audio_delta": 0.28716842322403985,
+            "cavenet_audio_delta": 0.28716842322403985
+          },
+          "status": "pass"
+        },
+        "selection": {
+          "margins": {
+            "cavenet_selection_margin": 0.19999999999999984,
+            "minimal_selection_margin": 0.15543912045392455
+          },
+          "status": "pass"
+        },
+        "topology": {
+          "margins": {
+            "cavenet_topology_mass_gain": 70.1917920595502,
+            "minimal_value_memory_strength": 2.2963755443363323
+          },
+          "status": "pass"
+        },
+        "value_retention": {
+          "margins": {
+            "value_memory_strength": 5.365539603288885,
+            "valued_focus_margin": 0.8413922172778727
+          },
+          "status": "pass"
+        }
+      },
+      "ok": true,
+      "results": {
+        "expectation": {
+          "errors": [],
+          "id": "role_recovery",
+          "metrics": {
+            "cavenet-adaptive-learning": {
+              "adapter": "CaveNet",
+              "final_expectation_gain": 1.0,
+              "final_learning_rate_gain": 0.8129438132014859,
+              "first_repeat_surprise": 0.16329931618554522,
+              "initial_expectation_gain": 1.0,
+              "initial_learning_rate_gain": 0.2,
+              "late_repeat_surprise": 0.12389196987022259,
+              "memory_mass": 0.025393914036176114,
+              "observation_count": 5,
+              "surprise_drop": 0.039407346315322625,
+              "violation_margin": 0.05012174226664444,
+              "violation_surprise": 0.17401371213686703
+            },
+            "cavenet-no-expectation": {
+              "adapter": "CaveNet",
+              "final_expectation_gain": 0.0,
+              "final_learning_rate_gain": 1.0,
+              "first_repeat_surprise": 0.20412414523193154,
+              "initial_expectation_gain": 0.0,
+              "initial_learning_rate_gain": 1.0,
+              "late_repeat_surprise": 0.20412414523193154,
+              "memory_mass": 0.0,
+              "observation_count": 5,
+              "surprise_drop": 0.0,
+              "violation_margin": 0.0,
+              "violation_surprise": 0.20412414523193154
+            },
+            "cavenet-reference": {
+              "adapter": "CaveNet",
+              "final_expectation_gain": 1.0,
+              "final_learning_rate_gain": 1.0,
+              "first_repeat_surprise": 0.20412414523193154,
+              "initial_expectation_gain": 1.0,
+              "initial_learning_rate_gain": 1.0,
+              "late_repeat_surprise": 0.10206207261596577,
+              "memory_mass": 0.0,
+              "observation_count": 5,
+              "surprise_drop": 0.10206207261596577,
+              "violation_margin": 0.12615565967785347,
+              "violation_surprise": 0.22821773229381925
+            },
+            "cavenet-weak-learning": {
+              "adapter": "CaveNet",
+              "final_expectation_gain": 1.0,
+              "final_learning_rate_gain": 0.2,
+              "first_repeat_surprise": 0.20412414523193154,
+              "initial_expectation_gain": 1.0,
+              "initial_learning_rate_gain": 0.2,
+              "late_repeat_surprise": 0.16738179909018383,
+              "memory_mass": 0.0716309355888455,
+              "observation_count": 5,
+              "surprise_drop": 0.036742346141747706,
+              "violation_margin": 0.04273086909841764,
+              "violation_surprise": 0.21011266818860147
+            },
+            "minimal-frequency-memory": {
+              "adapter": "MinimalSubject",
+              "first_repeat_surprise": 0.4082482904638631,
+              "late_repeat_surprise": 0.13732474092915903,
+              "memory_mass": 0.4783119337950667,
+              "memory_strength": 1.96,
+              "observation_count": 4,
+              "surprise_drop": 0.27092354953470404,
+              "value_separation": 1.0,
+              "violation_margin": 0.49152259561401423,
+              "violation_surprise": 0.6288473365431733
+            },
+            "minimal-no-memory": {
+              "adapter": "MinimalSubject",
+              "first_repeat_surprise": 0.4082482904638631,
+              "late_repeat_surprise": 0.4082482904638631,
+              "memory_mass": 0.0,
+              "memory_strength": 0.0,
+              "observation_count": 4,
+              "surprise_drop": 0.0,
+              "value_separation": 0.0,
+              "violation_margin": 0.0,
+              "violation_surprise": 0.4082482904638631
+            },
+            "minimal-value-memory": {
+              "adapter": "MinimalSubject",
+              "first_repeat_surprise": 0.4082482904638631,
+              "late_repeat_surprise": 0.13732474092915903,
+              "memory_mass": 0.4881644112667818,
+              "memory_strength": 2.2963755443363323,
+              "observation_count": 4,
+              "surprise_drop": 0.27092354953470404,
+              "value_separation": 1.0,
+              "violation_margin": 0.4990487021796105,
+              "violation_surprise": 0.6363734431087695
+            }
+          },
+          "ok": true,
+          "roles": {
+            "cavenet_learning_recovery": {
+              "adaptive_surprise_drop": 0.039407346315322625,
+              "adaptive_violation_margin": 0.05012174226664444,
+              "final_learning_gain": 0.8129438132014859,
+              "initial_learning_gain": 0.2,
+              "surprise_drop_gain": 0.002665000173574919,
+              "violation_margin_gain": 0.0073908731682268,
+              "weak_surprise_drop": 0.036742346141747706,
+              "weak_violation_margin": 0.04273086909841764
+            },
+            "cavenet_no_expectation": {
+              "expectation_gain": 0.0,
+              "surprise_drop": 0.0,
+              "violation_margin": 0.0
+            },
+            "cavenet_reference": {
+              "surprise_drop": 0.10206207261596577,
+              "violation_margin": 0.12615565967785347
+            },
+            "minimal_memory_recovery": {
+              "frequency_surprise_drop": 0.27092354953470404,
+              "frequency_violation_margin": 0.49152259561401423,
+              "no_memory_surprise_drop": 0.0,
+              "no_memory_violation_margin": 0.0,
+              "value_memory_strength": 2.2963755443363323,
+              "value_surprise_drop": 0.27092354953470404,
+              "value_violation_margin": 0.4990487021796105
+            }
+          }
+        },
+        "regulation": {
+          "errors": [],
+          "id": "regulation_recovery",
+          "metrics": {
+            "cave-adaptive": {
+              "adapter": "CaveProducer",
+              "audio_delta": 0.28716842322403985,
+              "current_audio_attention": 0.2,
+              "next_audio_attention": 0.48716842322403986,
+              "pain": 0.2
+            },
+            "cave-fixed": {
+              "adapter": "CaveProducer",
+              "audio_delta": 0.0,
+              "current_audio_attention": 0.2,
+              "next_audio_attention": 0.2,
+              "pain": 0.2
+            },
+            "cavenet-adaptive": {
+              "adapter": "CaveProducer",
+              "audio_delta": 0.28716842322403985,
+              "current_audio_attention": 0.2,
+              "next_audio_attention": 0.48716842322403986,
+              "pain": 0.2
+            },
+            "cavenet-fixed": {
+              "adapter": "CaveProducer",
+              "audio_delta": 0.0,
+              "current_audio_attention": 0.2,
+              "next_audio_attention": 0.2,
+              "pain": 0.2
+            }
+          },
+          "ok": true,
+          "roles": {
+            "future_attention_regulation": {
+              "cave_adaptive_audio_delta": 0.28716842322403985,
+              "cave_adaptive_next_audio": 0.48716842322403986,
+              "cave_fixed_audio_delta": 0.0,
+              "cavenet_adaptive_audio_delta": 0.28716842322403985,
+              "cavenet_adaptive_next_audio": 0.48716842322403986,
+              "cavenet_fixed_audio_delta": 0.0
+            }
+          }
+        },
+        "selection": {
+          "errors": [],
+          "id": "selection_recovery",
+          "metrics": {
+            "cavenet-no-bottleneck": {
+              "active_feature_count": 3,
+              "actual_mass": 1.0499999999999998,
+              "adapter": "CaveNet",
+              "compression_cost": 0.0,
+              "dropped_mass": 0.0,
+              "source_mass": 1.0499999999999998
+            },
+            "cavenet-selection": {
+              "active_feature_count": 2,
+              "actual_mass": 0.85,
+              "adapter": "CaveNet",
+              "compression_cost": 0.09696969696969705,
+              "dropped_mass": 0.19999999999999984,
+              "source_mass": 1.0499999999999998
+            },
+            "minimal-bottleneck": {
+              "adapter": "MinimalSubject",
+              "diagnostic_attention_gain": -0.010414718928495326,
+              "early_diagnostic_attention": 0.5659702804728078,
+              "late_diagnostic_attention": 0.5555555615443125,
+              "late_memory_strength": 9.649152960840237
+            },
+            "minimal-no-bottleneck": {
+              "adapter": "MinimalSubject",
+              "diagnostic_attention_gain": -0.03222597658536169,
+              "early_diagnostic_attention": 0.43234241767574966,
+              "late_diagnostic_attention": 0.40011644109038796,
+              "late_memory_strength": 9.649152960840237
+            },
+            "minimal-no-memory": {
+              "adapter": "MinimalSubject",
+              "diagnostic_attention_gain": 0.0,
+              "early_diagnostic_attention": 0.5555555555555556,
+              "late_diagnostic_attention": 0.5555555555555556,
+              "late_memory_strength": 0.0
+            }
+          },
+          "ok": true,
+          "roles": {
+            "cavenet_bottleneck": {
+              "no_bottleneck_active_feature_count": 3,
+              "no_bottleneck_dropped_mass": 0.0,
+              "selected_active_feature_count": 2,
+              "selected_dropped_mass": 0.19999999999999984,
+              "selection_margin": 0.19999999999999984
+            },
+            "minimal_diagnostic_selection": {
+              "bottleneck_diagnostic_attention_gain": -0.010414718928495326,
+              "bottleneck_late_diagnostic_attention": 0.5555555615443125,
+              "bottleneck_memory_strength": 9.649152960840237,
+              "no_bottleneck_late_diagnostic_attention": 0.40011644109038796,
+              "no_memory_diagnostic_attention_gain": 0.0,
+              "no_memory_late_diagnostic_attention": 0.5555555555555556,
+              "no_memory_strength": 0.0,
+              "selection_margin": 0.15543912045392455
+            }
+          }
+        },
+        "topology": {
+          "errors": [],
+          "id": "topology_recovery",
+          "metrics": {
+            "cavenet-adaptive-topology": {
+              "adapter": "CaveNet",
+              "final_topology_deposit_gain": 1.5270561907472964,
+              "initial_topology_deposit_gain": 0.1,
+              "topology_mass": 85.24884547322002
+            },
+            "cavenet-no-topology": {
+              "adapter": "CaveNet",
+              "final_topology_deposit_gain": 0.0,
+              "initial_topology_deposit_gain": 0.0,
+              "topology_mass": 0.0
+            },
+            "cavenet-reference": {
+              "adapter": "CaveNet",
+              "final_topology_deposit_gain": 1.0,
+              "initial_topology_deposit_gain": 1.0,
+              "topology_mass": 150.57053413669826
+            },
+            "cavenet-weak-topology": {
+              "adapter": "CaveNet",
+              "final_topology_deposit_gain": 0.1,
+              "initial_topology_deposit_gain": 0.1,
+              "topology_mass": 15.057053413669825
+            },
+            "minimal-no-memory": {
+              "adapter": "MinimalSubject",
+              "memory_strength": 0.0,
+              "trace_count": 0,
+              "value_separation": 0.0
+            },
+            "minimal-value-memory": {
+              "adapter": "MinimalSubject",
+              "memory_strength": 2.2963755443363323,
+              "trace_count": 2,
+              "value_separation": 1.0
+            }
+          },
+          "ok": true,
+          "roles": {
+            "cavenet_topology_recovery": {
+              "adaptive_topology_mass": 85.24884547322002,
+              "final_topology_gain": 1.5270561907472964,
+              "no_topology_mass": 0.0,
+              "reference_topology_mass": 150.57053413669826,
+              "topology_mass_gain": 70.1917920595502,
+              "weak_topology_mass": 15.057053413669825
+            },
+            "minimal_geometry_proxy": {
+              "no_memory_strength": 0.0,
+              "value_memory_strength": 2.2963755443363323,
+              "value_separation": 1.0
+            }
+          }
+        },
+        "value_retention": {
+          "errors": [],
+          "id": "value_retention_recovery",
+          "metrics": {
+            "minimal-frequency-memory": {
+              "adapter": "MinimalSubject",
+              "memory_strength": 23.010442674263174,
+              "trace_count": 62,
+              "value_separation": 0.022586093184184104,
+              "valued_memory_focus": 0.15860778272212733
+            },
+            "minimal-no-preference": {
+              "adapter": "MinimalSubject",
+              "memory_strength": 0.0,
+              "trace_count": 0,
+              "value_separation": 0.0,
+              "valued_memory_focus": 0.0
+            },
+            "minimal-value-memory": {
+              "adapter": "MinimalSubject",
+              "memory_strength": 5.365539603288885,
+              "trace_count": 15,
+              "value_separation": 0.09686183326867388,
+              "valued_memory_focus": 1.0
+            }
+          },
+          "ok": true,
+          "roles": {
+            "value_shaped_retention": {
+              "focus_margin": 0.8413922172778727,
+              "frequency_value_separation": 0.022586093184184104,
+              "frequency_valued_focus": 0.15860778272212733,
+              "no_preference_memory_strength": 0.0,
+              "value_memory_strength": 5.365539603288885,
+              "value_value_separation": 0.09686183326867388,
+              "value_valued_focus": 1.0
+            }
+          }
+        }
+      },
+      "summary": {
+        "passed_count": 5,
+        "role_count": 5
+      }
+    }
+  ],
+  "frame_count": 3,
+  "input_count": 3,
+  "observation_count": 3,
+  "ok": true,
+  "source_name": "regulation:cave-adaptive"
+}

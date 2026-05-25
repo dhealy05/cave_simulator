@@ -1,0 +1,14 @@
+{
+  "name": "representational_compression",
+  "vocabulary": ["dominant", "secondary", "detail"],
+  "objects": [
+    {
+      "id": "rich_signal",
+      "kind": "rich signal",
+      "start": 0.0,
+      "end": 1.0,
+      "features": {"dominant": 1.0, "secondary": 0.5, "detail": 0.25},
+      "salience": 1.0
+    }
+  ]
+}

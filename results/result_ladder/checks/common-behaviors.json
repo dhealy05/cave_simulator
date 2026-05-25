@@ -1,0 +1,169 @@
+{
+  "adapter": "CaveProducer",
+  "duration": 4.0,
+  "errors": [],
+  "extra": [
+    {
+      "equivalence": {
+        "max_actual_distance": 0.0,
+        "max_memory_distance": 0.0
+      },
+      "errors": [],
+      "id": "common_behaviors",
+      "metrics": {
+        "expectation_repetition": {
+          "cave": {
+            "adapter": "CaveProducer",
+            "first_repeat_surprise": 0.20412414523193154,
+            "late_repeat_surprise": 0.10206207261596577,
+            "observation_count": 5,
+            "surprise_drop": 0.10206207261596577,
+            "violation_margin": 0.12615565967785347,
+            "violation_surprise": 0.22821773229381925
+          },
+          "cavenet": {
+            "adapter": "CaveNet",
+            "first_repeat_surprise": 0.20412414523193154,
+            "late_repeat_surprise": 0.10206207261596577,
+            "observation_count": 5,
+            "surprise_drop": 0.10206207261596577,
+            "violation_margin": 0.12615565967785347,
+            "violation_surprise": 0.22821773229381925
+          },
+          "minimal_subject": {
+            "adapter": "MinimalSubject",
+            "first_repeat_surprise": 0.4082482904638631,
+            "late_repeat_surprise": 0.13732474092915903,
+            "observation_count": 4,
+            "surprise_drop": 0.27092354953470404,
+            "violation_margin": 0.4990487021796105,
+            "violation_surprise": 0.6363734431087695
+          }
+        },
+        "value_separation": {
+          "cave": {
+            "adapter": "CaveProducer",
+            "negative_signal": 0.5,
+            "negative_utility": -0.7282177322938193,
+            "positive_signal": 0.5,
+            "positive_utility": 0.29587585476806844,
+            "utility_contrast": 1.0240935870618877
+          },
+          "cavenet": {
+            "adapter": "CaveNet",
+            "negative_signal": 0.5,
+            "negative_utility": -0.7282177322938193,
+            "positive_signal": 0.5,
+            "positive_utility": 0.29587585476806844,
+            "utility_contrast": 1.0240935870618877
+          },
+          "minimal_subject": {
+            "adapter": "MinimalSubject",
+            "negative_signal": 1.0,
+            "negative_utility": -1.4082482904638631,
+            "positive_signal": 1.0,
+            "positive_utility": 0.5917517095361369,
+            "utility_contrast": 2.0
+          }
+        },
+        "workspace_selection": {
+          "cave": {
+            "active_feature_count": 2,
+            "actual_mass": 0.85,
+            "adapter": "CaveProducer",
+            "compression_cost": 0.09696969696969705,
+            "dropped_mass": 0.19999999999999984,
+            "source_mass": 1.0499999999999998
+          },
+          "cavenet": {
+            "active_feature_count": 2,
+            "actual_mass": 0.85,
+            "adapter": "CaveNet",
+            "compression_cost": 0.09696969696969705,
+            "dropped_mass": 0.19999999999999984,
+            "source_mass": 1.0499999999999998
+          },
+          "minimal_subject": {
+            "active_feature_count": 2,
+            "actual_mass": 1.7,
+            "adapter": "MinimalSubject",
+            "compression_cost": 0.19047619047619035,
+            "dropped_mass": 0.3999999999999997,
+            "source_mass": 2.0999999999999996
+          }
+        }
+      },
+      "ok": true,
+      "roles": {
+        "expectation_repetition": {
+          "cave": {
+            "first_repeat_surprise": 0.20412414523193154,
+            "late_repeat_surprise": 0.10206207261596577,
+            "surprise_drop": 0.10206207261596577,
+            "violation_margin": 0.12615565967785347,
+            "violation_surprise": 0.22821773229381925
+          },
+          "cavenet": {
+            "first_repeat_surprise": 0.20412414523193154,
+            "late_repeat_surprise": 0.10206207261596577,
+            "surprise_drop": 0.10206207261596577,
+            "violation_margin": 0.12615565967785347,
+            "violation_surprise": 0.22821773229381925
+          },
+          "minimal_subject": {
+            "first_repeat_surprise": 0.4082482904638631,
+            "late_repeat_surprise": 0.13732474092915903,
+            "surprise_drop": 0.27092354953470404,
+            "violation_margin": 0.4990487021796105,
+            "violation_surprise": 0.6363734431087695
+          }
+        },
+        "value_separation": {
+          "cave": {
+            "negative_signal": 0.5,
+            "negative_utility": -0.7282177322938193,
+            "positive_signal": 0.5,
+            "positive_utility": 0.29587585476806844,
+            "utility_contrast": 1.0240935870618877
+          },
+          "cavenet": {
+            "negative_signal": 0.5,
+            "negative_utility": -0.7282177322938193,
+            "positive_signal": 0.5,
+            "positive_utility": 0.29587585476806844,
+            "utility_contrast": 1.0240935870618877
+          },
+          "minimal_subject": {
+            "negative_signal": 1.0,
+            "negative_utility": -1.4082482904638631,
+            "positive_signal": 1.0,
+            "positive_utility": 0.5917517095361369,
+            "utility_contrast": 2.0
+          }
+        },
+        "workspace_selection": {
+          "cave": {
+            "active_feature_count": 2,
+            "compression_cost": 0.09696969696969705,
+            "dropped_mass": 0.19999999999999984
+          },
+          "cavenet": {
+            "active_feature_count": 2,
+            "compression_cost": 0.09696969696969705,
+            "dropped_mass": 0.19999999999999984
+          },
+          "minimal_subject": {
+            "active_feature_count": 2,
+            "compression_cost": 0.19047619047619035,
+            "dropped_mass": 0.3999999999999997
+          }
+        }
+      }
+    }
+  ],
+  "frame_count": 5,
+  "input_count": 4,
+  "observation_count": 5,
+  "ok": true,
+  "source_name": "cave:expectation_repetition"
+}

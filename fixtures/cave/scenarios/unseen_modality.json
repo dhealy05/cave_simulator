@@ -1,0 +1,36 @@
+{
+  "name": "unseen_modality",
+  "vocabulary": ["visual_signal", "audio_signal"],
+  "metadata": {
+    "scenario": "unseen_modality",
+    "claim": "An external object can exist in the sequence and timeline without entering subject state when the subject has no matching sensor."
+  },
+  "objects": [
+    {
+      "id": "visible_flash",
+      "start": 0.0,
+      "end": 0.5,
+      "order_index": 0,
+      "kind": "visible flash",
+      "modality": "visual",
+      "salience": 1.0,
+      "features": {
+        "visual_signal": 1.0,
+        "audio_signal": 0.0
+      }
+    },
+    {
+      "id": "unheard_tone",
+      "start": 0.6,
+      "end": 1.1,
+      "order_index": 1,
+      "kind": "unheard tone",
+      "modality": "audio",
+      "salience": 1.0,
+      "features": {
+        "visual_signal": 0.0,
+        "audio_signal": 1.0
+      }
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "adapter": "CaveProducer",
+  "duration": 2.0,
+  "errors": [],
+  "extra": [
+    {
+      "errors": [],
+      "id": "expectation_violation",
+      "metrics": {
+        "learning_rate": {
+          "repeat_1": 0.4897747564417433,
+          "repeat_2": 0.47065935084365024,
+          "repeat_3": 0.4699044585177127,
+          "violation": 0.49446892642049495
+        },
+        "surprise": {
+          "repeat_1": 0.35355339059327373,
+          "repeat_2": 0.1836386741657805,
+          "repeat_3": 0.17692852015744578,
+          "violation": 0.3952793459599557
+        }
+      },
+      "ok": true
+    }
+  ],
+  "frame_count": 21,
+  "input_count": 4,
+  "observation_count": 21,
+  "ok": true,
+  "source_name": "cave"
+}

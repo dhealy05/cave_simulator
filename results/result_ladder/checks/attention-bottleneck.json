@@ -1,0 +1,35 @@
+{
+  "adapter": "CaveProducer",
+  "duration": 1.0,
+  "errors": [],
+  "extra": [
+    {
+      "errors": [],
+      "id": "attention_bottleneck",
+      "metrics": {
+        "active_inputs": [
+          "visual_marker",
+          "audio_marker"
+        ],
+        "actual": [
+          0.25,
+          0.75
+        ],
+        "attention_weights": {
+          "audio_marker": 0.75,
+          "visual_marker": 0.25
+        },
+        "sensor_channels": [
+          "visual",
+          "audio"
+        ]
+      },
+      "ok": true
+    }
+  ],
+  "frame_count": 11,
+  "input_count": 2,
+  "observation_count": 11,
+  "ok": true,
+  "source_name": "cave"
+}

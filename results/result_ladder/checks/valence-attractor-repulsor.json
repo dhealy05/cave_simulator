@@ -1,0 +1,40 @@
+{
+  "adapter": "CaveProducer",
+  "duration": 2.2,
+  "errors": [],
+  "extra": [
+    {
+      "errors": [],
+      "id": "valence_attractor_repulsor",
+      "metrics": {
+        "neutral": {
+          "net": 0.0,
+          "pain": 0.0,
+          "pleasure": 0.0,
+          "surprise": 0.17677669529663687,
+          "utility": -0.044194173824159216
+        },
+        "painful": {
+          "net": -0.45,
+          "pain": 0.45,
+          "pleasure": 0.0,
+          "surprise": 0.36247629611630483,
+          "utility": -0.5406190740290762
+        },
+        "pleasant": {
+          "net": 0.45,
+          "pain": 0.0,
+          "pleasure": 0.45,
+          "surprise": 0.32290116778305883,
+          "utility": 0.3692747080542353
+        }
+      },
+      "ok": true
+    }
+  ],
+  "frame_count": 23,
+  "input_count": 3,
+  "observation_count": 23,
+  "ok": true,
+  "source_name": "cave"
+}

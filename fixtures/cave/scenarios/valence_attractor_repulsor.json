@@ -1,0 +1,33 @@
+{
+  "name": "valence_attractor_repulsor",
+  "vocabulary": ["comfort", "threat"],
+  "objects": [
+    {
+      "id": "neutral_event",
+      "kind": "neutral",
+      "start": 0.0,
+      "end": 0.6,
+      "features": {"comfort": 0.5, "threat": 0.0},
+      "salience": 1.0,
+      "metadata": {"affect": {"pain": 0.0, "pleasure": 0.0}}
+    },
+    {
+      "id": "pleasant_event",
+      "kind": "pleasant",
+      "start": 0.8,
+      "end": 1.4,
+      "features": {"comfort": 1.0, "threat": 0.0},
+      "salience": 1.0,
+      "metadata": {"affect": {"pain": 0.0, "pleasure": 0.9}}
+    },
+    {
+      "id": "painful_event",
+      "kind": "painful",
+      "start": 1.6,
+      "end": 2.2,
+      "features": {"comfort": 0.0, "threat": 1.0},
+      "salience": 1.0,
+      "metadata": {"affect": {"pain": 0.9, "pleasure": 0.0}}
+    }
+  ]
+}

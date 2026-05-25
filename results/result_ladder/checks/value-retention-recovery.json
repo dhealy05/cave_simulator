@@ -1,0 +1,51 @@
+{
+  "adapter": "MinimalSubject",
+  "duration": 64.0,
+  "errors": [],
+  "extra": [
+    {
+      "errors": [],
+      "id": "value_retention_recovery",
+      "metrics": {
+        "minimal-frequency-memory": {
+          "adapter": "MinimalSubject",
+          "memory_strength": 23.010442674263174,
+          "trace_count": 62,
+          "value_separation": 0.022586093184184104,
+          "valued_memory_focus": 0.15860778272212733
+        },
+        "minimal-no-preference": {
+          "adapter": "MinimalSubject",
+          "memory_strength": 0.0,
+          "trace_count": 0,
+          "value_separation": 0.0,
+          "valued_memory_focus": 0.0
+        },
+        "minimal-value-memory": {
+          "adapter": "MinimalSubject",
+          "memory_strength": 5.365539603288885,
+          "trace_count": 15,
+          "value_separation": 0.09686183326867388,
+          "valued_memory_focus": 1.0
+        }
+      },
+      "ok": true,
+      "roles": {
+        "value_shaped_retention": {
+          "focus_margin": 0.8413922172778727,
+          "frequency_value_separation": 0.022586093184184104,
+          "frequency_valued_focus": 0.15860778272212733,
+          "no_preference_memory_strength": 0.0,
+          "value_memory_strength": 5.365539603288885,
+          "value_value_separation": 0.09686183326867388,
+          "value_valued_focus": 1.0
+        }
+      }
+    }
+  ],
+  "frame_count": 64,
+  "input_count": 64,
+  "observation_count": 64,
+  "ok": true,
+  "source_name": "value-retention:minimal-value-memory"
+}

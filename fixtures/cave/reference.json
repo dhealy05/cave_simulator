@@ -1,0 +1,96 @@
+{
+  "name": "cave_reference",
+  "vocabulary": [
+    "sides",
+    "size",
+    "hue",
+    "saturation",
+    "lightness",
+    "angularity",
+    "roundness",
+    "symmetry",
+    "novelty"
+  ],
+  "metadata": {
+    "role": "reference_cave_run",
+    "description": "Authored fixture for the native Cave producer reference report."
+  },
+  "objects": [
+    {
+      "id": "evt_triangle",
+      "start": 0.0,
+      "end": 1.2,
+      "order_index": 0,
+      "kind": "experience",
+      "salience": 0.9,
+      "features": {
+        "sides": 0.0,
+        "size": 0.62,
+        "hue": 0.13,
+        "saturation": 0.52,
+        "lightness": 0.79,
+        "angularity": 1.0,
+        "roundness": 0.0,
+        "symmetry": 0.85,
+        "novelty": 0.55
+      }
+    },
+    {
+      "id": "evt_circle",
+      "start": 1.4,
+      "end": 2.7,
+      "order_index": 1,
+      "kind": "experience",
+      "salience": 0.8,
+      "features": {
+        "sides": 1.0,
+        "size": 0.7,
+        "hue": 0.58,
+        "saturation": 0.86,
+        "lightness": 0.78,
+        "angularity": 0.0,
+        "roundness": 1.0,
+        "symmetry": 1.0,
+        "novelty": 0.42
+      }
+    },
+    {
+      "id": "evt_square",
+      "start": 2.9,
+      "end": 4.1,
+      "order_index": 2,
+      "kind": "experience",
+      "salience": 0.85,
+      "features": {
+        "sides": 0.08,
+        "size": 0.82,
+        "hue": 0.03,
+        "saturation": 0.65,
+        "lightness": 0.68,
+        "angularity": 0.8,
+        "roundness": 0.05,
+        "symmetry": 0.95,
+        "novelty": 0.35
+      }
+    },
+    {
+      "id": "evt_gap",
+      "start": 4.4,
+      "end": 5.1,
+      "order_index": 3,
+      "kind": "experience",
+      "salience": 0.35,
+      "features": {
+        "sides": 0.0,
+        "size": 0.22,
+        "hue": 0.0,
+        "saturation": 0.0,
+        "lightness": 0.82,
+        "angularity": 0.05,
+        "roundness": 0.05,
+        "symmetry": 0.4,
+        "novelty": 0.1
+      }
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "adapter": "CaveProducer",
+  "duration": 2.0,
+  "errors": [],
+  "extra": [
+    {
+      "errors": [],
+      "id": "topology_atlas",
+      "metrics": {
+        "max_actual_expected_l2": 13.685773708923398,
+        "max_experienced_mass": 348.424577897398,
+        "row_count": 11
+      },
+      "ok": true
+    }
+  ],
+  "frame_count": 11,
+  "input_count": 4,
+  "observation_count": 11,
+  "ok": true,
+  "source_name": "cave"
+}

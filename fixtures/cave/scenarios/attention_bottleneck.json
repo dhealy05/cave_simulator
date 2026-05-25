@@ -1,0 +1,36 @@
+{
+  "name": "attention_bottleneck",
+  "vocabulary": ["visual_signal", "audio_signal"],
+  "metadata": {
+    "scenario": "attention_bottleneck",
+    "claim": "Simultaneous sensed objects enter state according to attention-channel weights rather than mere external presence."
+  },
+  "objects": [
+    {
+      "id": "visual_marker",
+      "start": 0.0,
+      "end": 1.0,
+      "order_index": 0,
+      "kind": "visual marker",
+      "modality": "visual",
+      "salience": 1.0,
+      "features": {
+        "visual_signal": 1.0,
+        "audio_signal": 0.0
+      }
+    },
+    {
+      "id": "audio_marker",
+      "start": 0.0,
+      "end": 1.0,
+      "order_index": 1,
+      "kind": "audio marker",
+      "modality": "audio",
+      "salience": 1.0,
+      "features": {
+        "visual_signal": 0.0,
+        "audio_signal": 1.0
+      }
+    }
+  ]
+}

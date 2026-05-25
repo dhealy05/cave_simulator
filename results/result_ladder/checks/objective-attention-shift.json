@@ -1,0 +1,36 @@
+{
+  "adapter": "CaveProducer",
+  "duration": 1.2,
+  "errors": [],
+  "extra": [
+    {
+      "errors": [],
+      "id": "objective_attention_shift",
+      "metrics": {
+        "first_attention_channels": {
+          "audio": 0.2,
+          "visual": 0.8
+        },
+        "first_channel_pain": {
+          "audio": 0.2,
+          "visual": 0.0
+        },
+        "first_next_attention_channels": {
+          "audio": 0.7436670856916245,
+          "visual": 0.25633291430837557
+        },
+        "first_pain": 0.2,
+        "second_attention_channels": {
+          "audio": 0.7436670856916245,
+          "visual": 0.25633291430837557
+        }
+      },
+      "ok": true
+    }
+  ],
+  "frame_count": 13,
+  "input_count": 2,
+  "observation_count": 13,
+  "ok": true,
+  "source_name": "cave"
+}

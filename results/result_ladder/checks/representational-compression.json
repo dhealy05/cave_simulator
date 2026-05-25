@@ -1,0 +1,39 @@
+{
+  "adapter": "CaveProducer",
+  "duration": 1.0,
+  "errors": [],
+  "extra": [
+    {
+      "errors": [],
+      "id": "representational_compression",
+      "metrics": {
+        "active_features": [
+          "dominant"
+        ],
+        "actual": [
+          0.5,
+          0.0,
+          0.0
+        ],
+        "attended_input": [
+          0.5,
+          0.25,
+          0.125
+        ],
+        "compression_cost": 0.23809523809523808,
+        "reconstruction_error": 0.16137430609197573,
+        "workspace_reconstructed": [
+          0.5,
+          0.0,
+          0.0
+        ]
+      },
+      "ok": true
+    }
+  ],
+  "frame_count": 11,
+  "input_count": 1,
+  "observation_count": 11,
+  "ok": true,
+  "source_name": "cave"
+}

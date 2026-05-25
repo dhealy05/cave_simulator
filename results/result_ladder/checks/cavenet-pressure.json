@@ -1,0 +1,110 @@
+{
+  "adapter": "CaveNet",
+  "duration": 5.1,
+  "errors": [],
+  "extra": [
+    {
+      "closeness": {
+        "adaptive": {
+          "actual_distance": 0.08061726818377646,
+          "combined_distance": 0.06531704571522727,
+          "expected_distance": 0.030452903517740312,
+          "memory_distance": 0.0900979523092031,
+          "surprise_distance": 0.0601000588501892
+        },
+        "fixed-weak": {
+          "actual_distance": 0.0833382151775064,
+          "combined_distance": 0.0672344596663418,
+          "expected_distance": 0.030836395778920986,
+          "memory_distance": 0.0925511788327058,
+          "surprise_distance": 0.062212048876234
+        }
+      },
+      "errors": [],
+      "id": "cavenet_pressure",
+      "metrics": {
+        "adaptive": {
+          "actual_mass": 1.344017697975101,
+          "config_delta": 0.10726596294781339,
+          "final_attention_gain": 0.4924036293762587,
+          "final_learning_rate_gain": 0.2742063514084526,
+          "final_memory_mass": 0.023016281883718015,
+          "final_topology_deposit_gain": 0.4679194326116562,
+          "initial_attention_gain": 0.45,
+          "initial_learning_rate_gain": 0.2,
+          "initial_topology_deposit_gain": 0.2,
+          "memory_mass": 0.6332467349615005,
+          "surprise_total": 1.2764231454056856,
+          "topology_mass": 35.8969444611715
+        },
+        "fixed-reference": {
+          "actual_mass": 2.860961780317932,
+          "config_delta": 0.0,
+          "final_attention_gain": 1.0,
+          "final_learning_rate_gain": 1.0,
+          "final_memory_mass": 0.025567003103584715,
+          "final_topology_deposit_gain": 1.0,
+          "initial_attention_gain": 1.0,
+          "initial_learning_rate_gain": 1.0,
+          "initial_topology_deposit_gain": 1.0,
+          "memory_mass": 2.571572803854558,
+          "surprise_total": 2.456715252218983,
+          "topology_mass": 132.58305645710405
+        },
+        "fixed-weak": {
+          "actual_mass": 1.2874328011430693,
+          "config_delta": 0.0,
+          "final_attention_gain": 0.45,
+          "final_learning_rate_gain": 0.2,
+          "final_memory_mass": 0.022283975540069195,
+          "final_topology_deposit_gain": 0.2,
+          "initial_attention_gain": 0.45,
+          "initial_learning_rate_gain": 0.2,
+          "initial_topology_deposit_gain": 0.2,
+          "memory_mass": 0.5741965387465453,
+          "surprise_total": 1.2258442904684221,
+          "topology_mass": 24.651922740808676
+        }
+      },
+      "ok": true,
+      "roles": {
+        "functional_recovery": {
+          "adaptive_memory_mass": 0.6332467349615005,
+          "adaptive_topology": 35.8969444611715,
+          "fixed_weak_memory_mass": 0.5741965387465453,
+          "fixed_weak_topology": 24.651922740808676,
+          "reference_memory_mass": 2.571572803854558,
+          "reference_topology": 132.58305645710405
+        },
+        "parameter_development": {
+          "final_attention_gain": 0.4924036293762587,
+          "final_external_attention_gain": 0.4924036293762587,
+          "final_learning_gain": 0.2742063514084526,
+          "final_topology_gain": 0.4679194326116562,
+          "initial_attention_gain": 0.45,
+          "initial_external_attention_gain": 0.45,
+          "initial_learning_gain": 0.2,
+          "initial_topology_gain": 0.2
+        },
+        "pressure_response": {
+          "adaptive_config_delta": 0.10726596294781339,
+          "fixed_weak_config_delta": 0.0
+        },
+        "reference_closeness": {
+          "adaptive_actual_distance": 0.08061726818377646,
+          "adaptive_distance": 0.06531704571522727,
+          "adaptive_memory_distance": 0.0900979523092031,
+          "distance_improvement": 0.0019174139511145272,
+          "fixed_weak_actual_distance": 0.0833382151775064,
+          "fixed_weak_distance": 0.0672344596663418,
+          "fixed_weak_memory_distance": 0.0925511788327058
+        }
+      }
+    }
+  ],
+  "frame_count": 26,
+  "input_count": 4,
+  "observation_count": 26,
+  "ok": true,
+  "source_name": "cavenet:adaptive"
+}

@@ -1,0 +1,145 @@
+{
+  "adapter": "MinimalSubject",
+  "duration": 40.0,
+  "errors": [],
+  "extra": [
+    {
+      "errors": [],
+      "id": "preference_emergence",
+      "metrics": {
+        "frequency-memory": {
+          "diagnostic_attention_gain": 0.05855047403382213,
+          "early_diagnostic_attention": 0.46775577140322294,
+          "early_skill": 0.22686392682079906,
+          "early_surprise": 0.507395681379864,
+          "late_diagnostic_attention": 0.5263062454370451,
+          "late_memory_concentration": 0.05076050927528213,
+          "late_memory_strength": 19.700353961715486,
+          "late_skill": 0.8595622400580063,
+          "late_surprise": 0.15426626923334394,
+          "late_value_separation": 0.0307348968612311,
+          "skill_gain": 0.6326983132372073,
+          "surprise_drop": 0.35312941214652005,
+          "utility_mean": -0.276679600349776
+        },
+        "minimal-preference": {
+          "diagnostic_attention_gain": 0.04872482449504045,
+          "early_diagnostic_attention": 0.4775814215897697,
+          "early_skill": 0.20552073742413074,
+          "early_surprise": 0.4873389113056218,
+          "late_diagnostic_attention": 0.5263062460848101,
+          "late_memory_concentration": 0.09949059817955298,
+          "late_memory_strength": 9.649152960840237,
+          "late_skill": 0.7731878123863725,
+          "late_surprise": 0.24151049916803083,
+          "late_value_separation": 0.0627504144250135,
+          "skill_gain": 0.5676670749622417,
+          "surprise_drop": 0.24582841213759096,
+          "utility_mean": -0.36178974392518626
+        },
+        "no-bottleneck": {
+          "diagnostic_attention_gain": 0.041441217794194296,
+          "early_diagnostic_attention": 0.328920228401806,
+          "early_skill": 0.2753325083396197,
+          "early_surprise": 0.5283581786062166,
+          "late_diagnostic_attention": 0.3703614461960003,
+          "late_memory_concentration": 0.09949059817955298,
+          "late_memory_strength": 9.649152960840237,
+          "late_skill": 0.7861850743771934,
+          "late_surprise": 0.2638119760464577,
+          "late_value_separation": 0.0627504144250135,
+          "skill_gain": 0.5108525660375738,
+          "surprise_drop": 0.2645462025597589,
+          "utility_mean": -0.3935871071539445
+        },
+        "no-memory": {
+          "diagnostic_attention_gain": 0.0,
+          "early_diagnostic_attention": 0.5263157894736842,
+          "early_skill": 0.0,
+          "early_surprise": 0.5492419017761361,
+          "late_diagnostic_attention": 0.5263157894736842,
+          "late_memory_concentration": 0.0,
+          "late_memory_strength": 0.0,
+          "late_skill": 0.0,
+          "late_surprise": 0.5492419017761361,
+          "late_value_separation": 0.0,
+          "skill_gain": 0.0,
+          "surprise_drop": 0.0,
+          "utility_mean": -0.5492419017761362
+        },
+        "no-preference": {
+          "diagnostic_attention_gain": 0.0,
+          "early_diagnostic_attention": 0.5263157894736842,
+          "early_skill": 0.0,
+          "early_surprise": 0.5492419017761361,
+          "late_diagnostic_attention": 0.5263157894736842,
+          "late_memory_concentration": 0.0,
+          "late_memory_strength": 0.0,
+          "late_skill": 0.0,
+          "late_surprise": 0.5492419017761361,
+          "late_value_separation": 0.0,
+          "skill_gain": 0.0,
+          "surprise_drop": 0.0,
+          "utility_mean": -0.5492419017761362
+        },
+        "shuffled": {
+          "diagnostic_attention_gain": 0.030738860665804835,
+          "early_diagnostic_attention": 0.4881108449859059,
+          "early_skill": 0.08294735010934806,
+          "early_surprise": 0.5758337422700913,
+          "late_diagnostic_attention": 0.5188497056517107,
+          "late_memory_concentration": 0.15065430916267883,
+          "late_memory_strength": 6.372204056661779,
+          "late_skill": 0.45192784390180146,
+          "late_surprise": 0.5095341379838206,
+          "late_value_separation": 0.06624969305957303,
+          "skill_gain": 0.3689804937924534,
+          "surprise_drop": 0.06629960428627069,
+          "utility_mean": -0.4067229761403804
+        }
+      },
+      "ok": true,
+      "roles": {
+        "delayed_consequence_prediction_like_readout": {
+          "no_memory_late_skill": 0.0,
+          "readout_margin": 0.7731878123863725,
+          "shuffled_late_skill": 0.45192784390180146,
+          "structure_margin": 0.321259968484571,
+          "structured_late_skill": 0.7731878123863725
+        },
+        "preference_pressure_value_shaped_memory": {
+          "frequency_memory_separation": 0.0307348968612311,
+          "frequency_memory_strength": 19.700353961715486,
+          "no_preference_strength": 0.0,
+          "value_memory_separation": 0.0627504144250135,
+          "value_memory_strength": 9.649152960840237,
+          "value_separation_margin": 0.0320155175637824,
+          "value_strength_margin": 9.649152960840237
+        },
+        "repeated_trajectory_topology_like_geometry": {
+          "memory_concentration": 0.09949059817955298,
+          "no_memory_value_separation": 0.0,
+          "value_separation": 0.0627504144250135
+        },
+        "temporal_recurrence_memory_like_trace": {
+          "memory_margin": 9.649152960840237,
+          "no_memory_strength": 0.0,
+          "with_memory_strength": 9.649152960840237
+        },
+        "workspace_pressure_attention_like_selection": {
+          "claim_kind": "diagnostic_input_weight_concentration",
+          "full_dynamic_attention_claimed": false,
+          "internal_expectation_channel_claimed": false,
+          "no_bottleneck_late_diagnostic_attention": 0.3703614461960003,
+          "selection_margin": 0.15594479988880983,
+          "with_bottleneck_late_diagnostic_attention": 0.5263062460848101
+        }
+      }
+    }
+  ],
+  "frame_count": 40,
+  "input_count": 40,
+  "observation_count": 40,
+  "ok": true,
+  "source_name": "minimal:minimal-preference"
+}

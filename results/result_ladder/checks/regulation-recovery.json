@@ -1,0 +1,57 @@
+{
+  "adapter": "CaveProducer",
+  "duration": 2.0,
+  "errors": [],
+  "extra": [
+    {
+      "errors": [],
+      "id": "regulation_recovery",
+      "metrics": {
+        "cave-adaptive": {
+          "adapter": "CaveProducer",
+          "audio_delta": 0.28716842322403985,
+          "current_audio_attention": 0.2,
+          "next_audio_attention": 0.48716842322403986,
+          "pain": 0.2
+        },
+        "cave-fixed": {
+          "adapter": "CaveProducer",
+          "audio_delta": 0.0,
+          "current_audio_attention": 0.2,
+          "next_audio_attention": 0.2,
+          "pain": 0.2
+        },
+        "cavenet-adaptive": {
+          "adapter": "CaveProducer",
+          "audio_delta": 0.28716842322403985,
+          "current_audio_attention": 0.2,
+          "next_audio_attention": 0.48716842322403986,
+          "pain": 0.2
+        },
+        "cavenet-fixed": {
+          "adapter": "CaveProducer",
+          "audio_delta": 0.0,
+          "current_audio_attention": 0.2,
+          "next_audio_attention": 0.2,
+          "pain": 0.2
+        }
+      },
+      "ok": true,
+      "roles": {
+        "future_attention_regulation": {
+          "cave_adaptive_audio_delta": 0.28716842322403985,
+          "cave_adaptive_next_audio": 0.48716842322403986,
+          "cave_fixed_audio_delta": 0.0,
+          "cavenet_adaptive_audio_delta": 0.28716842322403985,
+          "cavenet_adaptive_next_audio": 0.48716842322403986,
+          "cavenet_fixed_audio_delta": 0.0
+        }
+      }
+    }
+  ],
+  "frame_count": 3,
+  "input_count": 3,
+  "observation_count": 3,
+  "ok": true,
+  "source_name": "regulation:cave-adaptive"
+}

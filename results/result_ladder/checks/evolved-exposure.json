@@ -1,0 +1,85 @@
+{
+  "adapter": "EvolvedSubject",
+  "duration": 60.0,
+  "errors": [],
+  "extra": [
+    {
+      "errors": [],
+      "id": "evolved_exposure",
+      "metrics": {
+        "evolved-recurrent": {
+          "adapter": "EvolvedSubject",
+          "bad_exposure": 0.0025055581209493796,
+          "exposure_contrast": 0.9851878295808498,
+          "final_training_fitness": 3.3141366927948384,
+          "good_exposure": 0.9876933877017992,
+          "probe_accuracy": 1.0,
+          "utility": 11.170778941498819
+        },
+        "hidden-reset": {
+          "adapter": "EvolvedSubject",
+          "bad_exposure": 0.30315202194566593,
+          "exposure_contrast": 5.551115123125783e-17,
+          "final_training_fitness": 3.3141366927948384,
+          "good_exposure": 0.303152021945666,
+          "probe_accuracy": 0.6,
+          "utility": 0.303152021945666
+        },
+        "non-recurrent": {
+          "adapter": "EvolvedSubject",
+          "bad_exposure": 2.8130802890021987e-05,
+          "exposure_contrast": 6.776263578034403e-21,
+          "final_training_fitness": -0.0005420709295792233,
+          "good_exposure": 2.8130802890021994e-05,
+          "probe_accuracy": 0.4,
+          "utility": -0.0005485051155599865
+        },
+        "random-recurrent": {
+          "adapter": "EvolvedSubject",
+          "bad_exposure": 0.5,
+          "exposure_contrast": 0.0,
+          "final_training_fitness": 3.3141366927948384,
+          "good_exposure": 0.5,
+          "probe_accuracy": 0.6,
+          "utility": 0.499999999999999
+        },
+        "shuffled-temporal": {
+          "adapter": "EvolvedSubject",
+          "bad_exposure": 0.3962118485745041,
+          "exposure_contrast": 0.131117719382145,
+          "final_training_fitness": 3.3141366927948384,
+          "good_exposure": 0.5273295679566491,
+          "probe_accuracy": 0.55,
+          "utility": 5.272612122186408
+        }
+      },
+      "ok": true,
+      "roles": {
+        "exposure_regulation": {
+          "evolved_exposure_contrast": 0.9851878295808498,
+          "evolved_utility": 11.170778941498819,
+          "nonrecurrent_utility": -0.0005485051155599865,
+          "random_utility": 0.499999999999999,
+          "reset_exposure_contrast": 5.551115123125783e-17,
+          "reset_utility": 0.303152021945666,
+          "shuffled_exposure_contrast": 0.131117719382145,
+          "shuffled_utility": 5.272612122186408,
+          "utility_gain_over_nonrecurrent": 11.171327446614379,
+          "utility_gain_over_random": 10.67077894149882
+        },
+        "latent_expectation_probe": {
+          "evolved_probe_accuracy": 1.0,
+          "nonrecurrent_probe_accuracy": 0.4,
+          "random_probe_accuracy": 0.6,
+          "reset_probe_accuracy": 0.6,
+          "shuffled_probe_accuracy": 0.55
+        }
+      }
+    }
+  ],
+  "frame_count": 60,
+  "input_count": 60,
+  "observation_count": 60,
+  "ok": true,
+  "source_name": "evolved:evolved-recurrent"
+}

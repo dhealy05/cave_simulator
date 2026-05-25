@@ -1,0 +1,70 @@
+{
+  "adapter": "CaveNet",
+  "duration": 4.0,
+  "errors": [],
+  "extra": [
+    {
+      "errors": [],
+      "id": "topology_recovery",
+      "metrics": {
+        "cavenet-adaptive-topology": {
+          "adapter": "CaveNet",
+          "final_topology_deposit_gain": 1.5270561907472964,
+          "initial_topology_deposit_gain": 0.1,
+          "topology_mass": 85.24884547322002
+        },
+        "cavenet-no-topology": {
+          "adapter": "CaveNet",
+          "final_topology_deposit_gain": 0.0,
+          "initial_topology_deposit_gain": 0.0,
+          "topology_mass": 0.0
+        },
+        "cavenet-reference": {
+          "adapter": "CaveNet",
+          "final_topology_deposit_gain": 1.0,
+          "initial_topology_deposit_gain": 1.0,
+          "topology_mass": 150.57053413669826
+        },
+        "cavenet-weak-topology": {
+          "adapter": "CaveNet",
+          "final_topology_deposit_gain": 0.1,
+          "initial_topology_deposit_gain": 0.1,
+          "topology_mass": 15.057053413669825
+        },
+        "minimal-no-memory": {
+          "adapter": "MinimalSubject",
+          "memory_strength": 0.0,
+          "trace_count": 0,
+          "value_separation": 0.0
+        },
+        "minimal-value-memory": {
+          "adapter": "MinimalSubject",
+          "memory_strength": 2.2963755443363323,
+          "trace_count": 2,
+          "value_separation": 1.0
+        }
+      },
+      "ok": true,
+      "roles": {
+        "cavenet_topology_recovery": {
+          "adaptive_topology_mass": 85.24884547322002,
+          "final_topology_gain": 1.5270561907472964,
+          "no_topology_mass": 0.0,
+          "reference_topology_mass": 150.57053413669826,
+          "topology_mass_gain": 70.1917920595502,
+          "weak_topology_mass": 15.057053413669825
+        },
+        "minimal_geometry_proxy": {
+          "no_memory_strength": 0.0,
+          "value_memory_strength": 2.2963755443363323,
+          "value_separation": 1.0
+        }
+      }
+    }
+  ],
+  "frame_count": 5,
+  "input_count": 4,
+  "observation_count": 5,
+  "ok": true,
+  "source_name": "topology-recovery:cavenet-adaptive-topology"
+}

@@ -1,0 +1,28 @@
+{
+  "name": "minimal",
+  "vocabulary": ["energy", "hue"],
+  "objects": [
+    {
+      "id": "evt_a",
+      "start": 0.0,
+      "end": 1.0,
+      "features": {
+        "energy": 0.75,
+        "hue": 0.2
+      },
+      "salience": 0.8,
+      "learning_weight": 1.0
+    },
+    {
+      "id": "evt_b",
+      "start": 1.2,
+      "end": 2.0,
+      "features": {
+        "energy": 0.35,
+        "hue": 0.65
+      },
+      "salience": 1.0,
+      "learning_weight": 1.4
+    }
+  ]
+}

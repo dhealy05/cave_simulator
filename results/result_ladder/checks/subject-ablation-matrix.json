@@ -1,0 +1,26 @@
+{
+  "cluster_files": [
+    "out/report_suites/result-ladder/mechanism/subject-ablation-matrix/clusters/state_effect.json",
+    "out/report_suites/result-ladder/mechanism/subject-ablation-matrix/clusters/observed_memory.json",
+    "out/report_suites/result-ladder/mechanism/subject-ablation-matrix/clusters/subjective_trajectory.json",
+    "out/report_suites/result-ladder/mechanism/subject-ablation-matrix/clusters/active_context.json"
+  ],
+  "errors": [],
+  "extra": [
+    {
+      "errors": [],
+      "id": "subject_ablation_matrix",
+      "metrics": {
+        "baseline_prior_effect_distance": 2.296029742007071e-17,
+        "baseline_prior_internal_distance": 0.1108333671532469,
+        "baseline_prior_observed_distance": 0.19095838969211443,
+        "baseline_zero_attention_effect_distance": 0.12774171411051963,
+        "baseline_zero_predictor_internal_distance": 0.0600230387647718,
+        "zero_attention_effect_distance": 1.3761838603601975e-17
+      },
+      "ok": true
+    }
+  ],
+  "ok": true,
+  "run_count": 10
+}

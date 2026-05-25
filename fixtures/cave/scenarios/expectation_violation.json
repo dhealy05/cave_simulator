@@ -1,0 +1,58 @@
+{
+  "name": "expectation_violation",
+  "vocabulary": ["energy", "warmth"],
+  "metadata": {
+    "scenario": "expectation_violation",
+    "claim": "Repeated inputs reduce prediction error until an anomalous input raises surprise and surprise-weighted learning."
+  },
+  "objects": [
+    {
+      "id": "repeat_1",
+      "start": 0.0,
+      "end": 0.5,
+      "order_index": 0,
+      "kind": "expected pulse",
+      "salience": 1.0,
+      "features": {
+        "energy": 1.0,
+        "warmth": 0.0
+      }
+    },
+    {
+      "id": "repeat_2",
+      "start": 0.5,
+      "end": 1.0,
+      "order_index": 1,
+      "kind": "expected pulse",
+      "salience": 1.0,
+      "features": {
+        "energy": 1.0,
+        "warmth": 0.0
+      }
+    },
+    {
+      "id": "repeat_3",
+      "start": 1.0,
+      "end": 1.5,
+      "order_index": 2,
+      "kind": "expected pulse",
+      "salience": 1.0,
+      "features": {
+        "energy": 1.0,
+        "warmth": 0.0
+      }
+    },
+    {
+      "id": "violation",
+      "start": 1.5,
+      "end": 2.0,
+      "order_index": 3,
+      "kind": "violation",
+      "salience": 1.0,
+      "features": {
+        "energy": 0.0,
+        "warmth": 1.0
+      }
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "clusters": [
+    [
+      "pref-warm"
+    ],
+    [
+      "pref-threat-avoid"
+    ]
+  ],
+  "errors": [],
+  "metrics": {
+    "effect_distance": 0.19423920241935674,
+    "observed_distance": 0.19423920241935674,
+    "threat_avoid_action": {
+      "components": {
+        "action_cost": 0.0,
+        "preference_score": -1.0,
+        "target_exposure": 0.19999999999999996
+      },
+      "expected_utility_delta": 1.0,
+      "kind": "avoid",
+      "object_exposure": {
+        "threat_event": 0.19999999999999996
+      },
+      "strength": 1.0,
+      "target_channel": "visual",
+      "target_id": "threat_event"
+    },
+    "threat_avoid_final_memory": [
+      0.16088104248046875,
+      0.03217620849609375
+    ],
+    "warm_action": {
+      "components": {
+        "action_cost": 0.0,
+        "preference_score": 1.0,
+        "target_exposure": 1.6
+      },
+      "expected_utility_delta": 1.0,
+      "kind": "approach",
+      "object_exposure": {
+        "warm_event": 1.6
+      },
+      "strength": 1.0,
+      "target_channel": "visual",
+      "target_id": "warm_event"
+    },
+    "warm_final_memory": [
+      0.25740966796875,
+      0.16088104248046875
+    ]
+  },
+  "ok": true,
+  "run_count": 2
+}

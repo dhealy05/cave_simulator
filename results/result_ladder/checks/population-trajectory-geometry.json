@@ -1,0 +1,475 @@
+{
+  "cluster_files": [
+    "out/report_suites/result-ladder/mechanism/population-trajectory-geometry/clusters/state_effect.json",
+    "out/report_suites/result-ladder/mechanism/population-trajectory-geometry/clusters/observed_memory.json",
+    "out/report_suites/result-ladder/mechanism/population-trajectory-geometry/clusters/subjective_trajectory.json",
+    "out/report_suites/result-ladder/mechanism/population-trajectory-geometry/clusters/active_context.json"
+  ],
+  "errors": [],
+  "extra": [
+    {
+      "errors": [],
+      "id": "population_trajectory_geometry",
+      "metrics": {
+        "by_condition": {
+          "baseline": {
+            "active_context": {
+              "matched_start_treatment_distance": 0.21083690943655975,
+              "permutation_p": 0.005,
+              "same_treatment_start_distance": 0.0,
+              "treatment_decoding_accuracy": 1.0,
+              "treatment_decoding_lift": 0.75,
+              "treatment_margin": 0.21083690943655975,
+              "treatment_ratio": Infinity
+            },
+            "actual_input": {
+              "matched_start_treatment_distance": 0.14099883664893284,
+              "permutation_p": 0.005,
+              "same_treatment_start_distance": 0.0,
+              "treatment_decoding_accuracy": 1.0,
+              "treatment_decoding_lift": 0.75,
+              "treatment_margin": 0.1409988366489328,
+              "treatment_ratio": Infinity
+            },
+            "observed_memory": {
+              "matched_start_treatment_distance": 0.07294400341237316,
+              "permutation_p": 0.005,
+              "same_treatment_start_distance": 0.12840699252290172,
+              "treatment_decoding_accuracy": 1.0,
+              "treatment_decoding_lift": 0.75,
+              "treatment_margin": 0.017391091197253877,
+              "treatment_ratio": 1.1354372597282982
+            },
+            "permutations": 199,
+            "run_count": 64,
+            "start_count": 16,
+            "state_effect": {
+              "matched_start_treatment_distance": 0.07294400341237316,
+              "permutation_p": 0.005,
+              "same_treatment_start_distance": 2.7673507433332963e-17,
+              "treatment_decoding_accuracy": 1.0,
+              "treatment_decoding_lift": 0.75,
+              "treatment_margin": 0.0729440034123731,
+              "treatment_ratio": 2635878505393627.5
+            },
+            "subjective_trajectory": {
+              "matched_start_treatment_distance": 0.09092719849183904,
+              "permutation_p": 0.005,
+              "same_treatment_start_distance": 0.07457681329865819,
+              "treatment_decoding_accuracy": 1.0,
+              "treatment_decoding_lift": 0.75,
+              "treatment_margin": 0.04351120232676134,
+              "treatment_ratio": 1.5834414263922993
+            },
+            "treatment_count": 4
+          },
+          "external-only-attention": {
+            "active_context": {
+              "matched_start_treatment_distance": 0.21083690943655975,
+              "permutation_p": 0.005,
+              "same_treatment_start_distance": 0.0,
+              "treatment_decoding_accuracy": 1.0,
+              "treatment_decoding_lift": 0.75,
+              "treatment_margin": 0.21083690943655975,
+              "treatment_ratio": Infinity
+            },
+            "actual_input": {
+              "matched_start_treatment_distance": 0.2819976732978657,
+              "permutation_p": 0.005,
+              "same_treatment_start_distance": 0.0,
+              "treatment_decoding_accuracy": 1.0,
+              "treatment_decoding_lift": 0.75,
+              "treatment_margin": 0.2819976732978656,
+              "treatment_ratio": Infinity
+            },
+            "observed_memory": {
+              "matched_start_treatment_distance": 0.1458880068247463,
+              "permutation_p": 0.005,
+              "same_treatment_start_distance": 0.12840699252290172,
+              "treatment_decoding_accuracy": 1.0,
+              "treatment_decoding_lift": 0.75,
+              "treatment_margin": 0.06750566188358062,
+              "treatment_ratio": 1.525716400308502
+            },
+            "permutations": 199,
+            "run_count": 64,
+            "start_count": 16,
+            "state_effect": {
+              "matched_start_treatment_distance": 0.1458880068247463,
+              "permutation_p": 0.005,
+              "same_treatment_start_distance": 3.87037038115244e-17,
+              "treatment_decoding_accuracy": 1.0,
+              "treatment_decoding_lift": 0.75,
+              "treatment_margin": 0.14588800682474623,
+              "treatment_ratio": 3769355189755940.0
+            },
+            "subjective_trajectory": {
+              "matched_start_treatment_distance": 0.19644162771452264,
+              "permutation_p": 0.005,
+              "same_treatment_start_distance": 0.0,
+              "treatment_decoding_accuracy": 1.0,
+              "treatment_decoding_lift": 0.75,
+              "treatment_margin": 0.1964416277145226,
+              "treatment_ratio": Infinity
+            },
+            "treatment_count": 4
+          },
+          "internal-only-attention": {
+            "active_context": {
+              "matched_start_treatment_distance": 0.21083690943655975,
+              "permutation_p": 0.005,
+              "same_treatment_start_distance": 0.0,
+              "treatment_decoding_accuracy": 1.0,
+              "treatment_decoding_lift": 0.75,
+              "treatment_margin": 0.21083690943655975,
+              "treatment_ratio": Infinity
+            },
+            "actual_input": {
+              "matched_start_treatment_distance": 0.0,
+              "permutation_p": 1.0,
+              "same_treatment_start_distance": 0.0,
+              "treatment_decoding_accuracy": 0.25,
+              "treatment_decoding_lift": 0.0,
+              "treatment_margin": 0.0,
+              "treatment_ratio": 0.0
+            },
+            "observed_memory": {
+              "matched_start_treatment_distance": 0.0,
+              "permutation_p": 0.995,
+              "same_treatment_start_distance": 0.12840699252290172,
+              "treatment_decoding_accuracy": 0.25,
+              "treatment_decoding_lift": 0.0,
+              "treatment_margin": -0.008025437032681368,
+              "treatment_ratio": 0.9374999999999999
+            },
+            "permutations": 199,
+            "run_count": 64,
+            "start_count": 16,
+            "state_effect": {
+              "matched_start_treatment_distance": 0.0,
+              "permutation_p": 0.975,
+              "same_treatment_start_distance": 4.082506109188475e-18,
+              "treatment_decoding_accuracy": 0.25,
+              "treatment_decoding_lift": 0.0,
+              "treatment_margin": -2.5515663182427987e-19,
+              "treatment_ratio": 0.9375
+            },
+            "subjective_trajectory": {
+              "matched_start_treatment_distance": 0.0,
+              "permutation_p": 0.535,
+              "same_treatment_start_distance": 0.15002258920216324,
+              "treatment_decoding_accuracy": 0.25,
+              "treatment_decoding_lift": 0.0,
+              "treatment_margin": -0.009376411825135211,
+              "treatment_ratio": 0.9374999999999999
+            },
+            "treatment_count": 4
+          },
+          "no-memory": {
+            "active_context": {
+              "matched_start_treatment_distance": 0.21083690943655975,
+              "permutation_p": 0.005,
+              "same_treatment_start_distance": 0.0,
+              "treatment_decoding_accuracy": 1.0,
+              "treatment_decoding_lift": 0.75,
+              "treatment_margin": 0.21083690943655975,
+              "treatment_ratio": Infinity
+            },
+            "actual_input": {
+              "matched_start_treatment_distance": 0.14099883664893284,
+              "permutation_p": 0.005,
+              "same_treatment_start_distance": 0.0,
+              "treatment_decoding_accuracy": 1.0,
+              "treatment_decoding_lift": 0.75,
+              "treatment_margin": 0.1409988366489328,
+              "treatment_ratio": Infinity
+            },
+            "observed_memory": {
+              "matched_start_treatment_distance": 0.0,
+              "permutation_p": 0.305,
+              "same_treatment_start_distance": 0.3735184547527279,
+              "treatment_decoding_accuracy": 0.25,
+              "treatment_decoding_lift": 0.0,
+              "treatment_margin": -0.023344903422045427,
+              "treatment_ratio": 0.9375000000000002
+            },
+            "permutations": 199,
+            "run_count": 64,
+            "start_count": 16,
+            "state_effect": {
+              "matched_start_treatment_distance": 0.0,
+              "permutation_p": 1.0,
+              "same_treatment_start_distance": 0.2860329848954977,
+              "treatment_decoding_accuracy": 0.25,
+              "treatment_decoding_lift": 0.0,
+              "treatment_margin": -0.017877061555968687,
+              "treatment_ratio": 0.9374999999999997
+            },
+            "subjective_trajectory": {
+              "matched_start_treatment_distance": 0.09566579209762703,
+              "permutation_p": 0.005,
+              "same_treatment_start_distance": 0.17814654200635782,
+              "treatment_decoding_accuracy": 0.96875,
+              "treatment_decoding_lift": 0.71875,
+              "treatment_margin": 0.020157776114270942,
+              "treatment_ratio": 1.1131527779728194
+            },
+            "treatment_count": 4
+          },
+          "zero-attention": {
+            "active_context": {
+              "matched_start_treatment_distance": 0.21083690943655975,
+              "permutation_p": 0.005,
+              "same_treatment_start_distance": 0.0,
+              "treatment_decoding_accuracy": 1.0,
+              "treatment_decoding_lift": 0.75,
+              "treatment_margin": 0.21083690943655975,
+              "treatment_ratio": Infinity
+            },
+            "actual_input": {
+              "matched_start_treatment_distance": 0.0,
+              "permutation_p": 1.0,
+              "same_treatment_start_distance": 0.0,
+              "treatment_decoding_accuracy": 0.25,
+              "treatment_decoding_lift": 0.0,
+              "treatment_margin": 0.0,
+              "treatment_ratio": 0.0
+            },
+            "observed_memory": {
+              "matched_start_treatment_distance": 0.0,
+              "permutation_p": 0.995,
+              "same_treatment_start_distance": 0.12840699252290172,
+              "treatment_decoding_accuracy": 0.25,
+              "treatment_decoding_lift": 0.0,
+              "treatment_margin": -0.008025437032681368,
+              "treatment_ratio": 0.9374999999999999
+            },
+            "permutations": 199,
+            "run_count": 64,
+            "start_count": 16,
+            "state_effect": {
+              "matched_start_treatment_distance": 0.0,
+              "permutation_p": 0.975,
+              "same_treatment_start_distance": 4.082506109188475e-18,
+              "treatment_decoding_accuracy": 0.25,
+              "treatment_decoding_lift": 0.0,
+              "treatment_margin": -2.5515663182427987e-19,
+              "treatment_ratio": 0.9375
+            },
+            "subjective_trajectory": {
+              "matched_start_treatment_distance": 0.0,
+              "permutation_p": 1.0,
+              "same_treatment_start_distance": 0.0,
+              "treatment_decoding_accuracy": 0.25,
+              "treatment_decoding_lift": 0.0,
+              "treatment_margin": 0.0,
+              "treatment_ratio": 0.0
+            },
+            "treatment_count": 4
+          },
+          "zero-predictor": {
+            "active_context": {
+              "matched_start_treatment_distance": 0.21083690943655975,
+              "permutation_p": 0.005,
+              "same_treatment_start_distance": 0.0,
+              "treatment_decoding_accuracy": 1.0,
+              "treatment_decoding_lift": 0.75,
+              "treatment_margin": 0.21083690943655975,
+              "treatment_ratio": Infinity
+            },
+            "actual_input": {
+              "matched_start_treatment_distance": 0.14099883664893284,
+              "permutation_p": 0.005,
+              "same_treatment_start_distance": 0.0,
+              "treatment_decoding_accuracy": 1.0,
+              "treatment_decoding_lift": 0.75,
+              "treatment_margin": 0.1409988366489328,
+              "treatment_ratio": Infinity
+            },
+            "observed_memory": {
+              "matched_start_treatment_distance": 0.07294400341237316,
+              "permutation_p": 0.005,
+              "same_treatment_start_distance": 0.12840699252290172,
+              "treatment_decoding_accuracy": 1.0,
+              "treatment_decoding_lift": 0.75,
+              "treatment_margin": 0.017391091197253877,
+              "treatment_ratio": 1.1354372597282982
+            },
+            "permutations": 199,
+            "run_count": 64,
+            "start_count": 16,
+            "state_effect": {
+              "matched_start_treatment_distance": 0.07294400341237316,
+              "permutation_p": 0.005,
+              "same_treatment_start_distance": 2.7673507433332963e-17,
+              "treatment_decoding_accuracy": 1.0,
+              "treatment_decoding_lift": 0.75,
+              "treatment_margin": 0.0729440034123731,
+              "treatment_ratio": 2635878505393627.5
+            },
+            "subjective_trajectory": {
+              "matched_start_treatment_distance": 0.09822081385726132,
+              "permutation_p": 0.005,
+              "same_treatment_start_distance": 0.0,
+              "treatment_decoding_accuracy": 1.0,
+              "treatment_decoding_lift": 0.75,
+              "treatment_margin": 0.0982208138572613,
+              "treatment_ratio": Infinity
+            },
+            "treatment_count": 4
+          }
+        },
+        "overall": {
+          "active_context": {
+            "matched_start_treatment_distance": 0.2670404543125888,
+            "permutation_p": 0.005,
+            "same_treatment_start_distance": 0.09820927516479827,
+            "treatment_decoding_accuracy": 1.0,
+            "treatment_decoding_lift": 0.75,
+            "treatment_margin": 0.16779739730395052,
+            "treatment_ratio": 2.6907721543618432
+          },
+          "actual_input": {
+            "matched_start_treatment_distance": 0.18263545789815344,
+            "permutation_p": 0.005,
+            "same_treatment_start_distance": 0.1249348255951262,
+            "treatment_decoding_accuracy": 0.75,
+            "treatment_decoding_lift": 0.5,
+            "treatment_margin": 0.056385528875710106,
+            "treatment_ratio": 1.4466183015887994
+          },
+          "observed_memory": {
+            "matched_start_treatment_distance": 0.1812558030536383,
+            "permutation_p": 0.005,
+            "same_treatment_start_distance": 0.24527686018635336,
+            "treatment_decoding_accuracy": 0.5546875,
+            "treatment_decoding_lift": 0.3046875,
+            "treatment_margin": 0.005330629834905343,
+            "treatment_ratio": 1.0219525807231045
+          },
+          "permutations": 199,
+          "run_count": 384,
+          "start_count": 16,
+          "state_effect": {
+            "matched_start_treatment_distance": 0.1812558030536383,
+            "permutation_p": 0.005,
+            "same_treatment_start_distance": 0.17351760056878088,
+            "treatment_decoding_accuracy": 0.5416666666666666,
+            "treatment_decoding_lift": 0.29166666666666663,
+            "treatment_margin": 0.013862289328761546,
+            "treatment_ratio": 1.079284533384099
+          },
+          "subjective_trajectory": {
+            "matched_start_treatment_distance": 0.2045945441070023,
+            "permutation_p": 0.005,
+            "same_treatment_start_distance": 0.19849424572093669,
+            "treatment_decoding_accuracy": 0.6927083333333334,
+            "treatment_decoding_lift": 0.44270833333333337,
+            "treatment_margin": 0.018391547437531325,
+            "treatment_ratio": 1.0921998684388434
+          },
+          "treatment_count": 4
+        }
+      },
+      "ok": true,
+      "roles": {
+        "control_contrasts": {
+          "baseline": {
+            "actual_decoding_accuracy": 1.0,
+            "actual_decoding_lift": 0.75,
+            "observed_memory_decoding_accuracy": 1.0,
+            "observed_memory_decoding_lift": 0.75,
+            "subjective_decoding_accuracy": 1.0,
+            "subjective_decoding_lift": 0.75,
+            "subjective_permutation_p": 0.005,
+            "subjective_treatment_margin": 0.04351120232676134
+          },
+          "external-only-attention": {
+            "actual_decoding_accuracy": 1.0,
+            "actual_decoding_lift": 0.75,
+            "actual_lift_delta_from_baseline": 0.0,
+            "observed_memory_decoding_accuracy": 1.0,
+            "observed_memory_decoding_lift": 0.75,
+            "observed_memory_lift_delta_from_baseline": 0.0,
+            "subjective_decoding_accuracy": 1.0,
+            "subjective_decoding_lift": 0.75,
+            "subjective_lift_delta_from_baseline": 0.0,
+            "subjective_permutation_p": 0.005,
+            "subjective_treatment_margin": 0.1964416277145226
+          },
+          "internal-only-attention": {
+            "actual_decoding_accuracy": 0.25,
+            "actual_decoding_lift": 0.0,
+            "actual_lift_delta_from_baseline": 0.75,
+            "observed_memory_decoding_accuracy": 0.25,
+            "observed_memory_decoding_lift": 0.0,
+            "observed_memory_lift_delta_from_baseline": 0.75,
+            "subjective_decoding_accuracy": 0.25,
+            "subjective_decoding_lift": 0.0,
+            "subjective_lift_delta_from_baseline": 0.75,
+            "subjective_permutation_p": 0.535,
+            "subjective_treatment_margin": -0.009376411825135211
+          },
+          "no-memory": {
+            "actual_decoding_accuracy": 1.0,
+            "actual_decoding_lift": 0.75,
+            "actual_lift_delta_from_baseline": 0.0,
+            "observed_memory_decoding_accuracy": 0.25,
+            "observed_memory_decoding_lift": 0.0,
+            "observed_memory_lift_delta_from_baseline": 0.75,
+            "subjective_decoding_accuracy": 0.96875,
+            "subjective_decoding_lift": 0.71875,
+            "subjective_lift_delta_from_baseline": 0.03125,
+            "subjective_permutation_p": 0.005,
+            "subjective_treatment_margin": 0.020157776114270942
+          },
+          "zero-attention": {
+            "actual_decoding_accuracy": 0.25,
+            "actual_decoding_lift": 0.0,
+            "actual_lift_delta_from_baseline": 0.75,
+            "observed_memory_decoding_accuracy": 0.25,
+            "observed_memory_decoding_lift": 0.0,
+            "observed_memory_lift_delta_from_baseline": 0.75,
+            "subjective_decoding_accuracy": 0.25,
+            "subjective_decoding_lift": 0.0,
+            "subjective_lift_delta_from_baseline": 0.75,
+            "subjective_permutation_p": 1.0,
+            "subjective_treatment_margin": 0.0
+          },
+          "zero-predictor": {
+            "actual_decoding_accuracy": 1.0,
+            "actual_decoding_lift": 0.75,
+            "actual_lift_delta_from_baseline": 0.0,
+            "observed_memory_decoding_accuracy": 1.0,
+            "observed_memory_decoding_lift": 0.75,
+            "observed_memory_lift_delta_from_baseline": 0.0,
+            "subjective_decoding_accuracy": 1.0,
+            "subjective_decoding_lift": 0.75,
+            "subjective_lift_delta_from_baseline": 0.0,
+            "subjective_permutation_p": 0.005,
+            "subjective_treatment_margin": 0.0982208138572613
+          }
+        },
+        "matched_start_deformation": {
+          "matched_start_treatment_distance": 0.09092719849183904,
+          "same_treatment_start_distance": 0.07457681329865819
+        },
+        "treatment_decoding": {
+          "accuracy": 1.0,
+          "chance": 0.25,
+          "held_out_factor": "start_condition",
+          "lift": 0.75
+        },
+        "treatment_separability": {
+          "subjective_between_treatment_distance": 0.11808801562541953,
+          "subjective_permutation_p": 0.005,
+          "subjective_treatment_margin": 0.04351120232676134,
+          "subjective_treatment_ratio": 1.5834414263922993,
+          "subjective_within_treatment_distance": 0.07457681329865819
+        }
+      }
+    }
+  ],
+  "ok": true,
+  "run_count": 384
+}

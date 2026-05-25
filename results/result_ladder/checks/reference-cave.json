@@ -1,0 +1,11 @@
+{
+  "adapter": "CaveProducer",
+  "duration": 5.1,
+  "errors": [],
+  "extra": [],
+  "frame_count": 52,
+  "input_count": 4,
+  "observation_count": 52,
+  "ok": true,
+  "source_name": "cave"
+}

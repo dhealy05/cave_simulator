@@ -1,0 +1,38 @@
+{
+  "name": "importance_weighted_event",
+  "vocabulary": ["impact", "context"],
+  "metadata": {
+    "scenario": "importance_weighted_event",
+    "claim": "Two otherwise matched objects can affect state differently through learning_weight rather than special object categories."
+  },
+  "objects": [
+    {
+      "id": "ordinary_event",
+      "start": 0.0,
+      "end": 0.5,
+      "order_index": 0,
+      "kind": "matched event",
+      "modality": "visual",
+      "salience": 1.0,
+      "learning_weight": 1.0,
+      "features": {
+        "impact": 1.0,
+        "context": 0.0
+      }
+    },
+    {
+      "id": "important_event",
+      "start": 0.8,
+      "end": 1.3,
+      "order_index": 1,
+      "kind": "matched event",
+      "modality": "visual",
+      "salience": 1.0,
+      "learning_weight": 2.0,
+      "features": {
+        "impact": 1.0,
+        "context": 0.0
+      }
+    }
+  ]
+}

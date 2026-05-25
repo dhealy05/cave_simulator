@@ -1,0 +1,27 @@
+{
+  "clusters": [
+    [
+      "Q0-zero-flat",
+      "Q0-zero-prior"
+    ],
+    [
+      "Q0-full-flat"
+    ],
+    [
+      "Q0-sine-flat"
+    ],
+    [
+      "Q0-half-chan"
+    ]
+  ],
+  "errors": [],
+  "metrics": {
+    "full_half_effect_distance": 0.047199343247082075,
+    "zero_full_effect_distance": 0.09439868649416415,
+    "zero_full_internal_distance": 0.0813463961124974,
+    "zero_prior_effect_distance": 1.3669926701958516e-17,
+    "zero_prior_observed_distance": 0.1934540317943024
+  },
+  "ok": true,
+  "run_count": 5
+}

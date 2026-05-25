@@ -1,0 +1,277 @@
+{
+  "adapter": "RoleDependencyContrast",
+  "duration": 8.0,
+  "errors": [],
+  "extra": [
+    {
+      "contrasts": {
+        "attention_gate": {
+          "expected_contrast": "The bottleneck vector should equal the attention-weighted composition only when attention gating is represented or imitated.",
+          "hypothesis": "Simultaneous sensed inputs should be composed by attention weights, not by mere co-presence.",
+          "interpretation": "The cosmetic run can match this local relation, which marks attention gating as an observable contrast but not sufficient evidence for the full subject trajectory.",
+          "intervention_control": "Compare the Cave-like control with input copying, arbitrary recurrence, and a cosmetic control that explicitly imitates the attention-weighted vector.",
+          "observed_contrast": {
+            "cosmetic-topology": true,
+            "passive-recorder": false,
+            "positive-control": true,
+            "random-recurrent": false
+          }
+        },
+        "prediction_temporal_dependency": {
+          "expected_contrast": "Only an episode with prediction-history structure should show the repeat-down / violation-up pattern.",
+          "hypothesis": "Expectation is history-dependent: repetition should lower surprise and a violation should raise it.",
+          "interpretation": "The relation is absent in all three controls, including the cosmetic topology run, so topology-like output alone does not supply prediction history.",
+          "intervention_control": "Compare the Cave-like control with passive copying, arbitrary recurrence, and cosmetic topology.",
+          "observed_contrast": {
+            "cosmetic-topology": false,
+            "passive-recorder": false,
+            "positive-control": true,
+            "random-recurrent": false
+          }
+        },
+        "unseen_modality_boundary": {
+          "expected_contrast": "The unheard input should have zero actual mass only when the episode enforces the sensor boundary.",
+          "hypothesis": "External presence and subject input are separable when a modality is unavailable.",
+          "interpretation": "The passive and recurrent controls leak the unheard event into actual state; the cosmetic control can imitate this simpler boundary without reproducing prediction or value dynamics.",
+          "intervention_control": "Compare the Cave-like control with a passive recorder and a recurrent state control that do not enforce the modality boundary.",
+          "observed_contrast": {
+            "cosmetic-topology": true,
+            "passive-recorder": false,
+            "positive-control": true,
+            "random-recurrent": false
+          }
+        },
+        "value_future_attention": {
+          "expected_contrast": "The next frame should use the value-shifted attention distribution only in the Cave-like control.",
+          "hypothesis": "A value-bearing event should alter a later attention distribution, not only label the current frame.",
+          "interpretation": "The controls can carry input or metadata, but they do not preserve the value-to-future-attention dependency.",
+          "intervention_control": "Compare the Cave-like control with copy, recurrence, and cosmetic metadata controls that do not propagate value into the next frame.",
+          "observed_contrast": {
+            "cosmetic-topology": false,
+            "passive-recorder": false,
+            "positive-control": true,
+            "random-recurrent": false
+          }
+        }
+      },
+      "errors": [],
+      "id": "role_dependency_contrasts",
+      "metrics": {
+        "cosmetic-topology": {
+          "raw": {
+            "bottleneck_actual": [
+              0.25,
+              0.75,
+              0.0
+            ],
+            "cosmetic_topology_mass": 500.0,
+            "followup_attention_channels": {
+              "audio": 0.5,
+              "visual": 0.5
+            },
+            "painful_attention_channels": {
+              "audio": 0.5,
+              "visual": 0.5
+            },
+            "painful_next_attention_channels": {},
+            "repeat_3_expected_mass": 0.0,
+            "surprise": {
+              "repeat_1": 0.5,
+              "repeat_2": 0.5,
+              "repeat_3": 0.5,
+              "violation": 0.5
+            },
+            "unheard_actual_mass": 0.0
+          },
+          "roles": {
+            "attention_gate": true,
+            "prediction_temporal_dependency": false,
+            "unseen_modality_boundary": true,
+            "value_future_attention": false
+          }
+        },
+        "passive-recorder": {
+          "raw": {
+            "bottleneck_actual": [
+              1.0,
+              1.0,
+              0.0
+            ],
+            "cosmetic_topology_mass": 0.0,
+            "followup_attention_channels": {},
+            "painful_attention_channels": {},
+            "painful_next_attention_channels": {},
+            "repeat_3_expected_mass": 1.0,
+            "surprise": {
+              "repeat_1": 0.0,
+              "repeat_2": 0.0,
+              "repeat_3": 0.0,
+              "violation": 0.0
+            },
+            "unheard_actual_mass": 1.0
+          },
+          "roles": {
+            "attention_gate": false,
+            "prediction_temporal_dependency": false,
+            "unseen_modality_boundary": false,
+            "value_future_attention": false
+          }
+        },
+        "positive-control": {
+          "raw": {
+            "bottleneck_actual": [
+              0.25,
+              0.75,
+              0.0
+            ],
+            "cosmetic_topology_mass": 0.0,
+            "followup_attention_channels": {
+              "audio": 0.744,
+              "visual": 0.256
+            },
+            "painful_attention_channels": {
+              "audio": 0.2,
+              "visual": 0.8
+            },
+            "painful_next_attention_channels": {
+              "audio": 0.744,
+              "visual": 0.256
+            },
+            "repeat_3_expected_mass": 0.96,
+            "surprise": {
+              "repeat_1": 1.0,
+              "repeat_2": 0.25,
+              "repeat_3": 0.04,
+              "violation": 1.4
+            },
+            "unheard_actual_mass": 0.0
+          },
+          "roles": {
+            "attention_gate": true,
+            "prediction_temporal_dependency": true,
+            "unseen_modality_boundary": true,
+            "value_future_attention": true
+          }
+        },
+        "random-recurrent": {
+          "raw": {
+            "bottleneck_actual": [
+              0.7,
+              0.1,
+              0.0
+            ],
+            "cosmetic_topology_mass": 0.0,
+            "followup_attention_channels": {
+              "audio": 0.5,
+              "visual": 0.5
+            },
+            "painful_attention_channels": {
+              "audio": 0.5,
+              "visual": 0.5
+            },
+            "painful_next_attention_channels": {},
+            "repeat_3_expected_mass": 0.2,
+            "surprise": {
+              "repeat_1": 0.4,
+              "repeat_2": 0.9,
+              "repeat_3": 0.2,
+              "violation": 0.7
+            },
+            "unheard_actual_mass": 0.36055512754639896
+          },
+          "roles": {
+            "attention_gate": false,
+            "prediction_temporal_dependency": false,
+            "unseen_modality_boundary": false,
+            "value_future_attention": false
+          }
+        }
+      },
+      "ok": true,
+      "roles": {
+        "cosmetic_topology_does_not_supply_prediction_history": true,
+        "cosmetic_topology_exceeds_control": true,
+        "expected_absences": {
+          "cosmetic-topology": [
+            "prediction_temporal_dependency",
+            "value_future_attention"
+          ],
+          "passive-recorder": [
+            "prediction_temporal_dependency",
+            "unseen_modality_boundary",
+            "attention_gate",
+            "value_future_attention"
+          ],
+          "positive-control": [],
+          "random-recurrent": [
+            "prediction_temporal_dependency",
+            "attention_gate",
+            "value_future_attention"
+          ]
+        },
+        "missing_expected_absences": {
+          "cosmetic-topology": [],
+          "passive-recorder": [],
+          "positive-control": [],
+          "random-recurrent": []
+        },
+        "observed_absences": {
+          "cosmetic-topology": [
+            "prediction_temporal_dependency",
+            "value_future_attention"
+          ],
+          "passive-recorder": [
+            "prediction_temporal_dependency",
+            "unseen_modality_boundary",
+            "attention_gate",
+            "value_future_attention"
+          ],
+          "positive-control": [],
+          "random-recurrent": [
+            "prediction_temporal_dependency",
+            "unseen_modality_boundary",
+            "attention_gate",
+            "value_future_attention"
+          ]
+        },
+        "relation_presence": {
+          "cosmetic-topology": {
+            "attention_gate": true,
+            "prediction_temporal_dependency": false,
+            "unseen_modality_boundary": true,
+            "value_future_attention": false
+          },
+          "passive-recorder": {
+            "attention_gate": false,
+            "prediction_temporal_dependency": false,
+            "unseen_modality_boundary": false,
+            "value_future_attention": false
+          },
+          "positive-control": {
+            "attention_gate": true,
+            "prediction_temporal_dependency": true,
+            "unseen_modality_boundary": true,
+            "value_future_attention": true
+          },
+          "random-recurrent": {
+            "attention_gate": false,
+            "prediction_temporal_dependency": false,
+            "unseen_modality_boundary": false,
+            "value_future_attention": false
+          }
+        },
+        "relation_presence_counts": {
+          "cosmetic-topology": 2,
+          "passive-recorder": 0,
+          "positive-control": 4,
+          "random-recurrent": 0
+        }
+      }
+    }
+  ],
+  "frame_count": 8,
+  "input_count": 9,
+  "observation_count": 8,
+  "ok": true,
+  "source_name": "causal-probe:positive-control"
+}

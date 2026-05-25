@@ -1,0 +1,26 @@
+{
+  "name": "objective_attention_shift",
+  "vocabulary": ["visual_signal", "audio_signal"],
+  "objects": [
+    {
+      "id": "neutral_visual",
+      "kind": "neutral visual",
+      "start": 0.0,
+      "end": 1.2,
+      "features": {"visual_signal": 1.0, "audio_signal": 0.0},
+      "modality": "visual",
+      "salience": 1.0,
+      "metadata": {"affect": {"pain": 0.0, "pleasure": 0.0}}
+    },
+    {
+      "id": "painful_audio",
+      "kind": "painful audio",
+      "start": 0.0,
+      "end": 1.2,
+      "features": {"visual_signal": 0.0, "audio_signal": 1.0},
+      "modality": "audio",
+      "salience": 1.0,
+      "metadata": {"affect": {"pain": 1.0, "pleasure": 0.0}}
+    }
+  ]
+}

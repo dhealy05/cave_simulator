@@ -1,0 +1,75 @@
+{
+  "adapter": "CaveNet",
+  "duration": 1.0,
+  "errors": [],
+  "extra": [
+    {
+      "errors": [],
+      "id": "selection_recovery",
+      "metrics": {
+        "cavenet-no-bottleneck": {
+          "active_feature_count": 3,
+          "actual_mass": 1.0499999999999998,
+          "adapter": "CaveNet",
+          "compression_cost": 0.0,
+          "dropped_mass": 0.0,
+          "source_mass": 1.0499999999999998
+        },
+        "cavenet-selection": {
+          "active_feature_count": 2,
+          "actual_mass": 0.85,
+          "adapter": "CaveNet",
+          "compression_cost": 0.09696969696969705,
+          "dropped_mass": 0.19999999999999984,
+          "source_mass": 1.0499999999999998
+        },
+        "minimal-bottleneck": {
+          "adapter": "MinimalSubject",
+          "diagnostic_attention_gain": -0.010414718928495326,
+          "early_diagnostic_attention": 0.5659702804728078,
+          "late_diagnostic_attention": 0.5555555615443125,
+          "late_memory_strength": 9.649152960840237
+        },
+        "minimal-no-bottleneck": {
+          "adapter": "MinimalSubject",
+          "diagnostic_attention_gain": -0.03222597658536169,
+          "early_diagnostic_attention": 0.43234241767574966,
+          "late_diagnostic_attention": 0.40011644109038796,
+          "late_memory_strength": 9.649152960840237
+        },
+        "minimal-no-memory": {
+          "adapter": "MinimalSubject",
+          "diagnostic_attention_gain": 0.0,
+          "early_diagnostic_attention": 0.5555555555555556,
+          "late_diagnostic_attention": 0.5555555555555556,
+          "late_memory_strength": 0.0
+        }
+      },
+      "ok": true,
+      "roles": {
+        "cavenet_bottleneck": {
+          "no_bottleneck_active_feature_count": 3,
+          "no_bottleneck_dropped_mass": 0.0,
+          "selected_active_feature_count": 2,
+          "selected_dropped_mass": 0.19999999999999984,
+          "selection_margin": 0.19999999999999984
+        },
+        "minimal_diagnostic_selection": {
+          "bottleneck_diagnostic_attention_gain": -0.010414718928495326,
+          "bottleneck_late_diagnostic_attention": 0.5555555615443125,
+          "bottleneck_memory_strength": 9.649152960840237,
+          "no_bottleneck_late_diagnostic_attention": 0.40011644109038796,
+          "no_memory_diagnostic_attention_gain": 0.0,
+          "no_memory_late_diagnostic_attention": 0.5555555555555556,
+          "no_memory_strength": 0.0,
+          "selection_margin": 0.15543912045392455
+        }
+      }
+    }
+  ],
+  "frame_count": 2,
+  "input_count": 1,
+  "observation_count": 2,
+  "ok": true,
+  "source_name": "selection-recovery:cavenet-selection"
+}

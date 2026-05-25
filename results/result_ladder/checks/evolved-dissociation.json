@@ -1,0 +1,41 @@
+{
+  "adapter": "EvolvedSubject",
+  "duration": 80.0,
+  "errors": [],
+  "extra": [
+    {
+      "errors": [],
+      "id": "evolved_dissociation",
+      "ok": true,
+      "roles": {
+        "control_collapse": {
+          "nonrecurrent_rare_accuracy": 0.5353535353535354,
+          "reset_rare_accuracy": 0.5050505050505051,
+          "reset_rare_contrast": 0.0,
+          "shuffled_rare_accuracy": 0.5163934426229508
+        },
+        "exposure_regulation": {
+          "rare_exposure_contrast": 0.9988014679158713
+        },
+        "magnitude_selectivity": {
+          "common_exposure_contrast": 0.9422205026999906,
+          "common_future_accuracy": 0.9719298245614035,
+          "magnitude_blind": true,
+          "rare_minus_common_contrast": 0.05658096521588074
+        },
+        "value_retention": {
+          "evolved_utility": 1.970678427783519,
+          "frequency_counter_utility": -2.815748626951752,
+          "random_utility": -2.0065317488949,
+          "rare_future_accuracy": 1.0,
+          "utility_gain_over_frequency_counter": 4.786427054735271
+        }
+      }
+    }
+  ],
+  "frame_count": 80,
+  "input_count": 80,
+  "observation_count": 80,
+  "ok": true,
+  "source_name": "evolved:dissociation"
+}

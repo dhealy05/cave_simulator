@@ -1,0 +1,24 @@
+{
+  "cluster_files": [
+    "out/report_suites/result-ladder/mechanism/population-clusters/clusters/state_effect.json",
+    "out/report_suites/result-ladder/mechanism/population-clusters/clusters/observed_memory.json",
+    "out/report_suites/result-ladder/mechanism/population-clusters/clusters/subjective_trajectory.json",
+    "out/report_suites/result-ladder/mechanism/population-clusters/clusters/active_context.json"
+  ],
+  "errors": [],
+  "extra": [
+    {
+      "errors": [],
+      "id": "population_clusters_matrix",
+      "metrics": {
+        "max_zero_attention_effect_distance": 1.3761838603601975e-17,
+        "mean_baseline_sequence_effect_distance": 0.0537484086900446,
+        "mean_internal_baseline_zero_predictor_distance": 0.09856106429984089,
+        "mean_observed_subject_distance_baseline": 0.19095838969211443
+      },
+      "ok": true
+    }
+  ],
+  "ok": true,
+  "run_count": 30
+}

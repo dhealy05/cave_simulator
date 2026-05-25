@@ -1,0 +1,275 @@
+{
+  "adapter": "CaveNet",
+  "duration": 5.1,
+  "errors": [],
+  "extra": [
+    {
+      "comparisons": {
+        "external-only-attention": {
+          "errors": [
+            "max_actual_distance 0.509317 exceeds tolerance 1e-09",
+            "max_expected_distance 0.0708126 exceeds tolerance 1e-09",
+            "max_error_distance 0.512603 exceeds tolerance 1e-09",
+            "max_surprise_distance 0.512362 exceeds tolerance 1e-09",
+            "max_memory_distance 0.414984 exceeds tolerance 1e-09"
+          ],
+          "metrics": {
+            "max_actual_distance": 0.5093174643039783,
+            "max_error_distance": 0.5126028411988494,
+            "max_expected_distance": 0.07081258920631185,
+            "max_learning_rate_distance": 0.0,
+            "max_memory_distance": 0.4149841079123245,
+            "max_surprise_distance": 0.5123620239398778
+          },
+          "ok": false
+        },
+        "fixed": {
+          "errors": [],
+          "metrics": {
+            "max_actual_distance": 0.0,
+            "max_error_distance": 0.0,
+            "max_expected_distance": 0.0,
+            "max_learning_rate_distance": 0.0,
+            "max_memory_distance": 0.0,
+            "max_surprise_distance": 0.0
+          },
+          "ok": true
+        },
+        "high-surprise": {
+          "errors": [
+            "max_surprise_distance 0.272222 exceeds tolerance 1e-09"
+          ],
+          "metrics": {
+            "max_actual_distance": 0.0,
+            "max_error_distance": 0.0,
+            "max_expected_distance": 0.0,
+            "max_learning_rate_distance": 0.0,
+            "max_memory_distance": 0.0,
+            "max_surprise_distance": 0.2722223220695776
+          },
+          "ok": false
+        },
+        "internal-only-attention": {
+          "errors": [
+            "max_actual_distance 0.304795 exceeds tolerance 1e-09",
+            "max_expected_distance 0.562731 exceeds tolerance 1e-09",
+            "max_error_distance 0.679997 exceeds tolerance 1e-09",
+            "max_surprise_distance 0.426058 exceeds tolerance 1e-09",
+            "max_memory_distance 0.441338 exceeds tolerance 1e-09"
+          ],
+          "metrics": {
+            "max_actual_distance": 0.30479549711355935,
+            "max_error_distance": 0.6799971813667075,
+            "max_expected_distance": 0.5627314338711377,
+            "max_learning_rate_distance": 0.0,
+            "max_memory_distance": 0.44133808182239004,
+            "max_surprise_distance": 0.426058466536701
+          },
+          "ok": false
+        },
+        "zero-attention": {
+          "errors": [
+            "max_actual_distance 0.304795 exceeds tolerance 1e-09",
+            "max_expected_distance 0.0708126 exceeds tolerance 1e-09",
+            "max_error_distance 0.272222 exceeds tolerance 1e-09",
+            "max_surprise_distance 0.272222 exceeds tolerance 1e-09",
+            "max_memory_distance 0.178627 exceeds tolerance 1e-09"
+          ],
+          "metrics": {
+            "max_actual_distance": 0.30479549711355935,
+            "max_error_distance": 0.2722223220695776,
+            "max_expected_distance": 0.07081258920631185,
+            "max_learning_rate_distance": 0.0,
+            "max_memory_distance": 0.1786270764675426,
+            "max_surprise_distance": 0.2722223220695776
+          },
+          "ok": false
+        },
+        "zero-attention-capacity": {
+          "errors": [
+            "max_actual_distance 0.304795 exceeds tolerance 1e-09",
+            "max_expected_distance 0.0708126 exceeds tolerance 1e-09",
+            "max_error_distance 0.272222 exceeds tolerance 1e-09",
+            "max_surprise_distance 0.272222 exceeds tolerance 1e-09",
+            "max_memory_distance 0.178627 exceeds tolerance 1e-09"
+          ],
+          "metrics": {
+            "max_actual_distance": 0.30479549711355935,
+            "max_error_distance": 0.2722223220695776,
+            "max_expected_distance": 0.07081258920631185,
+            "max_learning_rate_distance": 0.0,
+            "max_memory_distance": 0.1786270764675426,
+            "max_surprise_distance": 0.2722223220695776
+          },
+          "ok": false
+        },
+        "zero-expectation": {
+          "errors": [
+            "max_expected_distance 0.0708126 exceeds tolerance 1e-09",
+            "max_error_distance 0.0708126 exceeds tolerance 1e-09",
+            "max_surprise_distance 0.0708126 exceeds tolerance 1e-09"
+          ],
+          "metrics": {
+            "max_actual_distance": 0.0,
+            "max_error_distance": 0.07081258920631185,
+            "max_expected_distance": 0.07081258920631185,
+            "max_learning_rate_distance": 0.0,
+            "max_memory_distance": 0.0,
+            "max_surprise_distance": 0.07081258920631185
+          },
+          "ok": false
+        },
+        "zero-learning": {
+          "errors": [
+            "max_expected_distance 0.0708126 exceeds tolerance 1e-09",
+            "max_error_distance 0.0708126 exceeds tolerance 1e-09",
+            "max_surprise_distance 0.0708126 exceeds tolerance 1e-09",
+            "max_memory_distance 0.178627 exceeds tolerance 1e-09",
+            "max_learning_rate_distance 0.18 exceeds tolerance 1e-09"
+          ],
+          "metrics": {
+            "max_actual_distance": 0.0,
+            "max_error_distance": 0.07081258920631185,
+            "max_expected_distance": 0.07081258920631185,
+            "max_learning_rate_distance": 0.18000000000000005,
+            "max_memory_distance": 0.1786270764675426,
+            "max_surprise_distance": 0.07081258920631185
+          },
+          "ok": false
+        },
+        "zero-topology": {
+          "errors": [],
+          "metrics": {
+            "max_actual_distance": 0.0,
+            "max_error_distance": 0.0,
+            "max_expected_distance": 0.0,
+            "max_learning_rate_distance": 0.0,
+            "max_memory_distance": 0.0,
+            "max_surprise_distance": 0.0
+          },
+          "ok": true
+        }
+      },
+      "errors": [],
+      "id": "cavenet_ablation",
+      "metrics": {
+        "external-only-attention": {
+          "actual_mass": 11.096038346461516,
+          "cave_actual_mass": 2.860961780317932,
+          "expected_mass": 0.0,
+          "final_memory_mass": 0.21850579994180785,
+          "surprise_total": 11.096038346461516,
+          "topology_mass": 412.74380143915005
+        },
+        "fixed": {
+          "actual_mass": 2.860961780317932,
+          "cave_actual_mass": 2.860961780317932,
+          "expected_mass": 0.6724335433616467,
+          "final_memory_mass": 0.025567003103584715,
+          "surprise_total": 2.456715252218983,
+          "topology_mass": 132.58305645710405
+        },
+        "high-surprise": {
+          "actual_mass": 2.860961780317932,
+          "cave_actual_mass": 2.860961780317932,
+          "expected_mass": 0.6724335433616467,
+          "final_memory_mass": 0.025567003103584715,
+          "surprise_total": 4.913430504437966,
+          "topology_mass": 132.58305645710405
+        },
+        "internal-only-attention": {
+          "actual_mass": 0.0,
+          "cave_actual_mass": 2.860961780317932,
+          "expected_mass": 3.1083306022237607,
+          "final_memory_mass": 0.0032319254708606648,
+          "surprise_total": 3.1083306022237607,
+          "topology_mass": 421.59706754181593
+        },
+        "zero-attention": {
+          "actual_mass": 0.0,
+          "cave_actual_mass": 2.860961780317932,
+          "expected_mass": 0.0,
+          "final_memory_mass": 0.0,
+          "surprise_total": 0.0,
+          "topology_mass": 121.33772237081344
+        },
+        "zero-attention-capacity": {
+          "actual_mass": 0.0,
+          "cave_actual_mass": 2.860961780317932,
+          "expected_mass": 0.0,
+          "final_memory_mass": 0.0,
+          "surprise_total": 0.0,
+          "topology_mass": 0.0
+        },
+        "zero-expectation": {
+          "actual_mass": 2.860961780317932,
+          "cave_actual_mass": 2.860961780317932,
+          "expected_mass": 0.0,
+          "final_memory_mass": 0.025567003103584715,
+          "surprise_total": 2.860961780317932,
+          "topology_mass": 121.33772237081344
+        },
+        "zero-learning": {
+          "actual_mass": 2.860961780317932,
+          "cave_actual_mass": 2.860961780317932,
+          "expected_mass": 0.0,
+          "final_memory_mass": 0.0,
+          "surprise_total": 2.860961780317932,
+          "topology_mass": 121.33772237081344
+        },
+        "zero-topology": {
+          "actual_mass": 2.860961780317932,
+          "cave_actual_mass": 2.860961780317932,
+          "expected_mass": 0.6724335433616467,
+          "final_memory_mass": 0.025567003103584715,
+          "surprise_total": 2.456715252218983,
+          "topology_mass": 0.0
+        }
+      },
+      "ok": true,
+      "roles": {
+        "attention_allocation": {
+          "external_only_actual_mass": 11.096038346461516,
+          "external_only_expected_mass": 0.0,
+          "fixed_actual_mass": 2.860961780317932,
+          "fixed_expected_mass": 0.6724335433616467,
+          "internal_only_actual_mass": 0.0,
+          "internal_only_expected_mass": 3.1083306022237607,
+          "zero_capacity_actual_mass": 0.0,
+          "zero_capacity_expected_mass": 0.0
+        },
+        "attention_gate": {
+          "fixed_actual_mass": 2.860961780317932,
+          "zero_attention_actual_mass": 0.0
+        },
+        "expectation_readout": {
+          "fixed_expected_mass": 0.6724335433616467,
+          "zero_expectation_expected_mass": 0.0,
+          "zero_expectation_internal_distance": 0.07081258920631185
+        },
+        "external_input_gate": {
+          "fixed_actual_mass": 2.860961780317932,
+          "zero_attention_actual_mass": 0.0,
+          "zero_external_attention_gain_actual_mass": 0.0
+        },
+        "memory_cell": {
+          "fixed_final_memory_mass": 0.025567003103584715,
+          "zero_learning_final_memory_mass": 0.0
+        },
+        "surprise_readout": {
+          "fixed_surprise_total": 2.456715252218983,
+          "high_surprise_total": 4.913430504437966
+        },
+        "topology_layer": {
+          "fixed_topology_mass": 132.58305645710405,
+          "zero_topology_mass": 0.0
+        }
+      }
+    }
+  ],
+  "frame_count": 26,
+  "input_count": 4,
+  "observation_count": 26,
+  "ok": true,
+  "source_name": "cavenet"
+}

@@ -1,0 +1,30 @@
+{
+  "adapter": "CaveProducer",
+  "duration": 1.1,
+  "errors": [],
+  "extra": [
+    {
+      "errors": [],
+      "id": "unseen_modality",
+      "metrics": {
+        "unheard_actual": [
+          0.0,
+          0.0
+        ],
+        "unheard_sensor_channels": [
+          "visual"
+        ],
+        "visible_actual": [
+          1.0,
+          0.0
+        ]
+      },
+      "ok": true
+    }
+  ],
+  "frame_count": 12,
+  "input_count": 2,
+  "observation_count": 12,
+  "ok": true,
+  "source_name": "cave"
+}
