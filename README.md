@@ -4,54 +4,37 @@ Cave uses Plato's allegory as a design frame for computational functions often
 invoked in consciousness research: sensing, attention, memory, expectation,
 error, learning, value, action/exposure, and topology-like state.
 
-Our goal is to make subject-side trajectories executable and inspectable: how an
-external sequence becomes available to a situated system through particular
-channels, limits, expectations, retained state, and future coupling.
+From these functions we can glean an observable, transferrable model for the subject's experience over time: *the subjective trajectory*.
 
-The included tutorials and papers build that idea in three steps:
-
-- build and render one subjective trajectory;
-- compare trajectories across subjects, experiences, populations, and
-  substrates;
-- run pressure experiments that ask whether Cave-like functional roles become
-  useful when simple systems face delay, bottleneck, value, and exposure
-  demands.
-
-We start with a simulation of the cave. Clockwise from top left:
+We start with a simulation of the cave, with panels as follows:
 
 1. A fixed point of view observes a wall against which objects appear.
 2. The objects recede into the observer's memory
 3. They are filtered by the observer's attention
 4. The observer develops internal expectations
-5. The observe develops internal predictions
-6. We measure the observer's experience.
+5. The observer develops internal predictions
+6. We measure the observer's subjective trajectory
 
 ![Synchronized projections of one Cave episode](results/readme/01_multi_view_state.gif)
 
-For an even simpler version, we can imagine our cave dweller liberated, but experiencing only the objects he encounters:
+This is the basis of the simulated cave. We have assumed only that the subject
 
-![Primitive demo](notebooks/primitive_demo/cave_walker.gif)
+1. has a memory (he thinks back)
+2. has an expectation (he thinks forward) and
+3. has an experience (he stares ahead).
 
-in this case, given a simpler model, a simpler subjective trajectory emerges.
+We proceed below to compare trajectories on a population basis and to apply treatments to different subject substrates in an effort to see whether functional primitives arise independently. We find that matched pressure plus sufficient capacity reliably bends population trajectories toward four of the five reference roles.
 
-## Install
+To render your own, follow the tutorials:
 
-```bash
-python -m pip install -e .
-```
+1. [Build and render one subjective trajectory](notebooks/tutorials/01_intro_to_cave_subjective_trajectory.ipynb);
+2. [Compare trajectories across subjects, experiences, populations, and substrates](notebooks/tutorials/02_comparing_experiences.ipynb);
+3. [Run pressure experiments under delay, bottleneck, value, and exposure demands](notebooks/tutorials/03_pressures_cavenet_evolved_subjects.ipynb).
 
-For development:
+and for a deeper dive, read up on
 
-```bash
-python -m pip install -e ".[dev]"
-pytest
-```
-
-Optional producers may need extra dependencies:
-
-```bash
-python -m pip install -e ".[gpt2]"
-```
+1. [Subjective Trajectories](docs/subjective_trajectories.pdf): construction vocabulary for subjective trajectories.
+2. [Functional Role Emergence Under Pressure](docs/convergence_under_pressure.pdf): pressure/capacity/function thesis and current evidence.
 
 ## Build One Trajectory
 
@@ -210,104 +193,54 @@ For the full comparison workflow, see
 
 ## Pressure Experiments
 
-Paper 2 and Tutorial 3 ask why certain trajectory-transforming functions should
-appear at all. The working thesis is:
+### Hypothesis
+
+Why should certain trajectory-transforming functions appear at all? Well, consciousness evolved for a reason. We propose the following:
 
 ```text
 capacity + pressure -> useful mathematical function
 ```
 
-Cave's reference architecture installs roles such as expectation, selection,
-value retention, regulation, and topology-like organization by design. The
-pressure experiments then ask whether related functions can be recovered,
-weakened, or disrupted under matched environmental demands and controls.
+and to test it, we subject three substrates of increasing distance from the named Cave architecture to matched pressures:
 
-The package includes:
+1. the reference model
+2. a weakened network (CaveNet) whose gains can adapt
+3. a compact recurrent subject evolved only on delayed exposure utility
 
-- `CaveNet`: a network-shaped realization of the Cave update path;
-- `CaveNetConfig`: gains for attention, state input, expectation, surprise,
-  learning, and topology;
-- `CaveNetAdaptationPolicy`: pressure-shaped gain adaptation;
-- minimal and evolved subject tests for recurrence, value, memory, selection,
-  regulation, and exposure;
-- controls for hidden reset, non-recurrence, temporal shuffling, removed
-  memory, removed attention, and related capacity failures.
+We then ask whether the predicted trajectory deformations appear and collapse in patterned ways when the enabling capacity is removed, scrambled, or reset.
 
-```python
-from cave.pressure.tests.cavenet_pressure import (
-    build_pressure_episode,
-    check_cavenet_pressure,
-)
-from cave.pressure.tests.evolved_dissociation import check_evolved_dissociation
+### Results
 
-episode = build_pressure_episode("adaptive")
-cavenet_summary = check_cavenet_pressure()
-dissociation_summary = check_evolved_dissociation()
-```
-
-The CaveNet pressure trace makes adaptation explicit: named gains move over
-time, then the resulting episodes can be compared through the same dashboard
-surface.
-
-![Adaptive CaveNet config history](results/readme/16_cavenet_config_history.png)
-
-Role evidence is reported as bounded functional resemblance, not coordinate
-identity and not a consciousness claim.
-
-![Role evidence board](results/readme/17_role_evidence_board.png)
-
-The evolved-subject results are the strongest current non-reference case: a
-compact recurrent subject learns exposure control in a delayed-value world, and
-the readout collapses under matched controls.
+The strongest current non-reference result is the evolved-dissociation world:
+rare cues carry true delayed value, common cues carry the same surface sign
+without consequence, and distractors fill the delay. A weak recurrent subject
+evolves exposure control that beats a frequency-counter by ~4.8 utility,
+decodes the rare future outcome from hidden state at 1.0 accuracy, and
+collapses to chance under reset, non-recurrent, and shuffled controls.
 
 ![Evolved exposure control metrics](results/readme/18_evolved_exposure_metrics.png)
 
+CaveNet sits one rung lower as a calibration result: pressure signals move a
+weakened, role-compatible architecture in the predicted direction, more
+strongly when a learned controller maps pressure summaries into gains than
+when a hand-written rule does. The gain history shows the mechanism; the
+result ladder records how far it actually moves.
+
+![Adaptive CaveNet config history](results/readme/16_cavenet_config_history.png)
+
+Across substrates, expectation, value retention, regulation, and latent
+topology emerge with clean control collapse. Selection is reported more
+conservatively as cue-weight concentration rather than full dynamic attention.
+The role evidence board reads as bounded functional resemblance — not
+coordinate identity with Cave variables, and not a consciousness claim.
+
+![Role evidence board](results/readme/17_role_evidence_board.png)
+
+Every claim above is recorded with metrics, controls, and pass/fail status in
+[`results/result_ladder/metrics.md`](results/result_ladder/metrics.md).
+
 For the pressure-result walkthrough, see
 [Tutorial 3](notebooks/tutorials/03_pressures_cavenet_evolved_subjects.ipynb).
+
 For the paper framing, see
-[Paper 2: Functional role emergence under pressure](docs/papers/paper_functional_role_emergence.md).
-
-## Reading Path
-
-- [Tutorial 1](notebooks/tutorials/01_intro_to_cave_subjective_trajectory.ipynb):
-  build an external sequence, configure a subject, run `CaveProducer`, inspect
-  an `Episode`, and render views.
-- [Tutorial 2](notebooks/tutorials/02_comparing_experiences.ipynb):
-  compare same-world/different-subject and same-subject/different-world runs,
-  then build population dashboards.
-- [Tutorial 3](notebooks/tutorials/03_pressures_cavenet_evolved_subjects.ipynb):
-  read the pressure-result ladder, CaveNet demos, evolved-subject controls, and
-  cross-substrate comparisons.
-- [Paper 1: Subjective trajectories](docs/papers/paper_subjective_trajectories.md):
-  construction vocabulary for subjective trajectories.
-- [Paper 2: Functional role emergence under pressure](docs/papers/paper_functional_role_emergence.md):
-  pressure/capacity/function thesis and current evidence.
-
-## Command Line
-
-```bash
-# Run an episode and export JSON.
-cave-run --demo --output out/demo/episode.json
-
-# Render a GIF.
-cave-render --demo --views all \
-  --output out/demo/trajectory.gif
-
-# Generate the predefined report suite.
-cave-report-suite
-
-# Regenerate README media assets.
-python scripts/generate_readme_assets.py
-```
-
-## Project Map
-
-```text
-cave/commitments/      reference roles: attention, memory, prediction, topology, value
-cave/observation/      experience objects, episodes, producers, views, populations
-cave/presentation/     renderers, reports, dashboards, topology surfaces
-cave/substrates/       CaveNet, minimal subject, evolved subject
-cave/pressure/         pressure tests, ablations, role recovery
-docs/                  paper docs
-notebooks/tutorials/   API-first tutorial notebooks
-```
+[Paper 2: Functional convergence under pressure](docs/convergence_under_pressure.pdf).
