@@ -36,23 +36,28 @@ class ExperienceModel:
             state_objects,
             self.vocabulary,
         )
-        u_t = self.sensorium.attended_input(
+        sensed_input = self.sensorium.attended_input(
             sensor_responses,
             attention_state,
             self.vocabulary,
         )
-        workspace = self.params.workspace_compressor.compress(u_t, self.vocabulary)
-        state_input = (
+        workspace = self.params.workspace_compressor.compress(
+            sensed_input,
+            self.vocabulary,
+        )
+        actual_input = (
             workspace.reconstructed
             if self.params.workspace_input_mode == "workspace"
-            else u_t
+            else sensed_input
         )
-        raw_expected_input = self.predictor.predict(
+        raw_generated_input = self.predictor.predict(
             self.subject_state.snapshot(),
             self.vocabulary,
         )
-        expected_input = raw_expected_input * attention_state.internal_expectation_impact()
-        prediction = self.predictor.evaluate(expected_input, state_input)
+        generated_input = (
+            raw_generated_input * attention_state.internal_expectation_impact()
+        )
+        prediction = self.predictor.evaluate(generated_input, actual_input)
         valence = self.params.valence_evaluator.evaluate(
             current_objects=state_objects,
             attention=attention_state,
@@ -76,7 +81,7 @@ class ExperienceModel:
         topology_params = self.params.topology
         self.subject_state.update(
             t,
-            state_input,
+            actual_input,
             state_objects,
             attention_state,
             topology_params,
@@ -111,8 +116,8 @@ class ExperienceModel:
             next_attention_channel_weights=next_attention_channel_weights,
             attention_profile=self.params.attention,
             sensor_responses=sensor_responses,
-            attended_input_vector=u_t.copy(),
-            input_vector=state_input.copy(),
+            attended_input_vector=sensed_input.copy(),
+            input_vector=actual_input.copy(),
             workspace=workspace,
             workspace_input_mode=self.params.workspace_input_mode,
             prediction=prediction,

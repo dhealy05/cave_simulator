@@ -31,6 +31,9 @@ from cave.demonstrations.scenarios import (
     unseen_modality_report_spec,
     valence_attractor_repulsor_report_spec,
 )
+from cave.observation.source_reports.producer_energy import (
+    canonical_producer_energy_report_spec,
+)
 from cave.presentation.reports.generate import write_producer_report
 from cave.presentation.reports.matrix import write_matrix_report
 from cave.presentation.reports.specs import (
@@ -39,33 +42,37 @@ from cave.presentation.reports.specs import (
     SubjectComparisonReportSpec,
 )
 from cave.presentation.reports.subject_comparison import write_subject_comparison_report
-from cave.pressure.tests.cavenet_ablation import cavenet_ablation_report_spec
-from cave.pressure.tests.cavenet_controller import (
+from cave.pressure.checks.cavenet_ablation import cavenet_ablation_report_spec
+from cave.pressure.checks.cavenet_controller import (
     cavenet_controller_learning_report_spec,
     cavenet_controller_population_report_spec,
     cavenet_controller_report_spec,
 )
-from cave.pressure.tests.cavenet_pressure import (
+from cave.pressure.checks.cavenet_pressure import (
     cavenet_pressure_population_report_spec,
     cavenet_pressure_report_spec,
 )
-from cave.pressure.tests.common_behaviors import common_behaviors_report_spec
-from cave.pressure.tests.evolved_dissociation import evolved_dissociation_report_spec
-from cave.pressure.tests.evolved_exposure import evolved_exposure_report_spec
-from cave.pressure.tests.evolved_exposure_sweep import evolved_exposure_sweep_report_spec
-from cave.pressure.tests.evolved_roles import evolved_roles_report_spec
-from cave.pressure.tests.evolved_roles_sweep import evolved_roles_sweep_report_spec
-from cave.pressure.tests.preference_emergence import preference_emergence_report_spec
-from cave.pressure.tests.population_trajectory_geometry import (
+from cave.pressure.checks.common_behaviors import common_behaviors_report_spec
+from cave.pressure.checks.compression_clamp import compression_clamp_report_spec
+from cave.pressure.checks.consciousness_energy import consciousness_energy_report_spec
+from cave.pressure.checks.evolved_dissociation import evolved_dissociation_report_spec
+from cave.pressure.checks.evolved_exposure import evolved_exposure_report_spec
+from cave.pressure.checks.evolved_exposure_sweep import evolved_exposure_sweep_report_spec
+from cave.pressure.checks.evolved_roles import evolved_roles_report_spec
+from cave.pressure.checks.evolved_roles_sweep import evolved_roles_sweep_report_spec
+from cave.pressure.checks.preference_emergence import preference_emergence_report_spec
+from cave.pressure.checks.population_trajectory_geometry import (
     population_trajectory_geometry_report_spec,
     population_trajectory_geometry_sweep_report_spec,
 )
-from cave.pressure.tests.regulation_recovery import regulation_recovery_report_spec
-from cave.pressure.tests.role_recovery import role_recovery_report_spec
-from cave.pressure.tests.role_recovery_matrix import role_recovery_matrix_report_spec
-from cave.pressure.tests.selection_recovery import selection_recovery_report_spec
-from cave.pressure.tests.topology_recovery import topology_recovery_report_spec
-from cave.pressure.tests.value_retention_recovery import (
+from cave.pressure.checks.primitive_compression import primitive_compression_report_spec
+from cave.pressure.checks.regulation_recovery import regulation_recovery_report_spec
+from cave.pressure.checks.role_recovery import role_recovery_report_spec
+from cave.pressure.checks.role_recovery_matrix import role_recovery_matrix_report_spec
+from cave.pressure.checks.selection_recovery import selection_recovery_report_spec
+from cave.pressure.checks.substrate_energy import substrate_energy_report_spec
+from cave.pressure.checks.topology_recovery import topology_recovery_report_spec
+from cave.pressure.checks.value_retention_recovery import (
     value_retention_recovery_report_spec,
 )
 
@@ -83,7 +90,10 @@ SPEC_FACTORIES: dict[str, SpecFactory] = {
     "cavenet_controller_population": cavenet_controller_population_report_spec,
     "cavenet_pressure": cavenet_pressure_report_spec,
     "cavenet_pressure_population": cavenet_pressure_population_report_spec,
+    "canonical_producer_energy": canonical_producer_energy_report_spec,
     "common_behaviors": common_behaviors_report_spec,
+    "compression_clamp": compression_clamp_report_spec,
+    "consciousness_energy": consciousness_energy_report_spec,
     "evolved_dissociation": evolved_dissociation_report_spec,
     "evolved_exposure": evolved_exposure_report_spec,
     "evolved_exposure_sweep": evolved_exposure_sweep_report_spec,
@@ -97,6 +107,7 @@ SPEC_FACTORIES: dict[str, SpecFactory] = {
     "population_trajectory_geometry_sweep": population_trajectory_geometry_sweep_report_spec,
     "preference_emergence": preference_emergence_report_spec,
     "preference_shaped_topology": preference_shaped_topology_report_spec,
+    "primitive_compression": primitive_compression_report_spec,
     "reference_cave": reference_cave_report_spec,
     "representational_compression": representational_compression_report_spec,
     "regulation_recovery": regulation_recovery_report_spec,
@@ -104,6 +115,7 @@ SPEC_FACTORIES: dict[str, SpecFactory] = {
     "role_recovery_matrix": role_recovery_matrix_report_spec,
     "same_world_different_subjects": same_world_different_subjects_report_spec,
     "selection_recovery": selection_recovery_report_spec,
+    "substrate_energy": substrate_energy_report_spec,
     "subject_ablation_matrix": subject_ablation_matrix_report_spec,
     "topology_recovery": topology_recovery_report_spec,
     "unseen_modality": unseen_modality_report_spec,
@@ -117,7 +129,7 @@ REPORT_WRITERS = {
     "matrix": write_matrix_report,
 }
 
-DEFAULT_SUITE_MANIFEST = Path("fixtures/report_suites/result_ladder.json")
+DEFAULT_SUITE_MANIFEST = Path("artifacts/manifests/report_suites/result_ladder.json")
 
 
 @dataclass(frozen=True)

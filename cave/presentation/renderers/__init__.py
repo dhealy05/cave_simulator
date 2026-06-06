@@ -9,6 +9,7 @@ __all__ = [
     "flatten_topology_state",
     "save_episode_set_dashboard",
     "save_episode_set_distances_json",
+    "save_experience_trajectory_strip",
     "save_topology_atlas",
     "save_topology_atlas_metrics",
     "save_topology_population_animation",
@@ -89,6 +90,12 @@ def __getattr__(name: str):
             "flatten_topology_state": flatten_topology_state,
             "save_topology_state_surface": save_topology_state_surface,
             "topology_state_surface": topology_state_surface,
+        }[name]
+    if name in {"save_experience_trajectory_strip"}:
+        from cave.presentation.renderers.trajectory_strip_renderer import save_experience_trajectory_strip
+
+        return {
+            "save_experience_trajectory_strip": save_experience_trajectory_strip,
         }[name]
     if name in {
         "TopologyTrajectory",

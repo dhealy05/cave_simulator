@@ -19,7 +19,6 @@ from cave.observation.views import (
     ExpectationActualView,
     MemoryLookbackView,
     PresentationView,
-    SubjectSurfaceView,
     SubjectiveTopologyView,
     TimelineView,
     default_views,
@@ -28,9 +27,6 @@ from cave.observation.views import (
 
 VIEW_FACTORIES = {
     "presentation": PresentationView,
-    "subject": SubjectSurfaceView,
-    "subject_surface": SubjectSurfaceView,
-    "surface": SubjectSurfaceView,
     "memory": MemoryLookbackView,
     "timeline": TimelineView,
     "expectation": ExpectationActualView,

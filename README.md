@@ -15,7 +15,7 @@ We start with a simulation of the cave, with panels as follows:
 5. The observer develops internal predictions
 6. We measure the observer's subjective trajectory
 
-![Synchronized projections of one Cave episode](results/readme/01_multi_view_state.gif)
+![Synchronized projections of one Cave episode](artifacts/results/readme/01_multi_view_state.gif)
 
 This is the basis of the simulated cave. We have assumed only that the subject
 
@@ -43,8 +43,8 @@ passed through a configured subject.
 
 An `ExperienceObject` is an external event with a time interval, feature vector,
 salience, modality, and optional presentation metadata. A subject-side model
-then decides what is sensed, attended, expected, missed, learned, retained, and
-carried forward.
+then decides what is sensed, what expected content is generated from prior
+state, what mismatch occurs, what is learned, retained, and carried forward.
 
 ```python
 from pathlib import Path
@@ -77,15 +77,13 @@ cave-run --demo --output out/readme/episode.json
 ```
 
 The core update is easiest to see in the expectation/actual view: each timestep
-has an expected vector, an attended actual vector, a signed error, a learning
-rate, and an after-update memory state.
+has a generated expected vector, an attended sensed actual vector, a signed
+error, a learning rate, and an after-update memory state.
 
-![Expected input, actual input, error, and update](results/readme/05_expectation_actual.gif)
+![Expected input, actual input, error, and update](artifacts/results/readme/05_expectation_actual.gif)
 
 For the full API walkthrough, see
 [Tutorial 1](notebooks/tutorials/01_intro_to_cave_subjective_trajectory.ipynb).
-For the formal construction story, see
-[Paper 1: Subjective trajectories](docs/papers/paper_subjective_trajectories.md).
 
 ## Configure A Subject
 
@@ -106,19 +104,37 @@ params = replace(
 ```
 
 Attention changes the timing and strength of admission into the subject-side
-update. Split-channel attention can also redistribute access across external
-input, audio, and internal expectation.
+update. Split-channel attention can redistribute access across sensed channels
+such as visual or audio input and generated channels such as internal
+expectation.
 
-![Attention profile examples](results/readme/09_attention_profiles.png)
+That channel split is where Cave separates two objective signals:
+
+```text
+sensed input    = world-originating input admitted through sensors and attention
+generated input = subject-originating expected input admitted through inward attention
+actual input    = sensed input, or its workspace reconstruction when that bottleneck is engaged
+error           = actual input - generated input
+```
+
+Generated input is not "less real" in the model. It is generated from prior
+subject state, memory, and prediction capacity, then gated through the
+`internal_expectation` attention channel. It is subject-relative because it
+depends on the subject's history and configuration, but once those are fixed it
+is an objective model signal. A subjective trajectory is the larger time-series
+formed as sensed input, generated input, error, surprise, memory, value, and
+topology evolve together.
+
+![Attention profile examples](artifacts/results/readme/09_attention_profiles.png)
 
 ## Inspect Episodes
 
 `Episode` is the common contract. Native Cave, GPT-2 text runs, conversation
 runs, CaveNet, and pressure-test substrates all adapt into this shape.
 
-Each observation can contain expected input, actual input, memory state,
-surprise, learning rate, attention, active inputs, and metadata. Views and
-dashboards read that state; they do not mutate the run.
+Each observation can contain expected/generated input, actual/sensed input,
+memory state, surprise, learning rate, attention, active inputs, and metadata.
+Views and dashboards read that state; they do not mutate the run.
 
 ```python
 print(episode.duration)
@@ -127,17 +143,14 @@ print(episode.observations[-1].memory_state)
 print(episode.observations[-1].surprise)
 ```
 
-![Episode observation readout](results/readme/10_episode_readout.png)
+![Episode observation readout](artifacts/results/readme/10_episode_readout.png)
 
 The visual layer includes presentation, timeline, memory lookback,
 expectation/actual, correction, affect/action, and subjective topology views.
 Topology is an accumulated density over a chosen feature plane, useful as an
 inspection surface rather than a literal mental map.
 
-![Whole-run topology state surface](results/readme/08_topology_surface.png)
-
-For view implementation details and image generation notes, see
-[README image construction](docs/reporting/readme_image_construction.md).
+![Whole-run topology state surface](artifacts/results/readme/08_topology_surface.png)
 
 ## Compare Trajectories
 
@@ -167,8 +180,8 @@ save_episode_set_dashboard(episodes, out / "comparison.png")
 save_episode_set_distances_json(episodes, out / "comparison_distances.json")
 ```
 
-Built-in embeddings include observed memory, state effect, actual input, and a
-broader subjective trajectory embedding.
+Built-in embeddings include observed memory, state effect, actual/sensed input,
+and a broader subjective trajectory embedding.
 
 ```text
 observed memory = what the episode directly retained
@@ -179,68 +192,124 @@ trajectory      = expected, actual, error, memory, attention, and adaptation
 State-effect subtraction is the key comparison idea: it isolates what the
 current episode changed rather than confusing that change with prior state.
 
-![Baseline-subtracted state effect](results/readme/10_state_effect_subtraction.png)
+![Baseline-subtracted state effect](artifacts/results/readme/10_state_effect_subtraction.png)
 
 Population tools add factor labels such as treatment, start condition, subject
 profile, mechanism condition, or substrate. They let a report ask whether
 families of trajectories converge, separate, collapse under controls, or
 preserve structure.
 
-![Population topology dashboard](results/readme/12_population_topology_dashboard.png)
+![Population topology dashboard](artifacts/results/readme/12_population_topology_dashboard.png)
 
 For the full comparison workflow, see
 [Tutorial 2](notebooks/tutorials/02_comparing_experiences.ipynb).
 
 ## Pressure Experiments
 
-### Hypothesis
-
-Why should certain trajectory-transforming functions appear at all? Well, consciousness evolved for a reason. We propose the following:
+Paper 2 and Tutorial 3 ask why certain trajectory-transforming functions should
+appear at all. The working thesis is:
 
 ```text
 capacity + pressure -> useful mathematical function
 ```
 
-and to test it, we subject three substrates of increasing distance from the named Cave architecture to matched pressures:
+Cave's reference architecture installs roles such as expectation, selection,
+value retention, regulation, and topology-like organization by design. The
+pressure experiments then ask whether related functions can be recovered,
+weakened, or disrupted under matched environmental demands and controls.
 
-1. the reference model
-2. a weakened network (CaveNet) whose gains can adapt
-3. a compact recurrent subject evolved only on delayed exposure utility
+The package includes:
 
-We then ask whether the predicted trajectory deformations appear and collapse in patterned ways when the enabling capacity is removed, scrambled, or reset.
+- `CaveNet`: a network-shaped realization of the Cave update path;
+- `CaveNetConfig`: gains for attention, state input, expectation, surprise,
+  learning, and topology;
+- `CaveNetAdaptationPolicy`: pressure-shaped gain adaptation;
+- minimal and evolved subject tests for recurrence, value, memory, selection,
+  regulation, and exposure;
+- controls for hidden reset, non-recurrence, temporal shuffling, removed
+  memory, removed attention, and related capacity failures.
 
-### Results
+```python
+from cave.pressure.checks.cavenet_pressure import (
+    build_pressure_episode,
+    check_cavenet_pressure,
+)
+from cave.pressure.checks.evolved_dissociation import check_evolved_dissociation
 
-The strongest current non-reference result is the evolved-dissociation world:
-rare cues carry true delayed value, common cues carry the same surface sign
-without consequence, and distractors fill the delay. A weak recurrent subject
-evolves exposure control that beats a frequency-counter by ~4.8 utility,
-decodes the rare future outcome from hidden state at 1.0 accuracy, and
-collapses to chance under reset, non-recurrent, and shuffled controls.
+episode = build_pressure_episode("adaptive")
+cavenet_summary = check_cavenet_pressure()
+dissociation_summary = check_evolved_dissociation()
+```
 
-![Evolved exposure control metrics](results/readme/18_evolved_exposure_metrics.png)
+The CaveNet pressure trace makes adaptation explicit: named gains move over
+time, then the resulting episodes can be compared through the same dashboard
+surface.
 
-CaveNet sits one rung lower as a calibration result: pressure signals move a
-weakened, role-compatible architecture in the predicted direction, more
-strongly when a learned controller maps pressure summaries into gains than
-when a hand-written rule does. The gain history shows the mechanism; the
-result ladder records how far it actually moves.
+![Adaptive CaveNet config history](artifacts/results/readme/16_cavenet_config_history.png)
 
-![Adaptive CaveNet config history](results/readme/16_cavenet_config_history.png)
+Role evidence is reported as bounded functional resemblance, not coordinate
+identity and not a consciousness claim.
 
-Across substrates, expectation, value retention, regulation, and latent
-topology emerge with clean control collapse. Selection is reported more
-conservatively as cue-weight concentration rather than full dynamic attention.
-The role evidence board reads as bounded functional resemblance — not
-coordinate identity with Cave variables, and not a consciousness claim.
+![Role evidence board](artifacts/results/readme/17_role_evidence_board.png)
 
-![Role evidence board](results/readme/17_role_evidence_board.png)
+The evolved-subject results are the strongest current non-reference case: a
+compact recurrent subject learns exposure control in a delayed-value world, and
+the readout collapses under matched controls.
 
-Every claim above is recorded with metrics, controls, and pass/fail status in
-[`results/result_ladder/metrics.md`](results/result_ladder/metrics.md).
+![Evolved exposure control metrics](artifacts/results/readme/18_evolved_exposure_metrics.png)
 
 For the pressure-result walkthrough, see
 [Tutorial 3](notebooks/tutorials/03_pressures_cavenet_evolved_subjects.ipynb).
 
-For the paper framing, see
-[Paper 2: Functional convergence under pressure](docs/convergence_under_pressure.pdf).
+## Costs And Compression
+
+Cave now treats costs as a cross-cutting measurement layer over the same
+`Episode` traces. The question is not only what trajectory a subject forms, but
+what had to be paid for that trajectory to exist:
+
+```text
+source load -> state capacity -> distortion -> update work -> future effect
+```
+
+Energy is one cost signal. Compression pressure is the broader frame. A compact
+state can be supplied by rails, amortized from prior training, or actively
+earned by the subject during the episode. The cost reports separate those cases
+instead of treating every compact state as active compression.
+
+The primitive compression report is the calibration case. It compares a 1:1
+source/state condition with 5:1 pressure and controls where the compact state is
+rails-provided or random-projected. The ownership scorecard is the core readout:
+all four states are equally compact, but only the 5:1 active subject passes every
+criterion — low distortion, subject-governed work, and future gain — so only it
+earns a high paid-compression proxy. Each control fails a different test.
+
+![Compression ownership scorecard](artifacts/results/readme/20_primitive_compression_scorecard.png)
+
+The coupling and overlay views connect the scalar cost readout back to Cave's
+usual trajectory language: loss should predict update work, and that work should
+sit on the same expected/actual/memory path rather than in a separate accounting
+system.
+
+![Primitive compression coupling](artifacts/results/readme/22_primitive_compression_coupling.png)
+
+The compression clamp report is the next step: capacity becomes the independent
+variable. The same feature stream enters the subject while available state
+slots tighten from open capacity into overload and then release. The readout is
+not that compression went up; it is whether the subject reorganized attention,
+memory update work, and response quality under the clamp.
+
+![Compression clamp stream](artifacts/results/readme/26_compression_clamp_stream.png)
+
+The four-panel animation gives the time-bound version of the same claim:
+pressure changes in one panel, while bottleneck selection, subject update work,
+and response quality change in the other panels.
+
+![Compression clamp governance animation](artifacts/results/readme/28_compression_clamp_governance.gif)
+
+Matched controls separate that claim from visual persuasion. The active subject
+beats a random compressor on useful selectivity, beats shuffled loss on lagged
+loss-to-update coupling, beats no-update on response success, and beats an
+oracle rails container on the adaptive-governance proxy because rails-supplied
+compact state does not count as subject-governed work.
+
+![Compression clamp controls](artifacts/results/readme/27_compression_clamp_controls.png)

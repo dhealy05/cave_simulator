@@ -14,6 +14,18 @@ def main() -> None:
     parser.add_argument("--output", type=Path, default=Path("animation.gif"))
     parser.add_argument("--views", default="all", help="Comma-separated views or 'all'.")
     parser.add_argument("--frame", action="store_true", help="Render one still frame instead of an animation.")
+    parser.add_argument(
+        "--filmstrip",
+        choices=("intervals", "blur", "shared-axes"),
+        default=None,
+        help="Render the animation frames as a static filmstrip effect.",
+    )
+    parser.add_argument(
+        "--filmstrip-max-frames",
+        type=int,
+        default=12,
+        help="Maximum rendered frames used by --filmstrip.",
+    )
     parser.add_argument("--time", type=float, default=2.4, help="Frame time for --frame.")
     parser.add_argument("--start", type=float, default=0.0, help="Animation start time.")
     parser.add_argument("--end", type=float, default=None, help="Animation end time. Defaults to sequence duration.")
@@ -43,6 +55,17 @@ def main() -> None:
         structural = structural_state_for_episode(episode)
         frame = frame_for_time(episode, args.time, structural)
         renderer.save_frame(frame, views, args.output)
+    elif args.filmstrip:
+        renderer.save_filmstrip(
+            episode,
+            views,
+            args.output,
+            mode=args.filmstrip,
+            start=args.start,
+            end=args.end,
+            dt=args.dt,
+            max_frames=args.filmstrip_max_frames,
+        )
     else:
         renderer.save_animation(
             episode,

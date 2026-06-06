@@ -46,7 +46,7 @@ def main() -> None:
         choices=("initial-conditions", "subject-ablation", "population-clusters"),
         default="subject-ablation",
     )
-    parser.add_argument("--output-dir", type=Path, default=Path("results/cave/topology-comparison"))
+    parser.add_argument("--output-dir", type=Path, default=Path("artifacts/results/cave/topology-comparison"))
     parser.add_argument("--count", type=int, default=5)
     parser.add_argument("--sequences", type=int, default=4)
     parser.add_argument(

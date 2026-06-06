@@ -266,7 +266,13 @@ def main() -> None:
 
 
 def _reference_fixture_path() -> Path:
-    return Path(__file__).resolve().parents[3] / "fixtures" / "cave" / "reference.json"
+    return (
+        Path(__file__).resolve().parents[3]
+        / "artifacts"
+        / "inputs"
+        / "cave"
+        / "reference.json"
+    )
 
 
 if __name__ == "__main__":

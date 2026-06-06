@@ -1,0 +1,143 @@
+{
+  "id": "compression_clamp",
+  "ok": true,
+  "errors": [],
+  "metrics": {
+    "active": {
+      "mean_pressure": 2.4499999999999997,
+      "mean_distortion": 0.4131103176471602,
+      "update_work": 3.066507244545644,
+      "ownership_subject_fraction": 1.0,
+      "mean_relevant_retention": 0.8804769072180095,
+      "mean_irrelevant_retention": 0.3119032070817008,
+      "mean_selectivity": 0.5685737001363087,
+      "mean_action_success": 0.7169533927250121,
+      "lag_loss_to_update_coupling": 0.5006695084653751,
+      "lag_loss_to_attention_shift": 0.35404596300255103,
+      "work_to_future_loss_improvement": 0.7923779495377311,
+      "future_loss_improvement": 0.045697411951101864,
+      "recovery_after_release": 0.273750081152335,
+      "adaptive_governance_proxy": 0.07225842333599153
+    },
+    "fixed-container": {
+      "mean_pressure": 2.4499999999999997,
+      "mean_distortion": 0.35108997538541725,
+      "update_work": 42.0,
+      "ownership_subject_fraction": 0.0,
+      "mean_relevant_retention": 0.33937359329466127,
+      "mean_irrelevant_retention": 0.9139239176124422,
+      "mean_selectivity": -0.574550324317781,
+      "mean_action_success": 0.19445316365563756,
+      "lag_loss_to_update_coupling": -0.7033811118099998,
+      "lag_loss_to_attention_shift": -0.2991277317860009,
+      "work_to_future_loss_improvement": 0.09296175825513753,
+      "future_loss_improvement": 0.08731038345050109,
+      "recovery_after_release": 0.36931209619429956,
+      "adaptive_governance_proxy": 0.0
+    },
+    "random-compressor": {
+      "mean_pressure": 2.4499999999999997,
+      "mean_distortion": 0.38886760219358374,
+      "update_work": 1.3599574040555913,
+      "ownership_subject_fraction": 1.0,
+      "mean_relevant_retention": 0.5863366547622446,
+      "mean_irrelevant_retention": 0.6591417295707771,
+      "mean_selectivity": -0.07280507480853259,
+      "mean_action_success": 0.49662584182065855,
+      "lag_loss_to_update_coupling": -0.4042319427466375,
+      "lag_loss_to_attention_shift": 0.4810460497749703,
+      "work_to_future_loss_improvement": 0.09141677423848643,
+      "future_loss_improvement": 0.07429725511137718,
+      "recovery_after_release": 0.4083556162885259,
+      "adaptive_governance_proxy": 0.0
+    },
+    "shuffled-loss": {
+      "mean_pressure": 2.4499999999999997,
+      "mean_distortion": 0.3800347616223854,
+      "update_work": 3.7334347087464956,
+      "ownership_subject_fraction": 1.0,
+      "mean_relevant_retention": 0.8777322935223871,
+      "mean_irrelevant_retention": 0.37796251031983497,
+      "mean_selectivity": 0.4997697832025521,
+      "mean_action_success": 0.7179097551497131,
+      "lag_loss_to_update_coupling": 0.0674509176330334,
+      "lag_loss_to_attention_shift": 0.17033494643630995,
+      "work_to_future_loss_improvement": -0.23905738885676422,
+      "future_loss_improvement": 0.043130175035755454,
+      "recovery_after_release": 0.25184436178336767,
+      "adaptive_governance_proxy": 0.004122222883750674
+    },
+    "no-update": {
+      "mean_pressure": 2.4499999999999997,
+      "mean_distortion": 0.39962474005928444,
+      "update_work": 0.0,
+      "ownership_subject_fraction": 0.0,
+      "mean_relevant_retention": 0.8880261821987953,
+      "mean_irrelevant_retention": 0.3119032070817008,
+      "mean_selectivity": 0.5761229751170945,
+      "mean_action_success": 0.5609610358381575,
+      "lag_loss_to_update_coupling": 0.0,
+      "lag_loss_to_attention_shift": 0.5670096637060321,
+      "work_to_future_loss_improvement": 0.0,
+      "future_loss_improvement": 0.06023425768673265,
+      "recovery_after_release": 0.38296419340458643,
+      "adaptive_governance_proxy": 0.0
+    },
+    "oracle-rails": {
+      "mean_pressure": 2.4499999999999997,
+      "mean_distortion": 0.39962474005928444,
+      "update_work": 42.0,
+      "ownership_subject_fraction": 0.0,
+      "mean_relevant_retention": 0.8880261821987953,
+      "mean_irrelevant_retention": 0.3119032070817008,
+      "mean_selectivity": 0.5761229751170945,
+      "mean_action_success": 0.6761183770276924,
+      "lag_loss_to_update_coupling": -0.8122260199980628,
+      "lag_loss_to_attention_shift": 0.7226307240730628,
+      "work_to_future_loss_improvement": -0.36898646658415274,
+      "future_loss_improvement": 0.06317827844444929,
+      "recovery_after_release": 0.43818899576002,
+      "adaptive_governance_proxy": 0.0
+    }
+  },
+  "roles": {
+    "selectivity": {
+      "active": 0.5685737001363087,
+      "fixed-container": -0.574550324317781,
+      "random-compressor": -0.07280507480853259,
+      "shuffled-loss": 0.4997697832025521,
+      "no-update": 0.5761229751170945,
+      "oracle-rails": 0.5761229751170945
+    },
+    "lag_loss_to_update_coupling": {
+      "active": 0.5006695084653751,
+      "fixed-container": -0.7033811118099998,
+      "random-compressor": -0.4042319427466375,
+      "shuffled-loss": 0.0674509176330334,
+      "no-update": 0.0,
+      "oracle-rails": -0.8122260199980628
+    },
+    "action_success": {
+      "active": 0.7169533927250121,
+      "fixed-container": 0.19445316365563756,
+      "random-compressor": 0.49662584182065855,
+      "shuffled-loss": 0.7179097551497131,
+      "no-update": 0.5609610358381575,
+      "oracle-rails": 0.6761183770276924
+    },
+    "adaptive_governance_proxy": {
+      "active": 0.07225842333599153,
+      "fixed-container": 0.0,
+      "random-compressor": 0.0,
+      "shuffled-loss": 0.004122222883750674,
+      "no-update": 0.0,
+      "oracle-rails": 0.0
+    },
+    "active_minus_controls": {
+      "selectivity_vs_random": 0.6413787749448413,
+      "coupling_vs_shuffled": 0.43321859083234165,
+      "proxy_vs_oracle_rails": 0.07225842333599153,
+      "success_vs_no_update": 0.15599235688685464
+    }
+  }
+}

@@ -12,7 +12,7 @@ from matplotlib.patches import FancyArrowPatch, Rectangle
 
 
 REPORT_ROOT = Path("out/reports/cave")
-DEFAULT_OUTPUT = Path("results/cave/agency_compression_summary.png")
+DEFAULT_OUTPUT = Path("artifacts/results/cave/agency_compression_summary.png")
 
 
 def main() -> None:

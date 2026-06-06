@@ -1,0 +1,163 @@
+{
+  "id": "topology_atlas",
+  "projection": {
+    "feature_x": "form",
+    "feature_y": "sensory tone",
+    "bounds": [
+      -1.0,
+      1.0
+    ],
+    "resolution": 72,
+    "prior": "random_wells"
+  },
+  "episode_set": {
+    "id": "matrix_topology_comparison",
+    "title": "Cave Matrix: Subjects x Mechanism Variants: Topology Comparison",
+    "comparison_axis": "matrix cell",
+    "metadata": {
+      "source": "cave.demonstrations.reports.topology_comparison"
+    }
+  },
+  "entries": {
+    "Q0:flat:baseline": {
+      "label": "Q0 / flat / baseline",
+      "metrics": {
+        "experienced_mass": 333.8129934979919,
+        "experienced_peak": 0.7854621414699607,
+        "experienced_centroid_x": 0.18770257404593718,
+        "experienced_centroid_y": 0.20647985005983602,
+        "experienced_spread": 0.31328989510256716,
+        "expected_mass": 700.6525999554863,
+        "actual_mass": 650.7289799576915,
+        "actual_expected_l2": 15.990176508898408,
+        "actual_expected_l1": 546.8034264144482
+      }
+    },
+    "Q0:flat:zero-attention": {
+      "label": "Q0 / flat / zero-attention",
+      "metrics": {
+        "experienced_mass": 0.0,
+        "experienced_peak": 0.0,
+        "experienced_centroid_x": 0.0,
+        "experienced_centroid_y": 0.0,
+        "experienced_spread": 0.0,
+        "expected_mass": 295.7332404144882,
+        "actual_mass": 295.7332404144882,
+        "actual_expected_l2": 0.0,
+        "actual_expected_l1": 0.0
+      }
+    },
+    "Q0:flat:split-attention": {
+      "label": "Q0 / flat / split-attention",
+      "metrics": {
+        "experienced_mass": 233.9478923185201,
+        "experienced_peak": 0.7791429223147853,
+        "experienced_centroid_x": 0.1917149953925691,
+        "experienced_centroid_y": 0.22321952750325302,
+        "experienced_spread": 0.280933543051821,
+        "expected_mass": 624.6390251538277,
+        "actual_mass": 615.9409740129039,
+        "actual_expected_l2": 9.05212518639404,
+        "actual_expected_l1": 246.18046285259337
+      }
+    },
+    "Q0:flat:surprise-learning": {
+      "label": "Q0 / flat / surprise-learning",
+      "metrics": {
+        "experienced_mass": 333.8129934979919,
+        "experienced_peak": 0.7854621414699607,
+        "experienced_centroid_x": 0.18770257404593718,
+        "experienced_centroid_y": 0.20647985005983602,
+        "experienced_spread": 0.31328989510256716,
+        "expected_mass": 702.202851452885,
+        "actual_mass": 650.7289799576915,
+        "actual_expected_l2": 15.66120666034793,
+        "actual_expected_l1": 536.0515502134169
+      }
+    },
+    "Q0:flat:zero-predictor": {
+      "label": "Q0 / flat / zero-predictor",
+      "metrics": {
+        "experienced_mass": 333.8129934979919,
+        "experienced_peak": 0.7854621414699607,
+        "experienced_centroid_x": 0.18770257404593718,
+        "experienced_centroid_y": 0.20647985005983602,
+        "experienced_spread": 0.31328989510256716,
+        "expected_mass": 295.7332404144882,
+        "actual_mass": 650.7289799576915,
+        "actual_expected_l2": 15.155025997765085,
+        "actual_expected_l1": 499.44016085304463
+      }
+    },
+    "Q0:prior:baseline": {
+      "label": "Q0 / prior / baseline",
+      "metrics": {
+        "experienced_mass": 333.8129934979919,
+        "experienced_peak": 0.7854621414699607,
+        "experienced_centroid_x": 0.18770257404593718,
+        "experienced_centroid_y": 0.20647985005983602,
+        "experienced_spread": 0.31328989510256716,
+        "expected_mass": 665.5507986657176,
+        "actual_mass": 650.7289799576915,
+        "actual_expected_l2": 9.624378392421422,
+        "actual_expected_l1": 338.50293615852627
+      }
+    },
+    "Q0:prior:zero-attention": {
+      "label": "Q0 / prior / zero-attention",
+      "metrics": {
+        "experienced_mass": 0.0,
+        "experienced_peak": 0.0,
+        "experienced_centroid_x": 0.0,
+        "experienced_centroid_y": 0.0,
+        "experienced_spread": 0.0,
+        "expected_mass": 576.8752416424506,
+        "actual_mass": 295.7332404144882,
+        "actual_expected_l2": 9.496792420169248,
+        "actual_expected_l1": 281.5325730080608
+      }
+    },
+    "Q0:prior:split-attention": {
+      "label": "Q0 / prior / split-attention",
+      "metrics": {
+        "experienced_mass": 233.9478923185201,
+        "experienced_peak": 0.7791429223147853,
+        "experienced_centroid_x": 0.1917149953925691,
+        "experienced_centroid_y": 0.22321952750325302,
+        "experienced_spread": 0.280933543051821,
+        "expected_mass": 712.5734998041098,
+        "actual_mass": 615.9409740129039,
+        "actual_expected_l2": 8.618692602964172,
+        "actual_expected_l1": 269.2939643096113
+      }
+    },
+    "Q0:prior:surprise-learning": {
+      "label": "Q0 / prior / surprise-learning",
+      "metrics": {
+        "experienced_mass": 333.8129934979919,
+        "experienced_peak": 0.7854621414699607,
+        "experienced_centroid_x": 0.18770257404593718,
+        "experienced_centroid_y": 0.20647985005983602,
+        "experienced_spread": 0.31328989510256716,
+        "expected_mass": 677.4738502266557,
+        "actual_mass": 650.7289799576915,
+        "actual_expected_l2": 10.08003725179836,
+        "actual_expected_l1": 351.4483275782256
+      }
+    },
+    "Q0:prior:zero-predictor": {
+      "label": "Q0 / prior / zero-predictor",
+      "metrics": {
+        "experienced_mass": 333.8129934979919,
+        "experienced_peak": 0.7854621414699607,
+        "experienced_centroid_x": 0.18770257404593718,
+        "experienced_centroid_y": 0.20647985005983602,
+        "experienced_spread": 0.31328989510256716,
+        "expected_mass": 295.7332404144882,
+        "actual_mass": 650.7289799576915,
+        "actual_expected_l2": 15.155025997765085,
+        "actual_expected_l1": 499.44016085304463
+      }
+    }
+  }
+}

@@ -13,7 +13,9 @@ Canonical entrypoints:
 - Population topology comparison: `python -m cave.demonstrations.reports.topology_comparison`
 - Agency/compression summary: `python -m cave.demonstrations.reports.agency_compression_summary`
 - Generic view rendering: `python -m cave.presentation.renderers.matplotlib_renderer --views <names>`
+- Generic view filmstrips: `python -m cave.presentation.render --views <names> --filmstrip intervals|blur`
 - Topology state surface: `python -m cave.presentation.renderers.topology_surface_renderer`
+- Experience trajectory strip: `python -m cave.presentation.renderers.trajectory_strip_renderer`
 - Report suites: `python -m cave.presentation.reports.suites`
 
 The `scripts/gpt2/` files are setup utilities for local GPT-2 model assets.

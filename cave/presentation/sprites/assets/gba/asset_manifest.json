@@ -1,0 +1,89 @@
+{
+  "native_resolution": [
+    240,
+    160
+  ],
+  "scale": 3,
+  "tile_size": [
+    16,
+    16
+  ],
+  "subject_sprite_size": [
+    32,
+    32
+  ],
+  "subject_sprite_variants": [
+    "adhd",
+    "default",
+    "excited",
+    "sleepy"
+  ],
+  "object_sprite_size": [
+    32,
+    32
+  ],
+  "semantic_colors": {
+    "expectation": "#E87518",
+    "actual": "#1A73B8",
+    "error": "#D83A68",
+    "memory": "#129B63"
+  },
+  "assets": [
+    "sprites/subjects/default/subject_idle.png",
+    "sprites/subjects/default/subject_walk_1.png",
+    "sprites/subjects/default/subject_walk_2.png",
+    "sprites/subjects/default/subject_thinking.png",
+    "sprites/subjects/default/subject_surprised.png",
+    "sprites/subjects/default/subject_update.png",
+    "sprites/objects/object_tree.png",
+    "sprites/objects/object_rock.png",
+    "sprites/objects/object_snake_1.png",
+    "sprites/objects/object_snake_2.png",
+    "sprites/objects/object_snake_alert.png",
+    "sprites/objects/object_triangle.png",
+    "sprites/objects/object_circle.png",
+    "sprites/objects/object_square.png",
+    "sprites/objects/object_audio_tone.png",
+    "sprites/objects/object_gap_marker.png",
+    "sprites/subjects/default/watcher_idle.png",
+    "sprites/subjects/default/watcher_look.png",
+    "sprites/subjects/default/watcher_expect.png",
+    "sprites/subjects/default/watcher_surprised.png",
+    "sprites/subjects/default/watcher_update.png",
+    "sprites/subjects/sleepy/watcher_idle.png",
+    "sprites/subjects/sleepy/watcher_look.png",
+    "sprites/subjects/sleepy/watcher_expect.png",
+    "sprites/subjects/sleepy/watcher_surprised.png",
+    "sprites/subjects/sleepy/watcher_update.png",
+    "sprites/subjects/excited/watcher_idle.png",
+    "sprites/subjects/excited/watcher_look.png",
+    "sprites/subjects/excited/watcher_expect.png",
+    "sprites/subjects/excited/watcher_surprised.png",
+    "sprites/subjects/excited/watcher_update.png",
+    "sprites/subjects/adhd/watcher_idle.png",
+    "sprites/subjects/adhd/watcher_look.png",
+    "sprites/subjects/adhd/watcher_expect.png",
+    "sprites/subjects/adhd/watcher_surprised.png",
+    "sprites/subjects/adhd/watcher_update.png",
+    "sprites/subjects/artsy/watcher_idle.png",
+    "sprites/subjects/artsy/watcher_look.png",
+    "sprites/subjects/artsy/watcher_expect.png",
+    "sprites/subjects/artsy/watcher_surprised.png",
+    "sprites/subjects/artsy/watcher_update.png",
+    "tiles/grass_tile.png",
+    "tiles/dirt_tile.png",
+    "tiles/platform_edge.png",
+    "background/cloud.png",
+    "background/cloud_bubbly.png",
+    "background/hills_far.png",
+    "background/hills_far_bubbly.png",
+    "background/hills_near.png",
+    "background/hills_near_bubbly.png",
+    "ui/marker_expectation.png",
+    "ui/marker_actual.png",
+    "ui/marker_error.png",
+    "ui/marker_memory.png",
+    "mockup_gba_viewport.png",
+    "tiles/tileset_sheet.png"
+  ]
+}

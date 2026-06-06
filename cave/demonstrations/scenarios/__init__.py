@@ -10,7 +10,7 @@ from cave.demonstrations.scenarios.importance_weighted_event import (
 from cave.demonstrations.scenarios.objective_attention_shift import (
     objective_attention_shift_report_spec,
 )
-from cave.pressure.tests.preference_emergence import (
+from cave.pressure.checks.preference_emergence import (
     preference_emergence_report_spec,
 )
 from cave.demonstrations.scenarios.representational_compression import (

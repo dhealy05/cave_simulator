@@ -1,2 +1,1 @@
-"""Pressure tests that explain why Cave commitments become useful."""
-
+"""Pressure checks that explain why Cave commitments become useful."""

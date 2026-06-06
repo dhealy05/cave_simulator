@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Primitive Demo Walkthrough</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #17201b;
+      --muted: #66736d;
+      --line: #d7ded9;
+      --paper: #f8f8f4;
+      --panel: #ffffff;
+      --code: #eef3ef;
+      --accent: #16885f;
+      --error: #c93e6d;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-size: 17px;
+      line-height: 1.62;
+    }
+
+    .page {
+      width: min(100%, 1120px);
+      margin: 0 auto;
+      padding: 24px clamp(16px, 3vw, 36px) 56px;
+    }
+
+    .hero {
+      display: grid;
+      gap: 18px;
+      margin-bottom: 32px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: clamp(2rem, 4.6vw, 4.1rem);
+      line-height: 1.03;
+      letter-spacing: 0;
+    }
+
+    .hero p {
+      max-width: 760px;
+      margin: 0;
+      color: var(--muted);
+      font-size: clamp(1rem, 1.7vw, 1.2rem);
+    }
+
+    article {
+      max-width: 880px;
+      margin: 0 auto;
+    }
+
+    h1, h2, h3 {
+      line-height: 1.16;
+      letter-spacing: 0;
+    }
+
+    article > h1:first-child {
+      display: none;
+    }
+
+    h2 {
+      margin: 42px 0 12px;
+      font-size: clamp(1.45rem, 2vw, 2rem);
+    }
+
+    h3 {
+      margin: 30px 0 10px;
+      font-size: 1.2rem;
+    }
+
+    p, ul, table, pre, figure {
+      margin: 16px 0;
+    }
+
+    ul {
+      padding-left: 1.35rem;
+    }
+
+    code {
+      padding: 0.12em 0.32em;
+      background: var(--code);
+      border: 1px solid var(--line);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.9em;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 16px;
+      background: var(--code);
+      border: 1px solid var(--line);
+    }
+
+    pre code {
+      padding: 0;
+      border: 0;
+      background: transparent;
+      font-size: 0.88rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--panel);
+      border: 1px solid var(--line);
+    }
+
+    th, td {
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: var(--code);
+      font-size: 0.83rem;
+      text-transform: uppercase;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+    }
+
+    .figure {
+      width: min(100%, 960px);
+      margin: 24px auto;
+    }
+
+    .figure img {
+      display: block;
+      width: 100%;
+      height: auto;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      box-shadow: 0 12px 34px rgba(23, 32, 27, 0.12);
+    }
+
+    .figure figcaption {
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 0.88rem;
+      text-align: center;
+    }
+
+    .money-shot {
+      width: min(100%, 1080px);
+      margin: 28px 50% 34px;
+      transform: translateX(-50%);
+    }
+
+    .money-shot img {
+      image-rendering: auto;
+      border: 2px solid var(--ink);
+    }
+
+    @media (max-width: 620px) {
+      body { font-size: 16px; }
+      .page { padding-top: 18px; }
+      pre { padding: 12px; }
+      th, td { padding: 8px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <h1>Primitive Demo Walkthrough</h1>
+      <p>A direct HTML rendering of <code>walkthrough.md</code>, with the Cave Walker animation left as the central visual.</p>
+    </header>
+    <article>
+<h1>Primitive Demo Walkthrough</h1>
+<p>This folder is the smallest visible version of Cave.</p>
+<p>The full Cave system has many layers: world objects, exposure, sensing, attention, expectation, error, memory, value, workspace compression, topology, views, and comparison. The primitive demo strips that down to the first loop that can still produce a subject-side trajectory.</p>
+<pre><code class="language-text">admitted input -&gt; expectation -&gt; error -&gt; update -&gt; next expectation</code></pre>
+<p>That loop is the point of the demo.</p>
+<h2>The Primitive Loop</h2>
+<p>At each timestep, the primitive system carries one state forward as memory. That memory becomes the next expectation. The actual admitted input arrives. The mismatch becomes prediction error. Memory moves toward the actual input.</p>
+<pre><code class="language-text">E_t = M_{t-1}
+P_t = U_t - E_t
+M_t = M_{t-1} + eta * P_t</code></pre>
+<p>Where:</p>
+<table><thead><tr><th>Symbol</th><th>Meaning</th></tr></thead><tbody><tr><td><code>U_t</code></td><td>actual admitted input</td></tr><tr><td><code>E_t</code></td><td>expectation from prior memory</td></tr><tr><td><code>P_t</code></td><td>prediction error</td></tr><tr><td><code>M_t</code></td><td>updated memory</td></tr><tr><td><code>eta</code></td><td>learning/update rate</td></tr></tbody></table>
+<p>The minimal primitive state is:</p>
+<pre><code class="language-text">S_t = (U_t, E_t, P_t, M_t)</code></pre>
+<p>The primitive trajectory is the ordered history:</p>
+<pre><code class="language-text">S_1 -&gt; S_2 -&gt; ... -&gt; S_T</code></pre>
+<p>This is why the trajectory is not just memory. Memory is one projection of the trajectory. The full state history includes what was expected, what arrived, how wrong the expectation was, and how memory changed.</p>
+<h2>The Abstract Demo</h2>
+<p>The abstract demo shows the recurrence directly in a two-feature plane.</p>
+<figure class="figure"><img src="../assets/primitive_loop_2d.gif" alt="Primitive Cave recurrence"><figcaption>Primitive Cave recurrence</figcaption></figure>
+<p>The top-left panel shows the current expectation, actual input, prediction error, and updated memory. The top-right panel keeps a running tape. The bottom left panel shows the subjective trajectory as points and arrows. The bottom right panel accumulates a topology-like field from the same sequence.</p>
+<p>That accumulated field is not the trajectory itself. It is a deposit made from the trajectory:</p>
+<pre><code class="language-text">trajectory = ordered state history
+field = accumulated trace of that history</code></pre>
+<p>This distinction matters because the full Cave system also has topology-like state, but topology is downstream of subject-side history. The primitive demo makes that dependency visible.</p>
+<h2>The Walker Demo</h2>
+<p>Cave Walker wraps the same recurrence in a tiny object world.</p>
+<pre><code class="language-text">world object -&gt; feature vector -&gt; primitive update -&gt; rendered subject state</code></pre>
+<p>The current episode is:</p>
+<pre><code class="language-text">tree -&gt; tree -&gt; tree -&gt; snake -&gt; rock -&gt; tree</code></pre>
+<p>The subject starts with a tree-like prior. The early tree encounters are not identical: each tree has a small visual and feature variation, so the subject receives slightly different tree-like inputs rather than the same exact vector each time. The snake then creates a much larger prediction error.</p>
+<figure class="figure money-shot"><img src="../assets/cave_walker.gif" alt="Cave Walker"><figcaption>Cave Walker</figcaption></figure>
+<p>The side-scroller is not a separate model. It is an intuition layer over the same primitive recurrence:</p>
+<pre><code class="language-text">expected object-like state
+actual encountered object
+error from mismatch
+memory update
+changed expectation for the next encounter</code></pre>
+<p>The world path is:</p>
+<pre><code class="language-text">tree -&gt; tree -&gt; tree -&gt; snake -&gt; rock -&gt; tree</code></pre>
+<p>The subject-side trajectory is:</p>
+<pre><code class="language-text">S_1 -&gt; S_2 -&gt; S_3 -&gt; S_4 -&gt; S_5 -&gt; S_6</code></pre>
+<p>Those are different things. The world sequence is what is available in the episode. The primitive trajectory is what happens inside the subject once those objects are admitted as inputs.</p>
+<h2>The Filmstrip View</h2>
+<p>The GIF shows the walk one encounter at a time. The filmstrip shows the same walk as a single static object: time runs left-to-right, and each slice keeps the two-feature geometry intact while shifting along the time axis.</p>
+<figure class="figure"><img src="../assets/storybook/filmstrip.png" alt="Cave Walker filmstrip"><figcaption>Cave Walker filmstrip</figcaption></figure>
+<p>The top strip is the world path; the bottom strip is the subjective trajectory unrolled. At each slice the orange <code>E_t</code>, blue <code>U_t</code>, and green <code>M_t</code> sit in their feature positions, the pink arrow is the error <code>P_t</code>, and the green line threads the memory path through the whole sequence. This is the trajectory made legible without animation — the same <code>S_1 -&gt; ... -&gt; S_T</code> history, flattened into one frame.</p>
+<p>The blur variant accumulates every GIF subframe between the encounter anchors, so the continuous motion between updates becomes a dense afterimage:</p>
+<figure class="figure"><img src="../assets/storybook/filmstrip_blur.png" alt="Cave Walker filmstrip, dense afterimage"><figcaption>Cave Walker filmstrip, dense afterimage</figcaption></figure>
+<p>The bright dots are the encounter/update anchors; the faint strokes are the in-between subframes. Both filmstrips are the same primitive deposits the accumulated field is built from — just laid out through time instead of summed into one plane.</p>
+<h2>Why This Sits Below Full Cave</h2>
+<p>Primitive Cave starts after input has already been admitted.</p>
+<p>That is a deliberate simplification. It does not explain how exposure, sensing, attention, or value decide what gets admitted. It does not model a full subject profile, multiple view boundaries, or comparison across subjects.</p>
+<p>The full Cave system sits around this kernel:</p>
+<pre><code class="language-text">world object
+-&gt; exposure
+-&gt; sensing
+-&gt; attention
+-&gt; admitted input
+-&gt; expectation
+-&gt; error
+-&gt; update
+-&gt; changed future uptake</code></pre>
+<p>So the relationship is:</p>
+<pre><code class="language-text">Primitive Cave = minimal trajectory generator
+Full Cave = complete subject-side architecture</code></pre>
+<p>Primitive Cave shows how a subject-side trajectory can form at all. Full Cave explains why different subjects form different trajectories from the same external episode.</p>
+<h2>Running The Demos</h2>
+<p>From the repository root:</p>
+<pre><code class="language-bash">python notebooks/demos/primitive_demo/primitive_cave/primitive_demo.py
+python notebooks/demos/primitive_demo/cave_walker/cave_walker_demo.py</code></pre>
+<p>The scripts write generated frames, rollout data, and GIFs into each demo&#x27;s <code>out/</code> directory. The two GIFs embedded in this walkthrough are checked-in copies of representative outputs so the explanation can be read without running the scripts first.</p>
+<h2>Files</h2>
+<pre><code class="language-text">kernel/primitive_engine.py
+  Shared recurrence kernel.
+
+primitive_cave/primitive_demo.py
+  Abstract 1D and 2D visualizations of the primitive loop.
+
+cave_walker/cave_walker_objects.py
+  Object definitions, episode, tree variants, and object-to-feature mapping.
+
+cave_walker/cave_walker_demo.py
+  Side-scroller renderer plus HUD, trajectory map, and topology panel.
+
+../assets/primitive_loop_2d.gif
+  Checked-in abstract recurrence walkthrough.
+
+../assets/cave_walker.gif
+  Checked-in object-world walkthrough.</code></pre>
+    </article>
+  </main>
+</body>
+</html>

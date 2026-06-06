@@ -12,13 +12,21 @@ matplotlib.use("Agg")
 
 import matplotlib.animation as animation
 import matplotlib.pyplot as plt
+import numpy as np
 from matplotlib.axes import Axes
 from matplotlib.figure import Figure
 from mpl_toolkits.mplot3d import Axes3D  # noqa: F401  (registers the 3d projection)
+from PIL import Image
 
 from cave.observation.episodes import CaveProducer, Episode
 from cave.observation.pipeline import views_from_names
 from cave.demonstrations.examples import demo_model, random_experience_model
+from cave.presentation.filmstrip import (
+    FilmstripSettings,
+    blur_filmstrip,
+    interval_filmstrip,
+    shared_axes_filmstrip,
+)
 from cave.presentation.renderers.matplotlib_renderer.action import draw_action
 from cave.presentation.renderers.matplotlib_renderer.affect import draw_affect
 from cave.presentation.renderers.matplotlib_renderer.correction import (
@@ -27,9 +35,7 @@ from cave.presentation.renderers.matplotlib_renderer.correction import (
 )
 from cave.presentation.renderers.matplotlib_renderer.expectation_actual import draw_expectation_actual
 from cave.presentation.renderers.matplotlib_renderer.memory import draw_memory
-from cave.presentation.renderers.matplotlib_renderer.observer import draw_observer
 from cave.presentation.renderers.matplotlib_renderer.presentation import draw_presentation
-from cave.presentation.renderers.matplotlib_renderer.subject_surface import draw_subject_surface
 from cave.presentation.renderers.matplotlib_renderer.subjective_topology import draw_subjective_topology
 from cave.presentation.renderers.matplotlib_renderer.styles import (
     RendererStyle,
@@ -48,9 +54,7 @@ from cave.observation.views import (
     ExperienceView,
     ExpectationActualViewState,
     MemoryLookbackViewState,
-    ObserverViewState,
     PresentationViewState,
-    SubjectSurfaceViewState,
     SubjectiveTopologyViewState,
     TimelineViewState,
     default_views,
@@ -121,23 +125,13 @@ class MatplotlibRenderer:
         fps: int = 20,
     ) -> None:
         with plt.rc_context(self.style.rc_params()):
-            if dt <= 0.0:
-                raise ValueError("dt must be positive")
-            structural = structural_state_for_episode(episode)
-            states = [
-                frame
-                for frame in episode_frames(episode, structural)
-                if start
-                <= frame.observation.t
-                <= (episode.duration if end is None else end)
-            ]
-            view_states_by_frame = [
-                [view.project(state) for view in views]
-                for state in states
-            ]
-            if not view_states_by_frame:
-                raise ValueError("animation has no frames")
-            view_states_by_frame = normalize_correction_series(view_states_by_frame)
+            view_states_by_frame = self._animation_view_states(
+                episode,
+                views,
+                start=start,
+                end=end,
+                dt=dt,
+            )
             figure, axes = self._make_figure(view_states_by_frame[0])
 
             def update(frame_index: int) -> list[Axes]:
@@ -160,6 +154,115 @@ class MatplotlibRenderer:
             anim.save(output, writer=writer, dpi=self.layout.dpi)
             plt.close(figure)
 
+    def save_filmstrip(
+        self,
+        episode: Episode,
+        views: Sequence[ExperienceView],
+        output: str | Path,
+        *,
+        mode: str = "intervals",
+        settings: FilmstripSettings | None = None,
+        start: float = 0.0,
+        end: float | None = None,
+        dt: float = 0.05,
+        max_frames: int | None = None,
+    ) -> None:
+        if len(views) != 1:
+            raise ValueError("filmstrip rendering requires exactly one view")
+        frames = self.animation_frame_images(
+            episode,
+            views,
+            start=start,
+            end=end,
+            dt=dt,
+            max_frames=max_frames,
+        )
+        if mode == "intervals":
+            image = interval_filmstrip(frames, settings=settings)
+        elif mode == "blur":
+            image = blur_filmstrip(frames, settings=settings)
+        elif mode == "shared-axes":
+            image = shared_axes_filmstrip(frames, settings=settings)
+        else:
+            raise ValueError("mode must be 'intervals', 'blur', or 'shared-axes'")
+        output = Path(output)
+        output.parent.mkdir(parents=True, exist_ok=True)
+        image.save(output)
+
+    def animation_frame_images(
+        self,
+        episode: Episode,
+        views: Sequence[ExperienceView],
+        *,
+        start: float = 0.0,
+        end: float | None = None,
+        dt: float = 0.05,
+        max_frames: int | None = None,
+    ) -> list[Image.Image]:
+        with plt.rc_context(self.style.rc_params()):
+            view_states_by_frame = self._animation_view_states(
+                episode,
+                views,
+                start=start,
+                end=end,
+                dt=dt,
+            )
+            if max_frames is not None:
+                view_states_by_frame = self._sample_view_states(
+                    view_states_by_frame,
+                    max_frames=max_frames,
+                )
+            figure, axes = self._make_figure(view_states_by_frame[0])
+            images: list[Image.Image] = []
+            for view_states in view_states_by_frame:
+                self.draw_view_states(axes, view_states)
+                figure.tight_layout()
+                figure.canvas.draw()
+                rgba = np.asarray(figure.canvas.buffer_rgba()).copy()
+                images.append(Image.fromarray(rgba))
+            plt.close(figure)
+            return images
+
+    def _animation_view_states(
+        self,
+        episode: Episode,
+        views: Sequence[ExperienceView],
+        *,
+        start: float,
+        end: float | None,
+        dt: float,
+    ) -> list[list[BaseViewState]]:
+        if dt <= 0.0:
+            raise ValueError("dt must be positive")
+        structural = structural_state_for_episode(episode)
+        states = [
+            frame
+            for frame in episode_frames(episode, structural)
+            if start
+            <= frame.observation.t
+            <= (episode.duration if end is None else end)
+        ]
+        view_states_by_frame = [
+            [view.project(state) for view in views]
+            for state in states
+        ]
+        if not view_states_by_frame:
+            raise ValueError("animation has no frames")
+        return normalize_correction_series(view_states_by_frame)
+
+    def _sample_view_states(
+        self,
+        view_states_by_frame: Sequence[list[BaseViewState]],
+        *,
+        max_frames: int,
+    ) -> list[list[BaseViewState]]:
+        if max_frames <= 0:
+            raise ValueError("max_frames must be positive")
+        if len(view_states_by_frame) <= max_frames:
+            return list(view_states_by_frame)
+        indices = np.linspace(0, len(view_states_by_frame) - 1, max_frames, dtype=int)
+        return [view_states_by_frame[int(index)] for index in indices]
+
     def draw_view_states(
         self,
         axes: Sequence[Axes],
@@ -176,10 +279,6 @@ class MatplotlibRenderer:
     def draw_view_state(self, axis: Axes, view_state: BaseViewState) -> None:
         if isinstance(view_state, PresentationViewState):
             draw_presentation(axis, view_state, self.style)
-        elif isinstance(view_state, SubjectSurfaceViewState):
-            draw_subject_surface(axis, view_state, self.style)
-        elif isinstance(view_state, ObserverViewState):
-            draw_observer(axis, view_state, self.style)
         elif isinstance(view_state, ActionViewState):
             draw_action(axis, view_state, self.style)
         elif isinstance(view_state, MemoryLookbackViewState):
@@ -224,6 +323,13 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Render cave views with matplotlib.")
     parser.add_argument("--output", type=Path, default=Path("animation.gif"))
     parser.add_argument("--frame", action="store_true", help="Render one still frame instead of an animation.")
+    parser.add_argument(
+        "--filmstrip",
+        choices=("intervals", "blur", "shared-axes"),
+        default=None,
+        help="Render animation frames as a static filmstrip effect.",
+    )
+    parser.add_argument("--filmstrip-max-frames", type=int, default=12)
     parser.add_argument("--time", type=float, default=2.4, help="Frame time for --frame.")
     parser.add_argument("--dt", type=float, default=0.1)
     parser.add_argument("--fps", type=int, default=12)
@@ -268,6 +374,15 @@ def main() -> None:
         if not frames:
             raise ValueError("frame has no episode observation")
         renderer.save_frame(frames[-1], views, args.output)
+    elif args.filmstrip:
+        renderer.save_filmstrip(
+            episode,
+            views,
+            args.output,
+            mode=args.filmstrip,
+            dt=args.dt,
+            max_frames=args.filmstrip_max_frames,
+        )
     else:
         renderer.save_animation(
             episode,

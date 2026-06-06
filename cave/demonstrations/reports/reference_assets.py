@@ -32,7 +32,7 @@ from cave.demonstrations.subjects.subject_dashboard import controlled_subject_ru
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Generate README paper assets.")
-    parser.add_argument("--output-dir", type=Path, default=Path("results/reference"))
+    parser.add_argument("--output-dir", type=Path, default=Path("artifacts/results/reference"))
     parser.add_argument("--dt", type=float, default=0.1)
     parser.add_argument("--fps", type=int, default=12)
     parser.add_argument("--seed", type=int, default=7)

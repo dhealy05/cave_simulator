@@ -19,7 +19,7 @@ from cave.presentation.renderers.matplotlib_renderer.styles import (
     apply_figure_style,
     resolve_style,
 )
-from cave.pressure.tests.role_recovery_matrix import check_role_recovery_matrix
+from cave.pressure.checks.role_recovery_matrix import check_role_recovery_matrix
 
 
 ROLE_ORDER = (

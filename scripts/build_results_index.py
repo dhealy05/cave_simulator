@@ -4,9 +4,9 @@
 The report suite writes a rich `index.json` under `out/` (gitignored). This
 script turns that ephemeral output into the committed *data of record*:
 
-    results/result_ladder/index.json   light, provenance-stamped dataset
-    results/result_ladder/checks/*.json per-entry full check detail
-    results/result_ladder/metrics.md    canonical human-readable tables
+    artifacts/results/result_ladder/index.json   light, provenance-stamped dataset
+    artifacts/results/result_ladder/checks/*.json per-entry full check detail
+    artifacts/results/result_ladder/metrics.md    canonical human-readable tables
 
 It also refreshes AUTOGEN regions inside docs so prose numbers are never
 hand-copied. A region is any block delimited by matching markers:
@@ -31,7 +31,7 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_SUITE_INDEX = ROOT / "out" / "report_suites" / "result-ladder" / "index.json"
-DEFAULT_OUT_DIR = ROOT / "results" / "result_ladder"
+DEFAULT_OUT_DIR = ROOT / "artifacts" / "results" / "result_ladder"
 DEFAULT_DOCS = (
     ROOT / "docs" / "reporting" / "results.md",
     ROOT / "docs" / "papers" / "paper_functional_role_emergence.md",

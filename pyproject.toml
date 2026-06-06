@@ -29,4 +29,20 @@ pythonpath = ["."]
 
 [tool.setuptools.packages.find]
 include = ["cave*"]
-exclude = ["docs*", "fixtures*", "results*", "lib*", "out*", "scripts*", "tests*"]
+exclude = ["artifacts*", "docs*", "lib*", "out*", "scripts*", "tests*"]
+
+[tool.setuptools.package-data]
+cave = [
+    "presentation/sprites/assets/gba/*.json",
+    "presentation/sprites/assets/gba/*.png",
+    "presentation/sprites/assets/gba/background/*.png",
+    "presentation/sprites/assets/gba/generated/*.png",
+    "presentation/sprites/assets/gba/sprites/*.png",
+    "presentation/sprites/assets/gba/sprites/objects/*.png",
+    "presentation/sprites/assets/gba/sprites/subjects/*/*.png",
+    "presentation/sprites/assets/gba/tiles/*.png",
+    "presentation/sprites/assets/gba/ui/*.png",
+    "interactive/game/shared/assets/attract/*.png",
+    "interactive/game/tutorials/build_cave/assets/*.json",
+    "interactive/game/tutorials/build_cave/assets/apparatus/*.png",
+]

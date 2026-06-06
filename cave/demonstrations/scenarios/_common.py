@@ -77,7 +77,8 @@ def channel_scenario_params(channel_weights: dict[str, float]) -> ModelParams:
 def scenario_fixture_path(name: str) -> Path:
     return (
         Path(__file__).resolve().parents[3]
-        / "fixtures"
+        / "artifacts"
+        / "inputs"
         / "cave"
         / "scenarios"
         / f"{name}.json"

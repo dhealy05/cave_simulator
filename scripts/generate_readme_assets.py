@@ -30,7 +30,7 @@ from cave.presentation.renderers import LayoutSpec, MatplotlibRenderer
 from cave.presentation.renderers.topology_surface_renderer import save_topology_state_surface
 
 
-OUT = ROOT / "results" / "readme"
+OUT = ROOT / "artifacts" / "results" / "readme"
 
 
 TUTORIAL_ASSETS = {

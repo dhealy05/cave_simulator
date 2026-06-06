@@ -1,0 +1,918 @@
+{
+  "id": "result-ladder",
+  "title": "Cave Result Ladder",
+  "description": "A predefined suite of reports that moves from reading one episode, to mechanism and population checks, to pressure and emergence-style runs.",
+  "output_root": "out/report_suites/result-ladder",
+  "tiers": [
+    {
+      "id": "walkthrough",
+      "title": "Walkthrough",
+      "description": "Show how to read a Cave episode through coordinated presentation, memory, timeline, prediction, correction, and topology views."
+    },
+    {
+      "id": "mechanism",
+      "title": "Mechanism And Population",
+      "description": "Show that sensing, attention, prediction, value, workspace compression, subject configuration, and population geometry are distinguishable."
+    },
+    {
+      "id": "emergence",
+      "title": "Emergence And Pressure",
+      "description": "Show the bridge from predefined Cave roles toward pressure-shaped and developmental substrate behavior."
+    },
+    {
+      "id": "causal_probes",
+      "title": "Causal Probes",
+      "description": "Show intervention/control contrasts for the role dependencies claimed by the causal probe reports."
+    }
+  ],
+  "entries": [
+    {
+      "id": "reference-cave",
+      "tier": "walkthrough",
+      "kind": "producer",
+      "spec": "reference_cave",
+      "output": "walkthrough/reference-cave",
+      "claim": "A single authored Cave run can be inspected through coordinated external and internal views.",
+      "kwargs": {
+        "dt": 0.1,
+        "fps": 12,
+        "include_readme_assets": true
+      },
+      "key_metrics": [
+        "ok",
+        "input_count",
+        "observation_count",
+        "frame_count"
+      ],
+      "curated_artifacts": [
+        "artifacts/results/reference/07_multi_view_state.gif",
+        "artifacts/results/reference/08_topology_state_surface.png"
+      ]
+    },
+    {
+      "id": "canonical-producer-energy",
+      "tier": "walkthrough",
+      "kind": "producer",
+      "spec": "canonical_producer_energy",
+      "output": "walkthrough/canonical-producer-energy",
+      "claim": "Canonical producer Episode outputs can be scored with the same proxy energy ledger, while fixed producer adapters show no dynamic loss-to-compute coupling by default.",
+      "kwargs": {
+        "dt": 0.5,
+        "fps": 4,
+        "include_assets": true
+      },
+      "key_metrics": [
+        "extra.canonical_producer_energy.metrics.cave.rail_independence",
+        "extra.canonical_producer_energy.metrics.gpt2.mean_loss_presence",
+        "extra.canonical_producer_energy.metrics.conversation.mean_loss_presence",
+        "extra.canonical_producer_energy.roles.dynamic_energy_coupling.gpt2"
+      ]
+    },
+    {
+      "id": "expectation-violation",
+      "tier": "mechanism",
+      "kind": "producer",
+      "spec": "expectation_violation",
+      "output": "mechanism/expectation-violation",
+      "claim": "Repeated input becomes expected; a violation raises surprise and learning rate.",
+      "kwargs": {
+        "dt": 0.1,
+        "fps": 12,
+        "include_assets": true
+      },
+      "key_metrics": [
+        "extra.expectation_violation.metrics.surprise.repeat_1",
+        "extra.expectation_violation.metrics.surprise.repeat_3",
+        "extra.expectation_violation.metrics.surprise.violation",
+        "extra.expectation_violation.metrics.learning_rate.violation"
+      ]
+    },
+    {
+      "id": "unseen-modality",
+      "tier": "mechanism",
+      "kind": "producer",
+      "spec": "unseen_modality",
+      "output": "mechanism/unseen-modality",
+      "claim": "An external event can be present without entering subject state when the subject lacks the relevant sensor.",
+      "kwargs": {
+        "dt": 0.1,
+        "fps": 12,
+        "include_assets": true
+      },
+      "key_metrics": [
+        "extra.unseen_modality.metrics.visible_actual",
+        "extra.unseen_modality.metrics.unheard_actual",
+        "extra.unseen_modality.metrics.unheard_sensor_channels"
+      ]
+    },
+    {
+      "id": "attention-bottleneck",
+      "tier": "mechanism",
+      "kind": "producer",
+      "spec": "attention_bottleneck",
+      "output": "mechanism/attention-bottleneck",
+      "claim": "Simultaneous sensed inputs are weighted by attention channels rather than mere external co-presence.",
+      "kwargs": {
+        "dt": 0.1,
+        "fps": 12,
+        "include_assets": true
+      },
+      "key_metrics": [
+        "extra.attention_bottleneck.metrics.actual",
+        "extra.attention_bottleneck.metrics.attention_weights"
+      ]
+    },
+    {
+      "id": "importance-weighted-event",
+      "tier": "mechanism",
+      "kind": "producer",
+      "spec": "importance_weighted_event",
+      "output": "mechanism/importance-weighted-event",
+      "claim": "Event importance changes learning, memory update magnitude, and attention weighting.",
+      "kwargs": {
+        "dt": 0.1,
+        "fps": 12,
+        "include_assets": true
+      },
+      "key_metrics": [
+        "extra.importance_weighted_event.metrics.ordinary_learning_rate",
+        "extra.importance_weighted_event.metrics.important_learning_rate",
+        "extra.importance_weighted_event.metrics.ordinary_memory_delta",
+        "extra.importance_weighted_event.metrics.important_memory_delta"
+      ]
+    },
+    {
+      "id": "valence-attractor-repulsor",
+      "tier": "mechanism",
+      "kind": "producer",
+      "spec": "valence_attractor_repulsor",
+      "output": "mechanism/valence-attractor-repulsor",
+      "claim": "Pain, pleasure, surprise, and utility are separable signals.",
+      "kwargs": {
+        "dt": 0.1,
+        "fps": 12,
+        "include_assets": true
+      },
+      "key_metrics": [
+        "extra.valence_attractor_repulsor.metrics.neutral.utility",
+        "extra.valence_attractor_repulsor.metrics.pleasant.utility",
+        "extra.valence_attractor_repulsor.metrics.painful.utility"
+      ]
+    },
+    {
+      "id": "objective-attention-shift",
+      "tier": "mechanism",
+      "kind": "producer",
+      "spec": "objective_attention_shift",
+      "output": "mechanism/objective-attention-shift",
+      "claim": "Objective pressure can steer the next attention distribution without rewriting the previous timestep.",
+      "kwargs": {
+        "dt": 0.1,
+        "fps": 12,
+        "include_assets": true
+      },
+      "key_metrics": [
+        "extra.objective_attention_shift.metrics.first_attention_channels",
+        "extra.objective_attention_shift.metrics.first_next_attention_channels",
+        "extra.objective_attention_shift.metrics.first_pain"
+      ]
+    },
+    {
+      "id": "representational-compression",
+      "tier": "mechanism",
+      "kind": "producer",
+      "spec": "representational_compression",
+      "output": "mechanism/representational-compression",
+      "claim": "Attention and workspace representation are distinct bottlenecks; attended features can be compressed away.",
+      "kwargs": {
+        "dt": 0.1,
+        "fps": 12,
+        "include_assets": true
+      },
+      "key_metrics": [
+        "extra.representational_compression.metrics.attended_input",
+        "extra.representational_compression.metrics.actual",
+        "extra.representational_compression.metrics.compression_cost",
+        "extra.representational_compression.metrics.reconstruction_error"
+      ]
+    },
+    {
+      "id": "same-world-different-subjects",
+      "tier": "mechanism",
+      "kind": "subject",
+      "spec": "same_world_different_subjects",
+      "output": "mechanism/same-world-different-subjects",
+      "claim": "The same external sequence can produce different internal histories under different subject configurations.",
+      "kwargs": {
+        "event_count": 5,
+        "seed": 202,
+        "dt": 0.2,
+        "end": 3.0,
+        "samples": 48
+      },
+      "key_metrics": [
+        "run_count",
+        "metrics.zero_prior_effect_distance",
+        "metrics.zero_prior_observed_distance",
+        "metrics.zero_full_effect_distance"
+      ],
+      "curated_artifacts": [
+        "artifacts/results/reference/07_subject_comparison.png",
+        "episode_set_distances.json",
+        "topology_atlas.png",
+        "topology_atlas_metrics.json"
+      ]
+    },
+    {
+      "id": "preference-shaped-topology",
+      "tier": "mechanism",
+      "kind": "subject",
+      "spec": "preference_shaped_topology",
+      "output": "mechanism/preference-shaped-topology",
+      "claim": "Preferences change action, action changes exposure, and exposure changes memory and topology.",
+      "kwargs": {
+        "dt": 0.2,
+        "end": 1.4,
+        "samples": 48
+      },
+      "key_metrics": [
+        "run_count",
+        "metrics.effect_distance",
+        "metrics.observed_distance",
+        "metrics.warm_action",
+        "metrics.threat_avoid_action"
+      ],
+      "curated_artifacts": [
+        "artifacts/results/cave/subjects/preference-shaped-topology/dashboard.png",
+        "episode_set_distances.json",
+        "topology_atlas.png",
+        "topology_atlas_metrics.json"
+      ]
+    },
+    {
+      "id": "subject-ablation-matrix",
+      "tier": "mechanism",
+      "kind": "matrix",
+      "spec": "subject_ablation_matrix",
+      "output": "mechanism/subject-ablation-matrix",
+      "claim": "Subject priors and mechanism variants separate differently across state effect, observed memory, subjective trajectory, and active context embeddings.",
+      "kwargs": {
+        "event_count": 5,
+        "seed": 303,
+        "dt": 0.2,
+        "end": 3.0,
+        "samples": 48
+      },
+      "key_metrics": [
+        "run_count",
+        "extra.subject_ablation_matrix.metrics.zero_attention_effect_distance",
+        "extra.subject_ablation_matrix.metrics.baseline_prior_observed_distance",
+        "extra.subject_ablation_matrix.metrics.baseline_zero_predictor_internal_distance"
+      ],
+      "curated_artifacts": [
+        "artifacts/results/cave/matrices/subject-ablation/population.png"
+      ]
+    },
+    {
+      "id": "population-clusters",
+      "tier": "mechanism",
+      "kind": "matrix",
+      "spec": "population_clusters_matrix",
+      "output": "mechanism/population-clusters",
+      "claim": "Mechanism and subject distinctions persist across multiple generated sequences.",
+      "kwargs": {
+        "sequence_count": 3,
+        "event_count": 5,
+        "seed": 404,
+        "dt": 0.2,
+        "end": 3.0,
+        "samples": 48
+      },
+      "key_metrics": [
+        "run_count",
+        "extra.population_clusters_matrix.metrics.max_zero_attention_effect_distance",
+        "extra.population_clusters_matrix.metrics.mean_observed_subject_distance_baseline",
+        "extra.population_clusters_matrix.metrics.mean_internal_baseline_zero_predictor_distance"
+      ],
+      "curated_artifacts": [
+        "artifacts/results/cave/matrices/population-clusters/population.png"
+      ]
+    },
+    {
+      "id": "population-trajectory-geometry",
+      "tier": "mechanism",
+      "kind": "matrix",
+      "spec": "population_trajectory_geometry",
+      "output": "mechanism/population-trajectory-geometry",
+      "claim": "Matched starts follow treatment-recoverable subjective trajectories across generated treatment sequences, with control variants exposing sensory access, internal expectation readout, memory, and prediction roles.",
+      "kwargs": {
+        "treatment_count": 4,
+        "start_count": 16,
+        "event_count": 5,
+        "seed": 701,
+        "dt": 0.2,
+        "end": 3.0,
+        "samples": 48,
+        "permutations": 199,
+        "min_treatment_accuracy_lift": 0.2,
+        "max_permutation_p": 0.05
+      },
+      "key_metrics": [
+        "run_count",
+        "extra.population_trajectory_geometry.roles.treatment_separability.subjective_treatment_margin",
+        "extra.population_trajectory_geometry.roles.treatment_separability.subjective_treatment_ratio",
+        "extra.population_trajectory_geometry.roles.treatment_separability.subjective_permutation_p",
+        "extra.population_trajectory_geometry.roles.treatment_decoding.accuracy",
+        "extra.population_trajectory_geometry.roles.treatment_decoding.chance",
+        "extra.population_trajectory_geometry.roles.matched_start_deformation.matched_start_treatment_distance",
+        "extra.population_trajectory_geometry.roles.control_contrasts.zero-attention.subjective_decoding_accuracy",
+        "extra.population_trajectory_geometry.roles.control_contrasts.external-only-attention.actual_decoding_accuracy",
+        "extra.population_trajectory_geometry.roles.control_contrasts.internal-only-attention.actual_decoding_accuracy",
+        "extra.population_trajectory_geometry.roles.control_contrasts.no-memory.observed_memory_decoding_accuracy"
+      ]
+    },
+    {
+      "id": "population-trajectory-geometry-sweep",
+      "tier": "mechanism",
+      "kind": "producer",
+      "spec": "population_trajectory_geometry_sweep",
+      "output": "mechanism/population-trajectory-geometry-sweep",
+      "claim": "The treatment-recovery, attention-allocation contrast, and control-collapse pattern survives a compact sweep across generated treatment seeds.",
+      "kwargs": {
+        "seed_start": 701,
+        "seed_count": 5,
+        "treatment_count": 4,
+        "start_count": 12,
+        "event_count": 5,
+        "dt": 0.2,
+        "fps": 8,
+        "end": 3.0,
+        "samples": 32,
+        "permutations": 49,
+        "min_pass_rate": 0.8,
+        "min_treatment_accuracy_lift": 0.2,
+        "max_permutation_p": 0.08,
+        "include_assets": true
+      },
+      "key_metrics": [
+        "extra.population_trajectory_geometry_sweep.roles.robust_treatment_recovery.strict_pass_rate",
+        "extra.population_trajectory_geometry_sweep.roles.robust_treatment_recovery.baseline_decoding_pass_count",
+        "extra.population_trajectory_geometry_sweep.roles.robust_treatment_recovery.baseline_permutation_pass_count",
+        "extra.population_trajectory_geometry_sweep.roles.robust_treatment_recovery.median_baseline_subjective_accuracy",
+        "extra.population_trajectory_geometry_sweep.roles.robust_treatment_recovery.median_baseline_subjective_permutation_p",
+        "extra.population_trajectory_geometry_sweep.roles.control_collapse.zero_attention_subjective_collapse_count",
+        "extra.population_trajectory_geometry_sweep.roles.control_collapse.external_only_actual_preserved_count",
+        "extra.population_trajectory_geometry_sweep.roles.control_collapse.internal_only_actual_collapse_count",
+        "extra.population_trajectory_geometry_sweep.roles.control_collapse.no_memory_observed_memory_collapse_count"
+      ]
+    },
+    {
+      "id": "preference-emergence",
+      "tier": "emergence",
+      "kind": "producer",
+      "spec": "preference_emergence",
+      "output": "emergence/preference-emergence",
+      "claim": "A minimal subject under workspace, memory, preference, and delayed-consequence pressure shows diagnostic input selection, value-shaped, and prediction-like roles.",
+      "kwargs": {
+        "dt": 0.2,
+        "fps": 8,
+        "include_assets": true
+      },
+      "key_metrics": [
+        "extra.preference_emergence.roles.workspace_pressure_attention_like_selection.selection_margin",
+        "extra.preference_emergence.roles.workspace_pressure_attention_like_selection.claim_kind",
+        "extra.preference_emergence.roles.preference_pressure_value_shaped_memory.value_separation_margin",
+        "extra.preference_emergence.roles.delayed_consequence_prediction_like_readout.structure_margin"
+      ]
+    },
+    {
+      "id": "common-behaviors",
+      "tier": "emergence",
+      "kind": "producer",
+      "spec": "common_behaviors",
+      "output": "emergence/common-behaviors",
+      "claim": "Cave, CaveNet, and minimal_subject can be scored against the same basic behavior probes through the common Episode contract.",
+      "kwargs": {
+        "dt": 1.0,
+        "fps": 4,
+        "include_assets": true
+      },
+      "key_metrics": [
+        "extra.common_behaviors.roles.expectation_repetition.cave.surprise_drop",
+        "extra.common_behaviors.roles.expectation_repetition.minimal_subject.surprise_drop",
+        "extra.common_behaviors.roles.workspace_selection.cavenet.dropped_mass",
+        "extra.common_behaviors.roles.value_separation.minimal_subject.utility_contrast",
+        "extra.common_behaviors.equivalence.max_actual_distance"
+      ]
+    },
+    {
+      "id": "consciousness-energy",
+      "tier": "emergence",
+      "kind": "producer",
+      "spec": "consciousness_energy",
+      "output": "emergence/consciousness-energy",
+      "claim": "A dynamic-compute subject distinguishes loss-coupled online energy allocation from fixed or externally replayed budget schedules.",
+      "kwargs": {
+        "dt": 1.0,
+        "fps": 4,
+        "include_assets": true
+      },
+      "key_metrics": [
+        "extra.consciousness_energy.roles.dynamic_energy_coupling.dynamic",
+        "extra.consciousness_energy.roles.dynamic_energy_coupling.dynamic_minus_fixed",
+        "extra.consciousness_energy.roles.rail_independence.dynamic_minus_replay",
+        "extra.consciousness_energy.roles.instantiation_proxy.dynamic"
+      ]
+    },
+    {
+      "id": "primitive-compression",
+      "tier": "emergence",
+      "kind": "producer",
+      "spec": "primitive_compression",
+      "output": "emergence/primitive-compression",
+      "claim": "Primitive source/state pressure distinguishes active subject-paid compression from compact states supplied by rails or random projection controls.",
+      "kwargs": {
+        "dt": 1.0,
+        "fps": 4,
+        "include_assets": true
+      },
+      "key_metrics": [
+        "extra.primitive_compression.metrics.ratio-5-active.compression_ratio",
+        "extra.primitive_compression.metrics.ratio-5-active.update_work",
+        "extra.primitive_compression.metrics.ratio-5-active.future_loss_improvement",
+        "extra.primitive_compression.metrics.ratio-5-container.ownership_subject_fraction",
+        "extra.primitive_compression.roles.active_minus_container.paid_compression_proxy"
+      ]
+    },
+    {
+      "id": "compression-clamp",
+      "tier": "emergence",
+      "kind": "producer",
+      "spec": "compression_clamp",
+      "output": "emergence/compression-clamp",
+      "claim": "A capacity clamp separates active subject-governed compression from compact containers, random compression, shuffled loss, no-update controls, and rails-supplied oracle state.",
+      "kwargs": {
+        "dt": 1.0,
+        "fps": 4,
+        "include_assets": true
+      },
+      "key_metrics": [
+        "extra.compression_clamp.metrics.active.mean_selectivity",
+        "extra.compression_clamp.metrics.active.lag_loss_to_update_coupling",
+        "extra.compression_clamp.metrics.active.mean_action_success",
+        "extra.compression_clamp.metrics.active.adaptive_governance_proxy",
+        "extra.compression_clamp.roles.active_minus_controls.proxy_vs_oracle_rails"
+      ]
+    },
+    {
+      "id": "substrate-energy",
+      "tier": "emergence",
+      "kind": "producer",
+      "spec": "substrate_energy",
+      "output": "emergence/substrate-energy",
+      "claim": "Minimal subject, Cave, CaveNet, controlled CaveNet, and evolved recurrent subjects expose different parts of the energy estimator: explicit compression, controller work, latent update work, and rails dependence separate.",
+      "kwargs": {
+        "dt": 1.0,
+        "fps": 4,
+        "include_assets": true
+      },
+      "key_metrics": [
+        "extra.substrate_energy.metrics.minimal_subject.compression_load",
+        "extra.substrate_energy.metrics.cavenet_controller.dynamic_energy_coupling",
+        "extra.substrate_energy.metrics.evolved_recurrent.rails_total",
+        "extra.substrate_energy.metrics.evolved_recurrent.latent_update_energy",
+        "extra.substrate_energy.roles.evolved_recurrent_minus_reset.dynamic_energy_coupling"
+      ]
+    },
+    {
+      "id": "role-recovery",
+      "tier": "emergence",
+      "kind": "producer",
+      "spec": "role_recovery",
+      "output": "emergence/role-recovery",
+      "claim": "Expectation-like behavior fails under ablation and partially recovers when weak learning or associative memory is available.",
+      "kwargs": {
+        "dt": 1.0,
+        "fps": 4,
+        "include_assets": true
+      },
+      "key_metrics": [
+        "extra.role_recovery.roles.cavenet_no_expectation.surprise_drop",
+        "extra.role_recovery.roles.cavenet_learning_recovery.surprise_drop_gain",
+        "extra.role_recovery.roles.cavenet_learning_recovery.final_learning_gain",
+        "extra.role_recovery.roles.minimal_memory_recovery.value_surprise_drop",
+        "extra.role_recovery.roles.minimal_memory_recovery.no_memory_surprise_drop"
+      ]
+    },
+    {
+      "id": "selection-recovery",
+      "tier": "emergence",
+      "kind": "producer",
+      "spec": "selection_recovery",
+      "output": "emergence/selection-recovery",
+      "claim": "Bottlenecked substrates express selection by preserving fewer features, dropping distractor mass, and increasing diagnostic workspace share relative to no-bottleneck controls.",
+      "kwargs": {
+        "dt": 1.0,
+        "fps": 4,
+        "include_assets": true
+      },
+      "key_metrics": [
+        "extra.selection_recovery.roles.cavenet_bottleneck.selected_active_feature_count",
+        "extra.selection_recovery.roles.cavenet_bottleneck.selection_margin",
+        "extra.selection_recovery.roles.minimal_diagnostic_selection.bottleneck_late_diagnostic_attention",
+        "extra.selection_recovery.roles.minimal_diagnostic_selection.no_bottleneck_late_diagnostic_attention",
+        "extra.selection_recovery.roles.minimal_diagnostic_selection.bottleneck_memory_strength"
+      ]
+    },
+    {
+      "id": "value-retention-recovery",
+      "tier": "emergence",
+      "kind": "producer",
+      "spec": "value_retention_recovery",
+      "output": "emergence/value-retention-recovery",
+      "claim": "Preference pressure shapes minimal-subject retention toward valued features rather than frequent neutral state.",
+      "kwargs": {
+        "dt": 1.0,
+        "fps": 4,
+        "include_assets": true
+      },
+      "key_metrics": [
+        "extra.value_retention_recovery.roles.value_shaped_retention.frequency_valued_focus",
+        "extra.value_retention_recovery.roles.value_shaped_retention.value_valued_focus",
+        "extra.value_retention_recovery.roles.value_shaped_retention.focus_margin",
+        "extra.value_retention_recovery.roles.value_shaped_retention.value_memory_strength"
+      ]
+    },
+    {
+      "id": "regulation-recovery",
+      "tier": "emergence",
+      "kind": "producer",
+      "spec": "regulation_recovery",
+      "output": "emergence/regulation-recovery",
+      "claim": "Objective pressure changes future coupling through adaptive attention, while fixed-attention controls do not.",
+      "kwargs": {
+        "dt": 1.0,
+        "fps": 4,
+        "include_assets": true
+      },
+      "key_metrics": [
+        "extra.regulation_recovery.roles.future_attention_regulation.cave_fixed_audio_delta",
+        "extra.regulation_recovery.roles.future_attention_regulation.cave_adaptive_audio_delta",
+        "extra.regulation_recovery.roles.future_attention_regulation.cavenet_adaptive_audio_delta"
+      ]
+    },
+    {
+      "id": "topology-recovery",
+      "tier": "emergence",
+      "kind": "producer",
+      "spec": "topology_recovery",
+      "output": "emergence/topology-recovery",
+      "claim": "Topology-like geometry collapses under no-topology/no-memory controls and recovers under topology gain or memory geometry.",
+      "kwargs": {
+        "dt": 1.0,
+        "fps": 4,
+        "include_assets": true
+      },
+      "key_metrics": [
+        "extra.topology_recovery.roles.cavenet_topology_recovery.reference_topology_mass",
+        "extra.topology_recovery.roles.cavenet_topology_recovery.no_topology_mass",
+        "extra.topology_recovery.roles.cavenet_topology_recovery.topology_mass_gain",
+        "extra.topology_recovery.roles.minimal_geometry_proxy.value_memory_strength"
+      ]
+    },
+    {
+      "id": "role-recovery-matrix",
+      "tier": "emergence",
+      "kind": "producer",
+      "spec": "role_recovery_matrix",
+      "output": "emergence/role-recovery-matrix",
+      "claim": "The individual recovery reports can be summarized as a role x substrate status matrix.",
+      "kwargs": {
+        "dt": 1.0,
+        "fps": 4,
+        "include_assets": true
+      },
+      "key_metrics": [
+        "extra.role_recovery_matrix.summary.role_count",
+        "extra.role_recovery_matrix.summary.passed_count",
+        "extra.role_recovery_matrix.matrix.expectation.status",
+        "extra.role_recovery_matrix.matrix.selection.status",
+        "extra.role_recovery_matrix.matrix.topology.status"
+      ]
+    },
+    {
+      "id": "evolved-exposure",
+      "tier": "emergence",
+      "kind": "producer",
+      "spec": "evolved_exposure",
+      "output": "emergence/evolved-exposure",
+      "claim": "A weak recurrent subject evolved for exposure utility develops behavior and latent state consistent with expectation under delayed consequences.",
+      "kwargs": {
+        "generations": 30,
+        "population_size": 32,
+        "world_count": 12,
+        "evaluation_cycles": 20,
+        "dt": 1.0,
+        "fps": 4,
+        "include_assets": true
+      },
+      "key_metrics": [
+        "extra.evolved_exposure.roles.exposure_regulation.utility_gain_over_random",
+        "extra.evolved_exposure.roles.exposure_regulation.utility_gain_over_nonrecurrent",
+        "extra.evolved_exposure.roles.exposure_regulation.evolved_exposure_contrast",
+        "extra.evolved_exposure.roles.latent_expectation_probe.evolved_probe_accuracy"
+      ]
+    },
+    {
+      "id": "evolved-exposure-sweep",
+      "tier": "emergence",
+      "kind": "producer",
+      "spec": "evolved_exposure_sweep",
+      "output": "emergence/evolved-exposure-sweep",
+      "claim": "The evolved exposure-control result survives a compact sweep across evolution seeds.",
+      "kwargs": {
+        "seed_start": 17,
+        "seed_count": 5,
+        "generations": 20,
+        "population_size": 24,
+        "world_count": 8,
+        "evaluation_cycles": 16,
+        "min_pass_rate": 0.8,
+        "dt": 1.0,
+        "fps": 4,
+        "include_assets": true
+      },
+      "key_metrics": [
+        "extra.evolved_exposure_sweep.roles.robust_expectation_regulation.strict_pass_rate",
+        "extra.evolved_exposure_sweep.roles.robust_expectation_regulation.utility_gain_over_random_pass_count",
+        "extra.evolved_exposure_sweep.roles.robust_expectation_regulation.exposure_contrast_pass_count",
+        "extra.evolved_exposure_sweep.roles.robust_expectation_regulation.probe_accuracy_pass_count",
+        "extra.evolved_exposure_sweep.roles.control_collapse.median_abs_reset_exposure_contrast",
+        "extra.evolved_exposure_sweep.roles.control_collapse.median_abs_shuffled_exposure_contrast"
+      ]
+    },
+    {
+      "id": "evolved-roles",
+      "tier": "emergence",
+      "kind": "producer",
+      "spec": "evolved_roles",
+      "output": "emergence/evolved-roles",
+      "claim": "A weak recurrent subject evolved for delayed exposure utility shows cue-weight concentration, value-retention, regulation, and latent-topology signals under shared controls without claiming full dynamic attention.",
+      "kwargs": {
+        "generations": 30,
+        "population_size": 32,
+        "world_count": 12,
+        "evaluation_cycles": 32,
+        "dt": 1.0,
+        "fps": 4,
+        "include_assets": true
+      },
+      "key_metrics": [
+        "extra.evolved_roles.roles.selection_under_bottleneck.evolved_cue_total_ratio",
+        "extra.evolved_roles.roles.selection_under_bottleneck.claim_kind",
+        "extra.evolved_roles.roles.attention_claim_boundary.dynamic_attention_claimed",
+        "extra.evolved_roles.roles.value_shaped_retention.evolved_probe_accuracy",
+        "extra.evolved_roles.roles.exposure_regulation.evolved_exposure_contrast",
+        "extra.evolved_roles.roles.latent_topology.evolved_latent_value_signal"
+      ]
+    },
+    {
+      "id": "evolved-roles-sweep",
+      "tier": "emergence",
+      "kind": "producer",
+      "spec": "evolved_roles_sweep",
+      "output": "emergence/evolved-roles-sweep",
+      "claim": "The evolved role readouts separate into robust expectation/regulation/value geometry and weaker cue-weight concentration evidence across seeds.",
+      "kwargs": {
+        "seed_start": 17,
+        "seed_count": 5,
+        "generations": 20,
+        "population_size": 24,
+        "world_count": 8,
+        "evaluation_cycles": 24,
+        "min_core_pass_rate": 0.8,
+        "min_selection_pass_rate": 0.6,
+        "dt": 1.0,
+        "fps": 4,
+        "include_assets": true
+      },
+      "key_metrics": [
+        "extra.evolved_roles_sweep.roles.selection_like_readout.cue_total_pass_count",
+        "extra.evolved_roles_sweep.roles.selection_like_readout.median_cue_total_ratio",
+        "extra.evolved_roles_sweep.roles.selection_like_readout.claim_kind",
+        "extra.evolved_roles_sweep.roles.attention_claim_boundary.dynamic_attention_claimed",
+        "extra.evolved_roles_sweep.roles.value_retention.probe_accuracy_pass_count",
+        "extra.evolved_roles_sweep.roles.exposure_regulation.exposure_order_pass_count",
+        "extra.evolved_roles_sweep.roles.latent_geometry.latent_value_signal_pass_count",
+        "extra.evolved_roles_sweep.aggregate.strict_pass_rate"
+      ]
+    },
+    {
+      "id": "evolved-dissociation",
+      "tier": "emergence",
+      "kind": "producer",
+      "spec": "evolved_dissociation",
+      "output": "emergence/evolved-dissociation",
+      "claim": "In a frequency/value-dissociated world with distractors, a weak recurrent subject evolves value retention and exposure regulation that beats a frequency-counter and collapses under reset/non-recurrent/shuffled controls; the emergent function is sign-gated, not magnitude-selective.",
+      "kwargs": {
+        "seed": 17,
+        "generations": 80,
+        "population_size": 40,
+        "world_count": 12,
+        "hidden_dim": 8,
+        "cycles": 16,
+        "delay_steps": 3,
+        "rare_prob": 0.3,
+        "eval_world_count": 24,
+        "dt": 1.0,
+        "fps": 4,
+        "include_assets": true
+      },
+      "key_metrics": [
+        "extra.evolved_dissociation.roles.value_retention.rare_future_accuracy",
+        "extra.evolved_dissociation.roles.value_retention.evolved_utility",
+        "extra.evolved_dissociation.roles.value_retention.frequency_counter_utility",
+        "extra.evolved_dissociation.roles.value_retention.utility_gain_over_frequency_counter",
+        "extra.evolved_dissociation.roles.exposure_regulation.rare_exposure_contrast",
+        "extra.evolved_dissociation.roles.control_collapse.reset_rare_contrast",
+        "extra.evolved_dissociation.roles.control_collapse.nonrecurrent_rare_accuracy",
+        "extra.evolved_dissociation.roles.control_collapse.shuffled_rare_accuracy",
+        "extra.evolved_dissociation.roles.magnitude_selectivity.common_exposure_contrast",
+        "extra.evolved_dissociation.roles.magnitude_selectivity.rare_minus_common_contrast",
+        "extra.evolved_dissociation.roles.magnitude_selectivity.magnitude_blind"
+      ]
+    },
+    {
+      "id": "cavenet-ablation",
+      "tier": "emergence",
+      "kind": "producer",
+      "spec": "cavenet_ablation",
+      "output": "emergence/cavenet-ablation",
+      "claim": "CaveNet parameter ablations expose external input gain, attention allocation, expectation, memory, surprise, and topology roles.",
+      "kwargs": {
+        "dt": 0.2,
+        "fps": 8,
+        "include_assets": true
+      },
+      "key_metrics": [
+        "extra.cavenet_ablation.roles.attention_gate.zero_attention_actual_mass",
+        "extra.cavenet_ablation.roles.external_input_gate.zero_external_attention_gain_actual_mass",
+        "extra.cavenet_ablation.roles.attention_allocation.zero_capacity_expected_mass",
+        "extra.cavenet_ablation.roles.attention_allocation.external_only_actual_mass",
+        "extra.cavenet_ablation.roles.attention_allocation.internal_only_expected_mass",
+        "extra.cavenet_ablation.roles.memory_cell.fixed_final_memory_mass",
+        "extra.cavenet_ablation.roles.topology_layer.zero_topology_mass"
+      ]
+    },
+    {
+      "id": "cavenet-pressure",
+      "tier": "emergence",
+      "kind": "producer",
+      "spec": "cavenet_pressure",
+      "output": "emergence/cavenet-pressure",
+      "claim": "Pressure-shaped parameters move weak CaveNet toward stronger memory and topology behavior.",
+      "kwargs": {
+        "dt": 0.2,
+        "fps": 8,
+        "include_assets": true
+      },
+      "key_metrics": [
+        "extra.cavenet_pressure.roles.parameter_development.initial_learning_gain",
+        "extra.cavenet_pressure.roles.parameter_development.final_learning_gain",
+        "extra.cavenet_pressure.roles.parameter_development.final_external_attention_gain",
+        "extra.cavenet_pressure.roles.reference_closeness.distance_improvement"
+      ]
+    },
+    {
+      "id": "cavenet-pressure-population",
+      "tier": "emergence",
+      "kind": "producer",
+      "spec": "cavenet_pressure_population",
+      "output": "emergence/cavenet-pressure-population",
+      "claim": "The pressure rule improves weak CaveNet across a generated population rather than one selected scene.",
+      "kwargs": {
+        "sequence_count": 4,
+        "event_count": 4,
+        "seed": 41,
+        "dt": 0.2,
+        "fps": 8,
+        "include_assets": true
+      },
+      "key_metrics": [
+        "extra.cavenet_pressure_population.roles.population_recovery.improved_sequence_count",
+        "extra.cavenet_pressure_population.roles.population_recovery.mean_distance_improvement",
+        "extra.cavenet_pressure_population.roles.functional_recovery.mean_adaptive_memory_mass"
+      ]
+    },
+    {
+      "id": "cavenet-controller",
+      "tier": "emergence",
+      "kind": "producer",
+      "spec": "cavenet_controller",
+      "output": "emergence/cavenet-controller",
+      "claim": "A latent controller can use pressure and state observations to improve weak CaveNet behavior.",
+      "kwargs": {
+        "dt": 0.2,
+        "fps": 8,
+        "include_assets": true
+      },
+      "key_metrics": [
+        "extra.cavenet_controller.roles.controlled_recovery.distance_improvement",
+        "extra.cavenet_controller.roles.controller_state.latent_norm",
+        "extra.cavenet_controller.roles.controller_state.config_delta",
+        "extra.cavenet_controller.roles.controller_state.mean_external_attention",
+        "extra.cavenet_controller.roles.controller_state.mean_internal_expectation_attention",
+        "extra.cavenet_controller.roles.input_ablation_effects.full_external_attention_gain"
+      ]
+    },
+    {
+      "id": "cavenet-controller-population",
+      "tier": "emergence",
+      "kind": "producer",
+      "spec": "cavenet_controller_population",
+      "output": "emergence/cavenet-controller-population",
+      "claim": "The latent controller generalizes across generated worlds and ablation checks expose which inputs support which gains.",
+      "kwargs": {
+        "sequence_count": 4,
+        "event_count": 4,
+        "seed": 61,
+        "dt": 0.2,
+        "fps": 8,
+        "include_assets": true
+      },
+      "key_metrics": [
+        "extra.cavenet_controller_population.roles.population_recovery.improved_sequence_count",
+        "extra.cavenet_controller_population.roles.population_recovery.mean_distance_improvement",
+        "extra.cavenet_controller_population.roles.controller_state.mean_controller_latent_norm",
+        "extra.cavenet_controller_population.roles.controller_state.mean_external_attention",
+        "extra.cavenet_controller_population.roles.controller_state.mean_internal_expectation_attention",
+        "extra.cavenet_controller_population.roles.input_ablation_effects.mean_external_attention_gain_drop_without_attention_capacity"
+      ]
+    },
+    {
+      "id": "cavenet-controller-learning",
+      "tier": "emergence",
+      "kind": "producer",
+      "spec": "cavenet_controller_learning",
+      "output": "emergence/cavenet-controller-learning",
+      "claim": "Moderate plastic readout learning improves the controller over a static weak readout.",
+      "kwargs": {
+        "sequence_count": 4,
+        "event_count": 4,
+        "seed": 91,
+        "dt": 0.2,
+        "fps": 8,
+        "include_assets": true
+      },
+      "key_metrics": [
+        "extra.cavenet_controller_learning.roles.learned_recovery.improved_over_static_count",
+        "extra.cavenet_controller_learning.roles.learned_recovery.mean_distance_improvement_over_static",
+        "extra.cavenet_controller_learning.roles.readout_learning.mean_learning_readout_delta_norm"
+      ]
+    },
+    {
+      "id": "role-dependency-contrasts",
+      "tier": "causal_probes",
+      "kind": "producer",
+      "spec": "role_dependency_contrasts",
+      "output": "causal-probes/role-dependency-contrasts",
+      "claim": "Role claims are expressed as contrasts: passive copying, arbitrary recurrence, and cosmetic topology preserve different subsets of the dependency structure.",
+      "kwargs": {
+        "dt": 0.2,
+        "fps": 8,
+        "include_assets": true
+      },
+      "key_metrics": [
+        "extra.role_dependency_contrasts.roles.cosmetic_topology_exceeds_control",
+        "extra.role_dependency_contrasts.roles.cosmetic_topology_does_not_supply_prediction_history",
+        "extra.role_dependency_contrasts.contrasts.prediction_temporal_dependency.observed_contrast.cosmetic-topology",
+        "extra.role_dependency_contrasts.contrasts.attention_gate.observed_contrast.cosmetic-topology",
+        "extra.role_dependency_contrasts.contrasts.value_future_attention.observed_contrast.cosmetic-topology"
+      ]
+    },
+    {
+      "id": "topology-atlas",
+      "tier": "causal_probes",
+      "kind": "producer",
+      "spec": "topology_atlas",
+      "output": "causal-probes/topology-atlas",
+      "claim": "Scenario and control impacts can be inspected as topology deltas from one shared initial prior and projection.",
+      "kwargs": {
+        "dt": 0.2,
+        "fps": 8,
+        "include_assets": true
+      },
+      "key_metrics": [
+        "extra.topology_atlas.metrics.row_count",
+        "extra.topology_atlas.metrics.max_actual_expected_l2",
+        "extra.topology_atlas.metrics.max_experienced_mass"
+      ],
+      "curated_artifacts": [
+        "assets/episode_set_dashboard.png",
+        "assets/episode_set_distances.json",
+        "assets/topology_atlas.png",
+        "assets/topology_atlas_metrics.json"
+      ]
+    }
+  ]
+}
